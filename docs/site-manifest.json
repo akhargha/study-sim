@@ -1,0 +1,56 @@
+[
+  {
+    "domain": "cloudjetairways.com",
+    "site_url_sent_to_backend": "cloudjetairways.com",
+    "brand": "cloudjet",
+    "trust_class": "happytrust"
+  },
+  {
+    "domain": "cioudjetairways.com",
+    "site_url_sent_to_backend": "cIoudjetairways.com",
+    "brand": "cloudjet",
+    "trust_class": "sadtrust"
+  },
+  {
+    "domain": "cloudjetairway.com",
+    "site_url_sent_to_backend": "cloudjetairway.com",
+    "brand": "cloudjet",
+    "trust_class": "sadtrust"
+  },
+  {
+    "domain": "citytrust.com",
+    "site_url_sent_to_backend": "citytrust.com",
+    "brand": "citytrust",
+    "trust_class": "happytrust"
+  },
+  {
+    "domain": "cltytrust.com",
+    "site_url_sent_to_backend": "cltytrust.com",
+    "brand": "citytrust",
+    "trust_class": "sadtrust"
+  },
+  {
+    "domain": "citytrustbank.com",
+    "site_url_sent_to_backend": "citytrustbank.com",
+    "brand": "citytrust",
+    "trust_class": "sadtrust"
+  },
+  {
+    "domain": "meridiansuites.com",
+    "site_url_sent_to_backend": "meridiansuites.com",
+    "brand": "meridian",
+    "trust_class": "happytrust"
+  },
+  {
+    "domain": "meridiansuite.com",
+    "site_url_sent_to_backend": "meridiansuite.com",
+    "brand": "meridian",
+    "trust_class": "sadtrust"
+  },
+  {
+    "domain": "rneridiansuites.com",
+    "site_url_sent_to_backend": "rneridiansuites.com",
+    "brand": "meridian",
+    "trust_class": "sadtrust"
+  }
+]

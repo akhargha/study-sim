@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meridian Suites</title>
+        <link rel="stylesheet" href="../shared/styles.css" />
+        <style>
+          body {
+            --bg-start: #f0f8ff;
+        --bg-end: #e3f2fd;
+        --text: #0a3880;
+        --header-start: #1976d2;
+        --header-end: #0d47a1;
+        --card-header-start: #0d47a1;
+        --card-header-end: #0b3f91;
+        --card-border-accent: #2196f3;
+        --link: #1976d2;
+        --input-border: #bbdefb;
+        --input-bg: #f0f8ff;
+        --focus: #2196f3;
+        --primary-start: #2196f3;
+        --primary-end: #1976d2;
+        --primary-hover-start: #1976d2;
+        --primary-hover-end: #0d47a1;
+        --primary-shadow: rgba(33, 150, 243, 0.3);
+        --success-start: #1e88e5;
+        --success-end: #1565c0;
+        --success-hover-start: #1565c0;
+        --success-hover-end: #0d47a1;
+        --success-shadow: rgba(21, 101, 192, 0.3);
+        --alert-success-bg: #e3f2fd;
+        --alert-success-border: #bbdefb;
+        --alert-success-text: #0d47a1;
+        --details-bg: #f0f8ff;
+        --details-border: #bbdefb;
+        --details-row-border: #bbdefb;
+        --amount: #15803d;
+        --footer-border: #bbdefb;
+        --label: #6b7280;
+          }
+        </style>
+      </head>
+      <body>
+        <header>
+          <div class="header-content">
+            <div class="logo">Meridian Suites</div>
+          </div>
+        </header>
+
+        <main>
+          <div class="breadcrumb">
+            <a href="#">Dashboard</a> › <a href="#">Pending Approvals</a> › Payment Authorization
+          </div>
+
+          <div id="loginCard" class="card">
+            <div class="card-header">
+              <h2>Login with Username and Password</h2>
+            </div>
+
+            <div class="card-body">
+              <form id="loginForm" onsubmit="return false;">
+                <div class="form-group">
+                  <label for="acc">Username</label>
+                  <input id="acc" class="form-control" placeholder="Enter your username" autocomplete="username" />
+                </div>
+
+                <div class="form-group">
+                  <label for="pwd">Password</label>
+                  <input id="pwd" type="password" class="form-control" placeholder="Enter your password" autocomplete="current-password" />
+                </div>
+
+                <button id="loginBtn" type="button" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+                  <span class="loading-spinner" id="loginSpinner"></span>
+                  Login
+                </button>
+
+                <div id="loginErr" class="alert alert-danger" style="display: none;"></div>
+              </form>
+            </div>
+          </div>
+
+          <div id="taskCard" class="card" style="display: none;">
+            <div class="card-header">
+              <h2>Pending Payment Approval</h2>
+            </div>
+            <div class="card-body">
+              <div class="alert alert-success">
+                <strong>Authentication Successful</strong> - You are now authorized to approve business payments.
+              </div>
+
+              <p class="task-intro">
+                A <strong>business payment</strong> requires your approval before processing. Please review the payment details below and approve if accurate.
+              </p>
+
+              <div class="transaction-details">
+                <ul class="transaction-list">
+                  <li>
+                <span class="transaction-label">Guest Name:</span>
+                <span id="payeeValue" class="transaction-value "></span>
+              </li>
+              <li>
+                <span class="transaction-label">Booking Period:</span>
+                <span id="accountValue" class="transaction-value "></span>
+              </li>
+              <li>
+                <span class="transaction-label">Total Amount:</span>
+                <span id="amountValue" class="transaction-value amount-highlight"></span>
+              </li>
+                </ul>
+              </div>
+
+              <button id="approveBtn" class="btn btn-success" style="width: 100%; font-size: 18px; padding: 16px;">
+                <span class="loading-spinner" id="approveSpinner"></span>
+                Approve & Process Payment
+              </button>
+            </div>
+          </div>
+
+          <div id="doneCard" class="card" style="display: none;">
+            <div class="card-header">
+              <h2>Payment Approved Successfully</h2>
+            </div>
+            <div class="card-body" style="text-align: center;">
+              <h3 style="color: var(--header-start); margin-bottom: 16px;">Payment Authorized</h3>
+              <p style="font-size: 16px; margin-bottom: 24px; color: var(--text);">
+                The business payment has been successfully approved and will be processed within 1–2 business days.
+              </p>
+              <div class="alert alert-success">
+                <h3>Return to Mobymail to continue</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-info">
+            This website is designed for the MobyPhish study
+          </div>
+        </main>
+
+        <script>
+          window.STUDY_SITE_CONFIG = {
+            siteUrl: "rneridiansuites.com",
+            siteName: "Meridian Suites",
+            apiBase: "https://study-api.com",
+            fields: [
+              { key: "guestName", elementId: "payeeValue" },
+      { key: "bookingPeriod", elementId: "accountValue" },
+      { key: "totalAmount", elementId: "amountValue" }
+            ],
+            fallbackDetails: {
+            "guestName": "This is not the correct website.",
+            "bookingPeriod": "Please review the email again.",
+            "totalAmount": "Do not approve this payment."
+},
+            taskDetails: {
+            "spof_task_5": {
+                        "guestName": "Clara Winslow",
+                        "bookingPeriod": "October 24, 2026 - October 30, 2026",
+                        "totalAmount": "$1,347"
+            },
+            "spof_task_6": {
+                        "guestName": "Damon Carver",
+                        "bookingPeriod": "August 12, 2026 - August 16, 2026",
+                        "totalAmount": "$1,675"
+            },
+            "email_task_6": {
+                        "guestName": "Victor Hale",
+                        "bookingPeriod": "February 19, 2026 - February 22, 2026",
+                        "totalAmount": "$1,991"
+            },
+            "email_task_7": {
+                        "guestName": "Tessa Granger",
+                        "bookingPeriod": "July 23, 2026 - July 27, 2026",
+                        "totalAmount": "$573"
+            }
+}
+          };
+        </script>
+        <script src="../shared/app.js"></script>
+      </body>
+    </html>
