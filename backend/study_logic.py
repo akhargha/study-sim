@@ -163,7 +163,7 @@ def get_remaining_categories_for_stage(user_id: int, stage: str):
     return [k for k in quota if counts[k] < quota[k]]
 
 
-def get_candidate_tasks(user_id: int, stage: str, category: str):
+def get_candidate_tasks(user_id: int, stage: str, category: str, allow_duplicates: bool = False):
     blocked = set(STAGE_BLOCKLISTS[stage])
     used_task_ids = get_used_task_ids(user_id)
     all_tasks = get_all_tasks()
@@ -171,7 +171,7 @@ def get_candidate_tasks(user_id: int, stage: str, category: str):
     candidates = []
 
     for task in all_tasks:
-        if task["task_id"] in used_task_ids:
+        if not allow_duplicates and task["task_id"] in used_task_ids:
             continue
 
         task_category = classify_task(task)
@@ -199,12 +199,39 @@ def choose_next_task(user_id: int, stage: str):
 
     random.shuffle(remaining_categories)
 
+    # First pass: avoid duplicates
     for category in remaining_categories:
-        candidates = get_candidate_tasks(user_id, stage, category)
+        candidates = get_candidate_tasks(
+            user_id=user_id,
+            stage=stage,
+            category=category,
+            allow_duplicates=False,
+        )
         if candidates:
-            return random.choice(candidates)
+            task = random.choice(candidates)
+            logger.info(
+                "Chose NON-DUPLICATE task_id=%s for user_id=%s stage=%s category=%s",
+                task["task_id"], user_id, stage, category
+            )
+            return task
 
-    raise ValueError(f"No candidate tasks available for user_id={user_id}, stage={stage}")
+    # Second pass: allow duplicates only if necessary
+    for category in remaining_categories:
+        candidates = get_candidate_tasks(
+            user_id=user_id,
+            stage=stage,
+            category=category,
+            allow_duplicates=True,
+        )
+        if candidates:
+            task = random.choice(candidates)
+            logger.warning(
+                "Chose DUPLICATE-ALLOWED task_id=%s for user_id=%s stage=%s category=%s because no non-duplicate candidate existed",
+                task["task_id"], user_id, stage, category
+            )
+            return task
+
+    raise ValueError(f"No candidate tasks available at all for user_id={user_id}, stage={stage}")
 
 
 def create_assignment(user: dict, task: dict, stage: str):
