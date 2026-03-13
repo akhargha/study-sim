@@ -11,6 +11,7 @@ from config import (
     ALLOWED_COMPLETION_TYPES,
 )
 from db import supabase
+from email_logic import send_task_email, send_stage_complete_email
 
 logger = logging.getLogger("study_backend")
 NY_TZ = ZoneInfo("America/New_York")
@@ -327,6 +328,13 @@ def assign_next_task_if_possible(user: dict):
             "waiting_for_admin": True,
             "stage_completed_at": now_ny_iso(),
         })
+
+        try:
+            email_result = send_stage_complete_email(stage)
+            logger.info("Stage complete email sent: %s", email_result)
+        except Exception as e:
+            logger.exception("Failed to send stage complete email for stage=%s", stage)
+
         return {
             "created": False,
             "reason": "stage_complete",
@@ -339,6 +347,13 @@ def assign_next_task_if_possible(user: dict):
             "waiting_for_admin": True,
             "stage_completed_at": now_ny_iso(),
         })
+
+        try:
+            email_result = send_stage_complete_email(stage)
+            logger.info("Stage complete email sent: %s", email_result)
+        except Exception as e:
+            logger.exception("Failed to send stage complete email for stage=%s", stage)
+
         return {
             "created": False,
             "reason": "stage_complete",
@@ -347,6 +362,12 @@ def assign_next_task_if_possible(user: dict):
 
     assignment = create_assignment(user, task, stage)
     logger.info("Assigned task_id=%s to user_id=%s for stage=%s", task["task_id"], user["id"], stage)
+
+    try:
+        email_result = send_task_email(task)
+        logger.info("Task email result: %s", email_result)
+    except Exception as e:
+        logger.exception("Failed to send task email for task_id=%s", task["task_id"])
 
     return {
         "created": True,
