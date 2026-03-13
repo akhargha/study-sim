@@ -321,3 +321,243 @@ ValueError: No candidate tasks available for user_id=21, stage=stage3
 2026-03-13 02:51:24,892 | INFO | Appended log line for user_id=21: Event Id 11: Unsafe site unblocked temporarily
 2026-03-13 02:51:24,893 | INFO | Extension /log accepted timestamp=1773384682194 text=Event Id 11: Unsafe site unblocked temporarily
 2026-03-13 02:51:25,097 | INFO | Compat complete-task called website=citytrust.com completion_type=report_extension assignment_id=499 next_result={'created': False, 'reason': 'stage_complete', 'stage': 'stage3'}
+2026-03-13 02:56:51,662 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-03-13 02:56:51,663 | INFO | Extension /log accepted timestamp=1773385008965 text=Event Id 3: Open popup
+2026-03-13 02:56:54,661 | INFO | Appended log line for user_id=21: Event Id 16: User opened edit site list view
+2026-03-13 02:56:54,662 | INFO | Extension /log accepted timestamp=1773385010565 text=Event Id 16: User opened edit site list view
+2026-03-13 02:58:42,229 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: chrome-extension://bpbgjhiebnlnlcaiocidmemafeiaeajm/index.html
+2026-03-13 02:58:42,229 | INFO | Extension /log accepted timestamp=2026-03-13T06:58:42.460Z text=Event: Reported Website Change | website: chrome-extension://bpbgjhiebnlnlcaiocidmemafeiaeajm/index.html
+2026-03-13 03:11:06,499 | INFO | Completed assignment_id=496 with completion_type=report_extension
+2026-03-13 03:11:06,511 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html
+2026-03-13 03:11:06,511 | INFO | Extension /log accepted timestamp=2026-03-13T07:11:06.587Z text=Event: Reported Website Change | website: chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html
+2026-03-13 03:11:06,975 | INFO | Chose NON-DUPLICATE task_id=86 for user_id=21 stage=stage3 category=email
+2026-03-13 03:11:07,026 | INFO | Assigned task_id=86 to user_id=21 for stage=stage3
+2026-03-13 03:11:07,026 | INFO | Compat complete-task called website=chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html completion_type=report_extension assignment_id=496 next_result={'created': True, 'stage': 'stage3', 'assignment': {'assignment_id': 500, 'user_id': 21, 'task_id': 86, 'sent_at': '2026-03-13T03:11:06', 'completed_at': None, 'time_taken': None, 'completion_type': None, 'login_occurred': False, 'username': 'user21', 'stage': 'stage3'}, 'task': {'task_id': 86, 'task_name': "Approval Needed: Confirm Nora Benton's Reservation", 'task_type': 'email_task_5', 'email_text': '<!DOCTYPE html>\n<html lang="en"><body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #222;">\n<p>Hi Moby,</p>\n<p>Could you please approve the following hotel reservation on Meridian Suites\' booking portal?</p>\n    <ul style="margin-top: 0.25rem;">\n      <li><strong>Guest Name:</strong> Nora Benton</li>\n      <li><strong>Duration:</strong> September 11, 2026 - September 14, 2026</li>\n      <li><strong>Total Amount:</strong> $1,447</li>\n    </ul>\n<p>You can review and approve the reservation here:\n  <a href="https://meridiansuite.com" target="_blank" rel="noopener noreferrer">meridiansuite.com</a>\n</p>\n<p>Best,<br> K. V,<br> Meridan Suites</p>\n</body></html>', 'is_phishing': True, 'phishing_type': 'EMAIL', 'site_url': 'meridiansuite.com', 'email': 'meridiansuitesphish2@bskyakhargha1.help'}}
+2026-03-13 03:11:38,119 | INFO | Completed assignment_id=500 with completion_type=report_extension
+2026-03-13 03:11:38,127 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html
+2026-03-13 03:11:38,127 | INFO | Extension /log accepted timestamp=2026-03-13T07:11:38.453Z text=Event: Reported Website Change | website: chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html
+2026-03-13 03:11:38,454 | INFO | Chose NON-DUPLICATE task_id=71 for user_id=21 stage=stage3 category=email
+2026-03-13 03:11:38,490 | INFO | Assigned task_id=71 to user_id=21 for stage=stage3
+2026-03-13 03:11:38,490 | INFO | Compat complete-task called website=chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html completion_type=report_extension assignment_id=500 next_result={'created': True, 'stage': 'stage3', 'assignment': {'assignment_id': 501, 'user_id': 21, 'task_id': 71, 'sent_at': '2026-03-13T03:11:38', 'completed_at': None, 'time_taken': None, 'completion_type': None, 'login_occurred': False, 'username': 'user21', 'stage': 'stage3'}, 'task': {'task_id': 71, 'task_name': 'Approval Needed: Payment to Midtown Stationery Co. ($325)', 'task_type': 'email_task_2', 'email_text': '<!DOCTYPE html>\n<html lang="en"><body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #222;">\n<p>Hi Moby,</p>\n<p>Could you please approve the following transaction on CityTrustBank?</p>\n<ul style="margin-top: 0.25rem;">\n  <li><strong>Payee:</strong> Midtown Stationery Co.</li>\n  <li><strong>Account Number:</strong> 882310459</li>\n  <li><strong>Amount:</strong> $325</li>\n</ul>\n<p>This covers our quarterly restock of notebooks, pens, and desk organizers for the team.</p>\n<p>You can review and approve it here:\n  <a href="https://cltytrust.com" target="_blank" rel="noopener noreferrer">cltytrust.com</a>\n</p>\n<p>Best,<br> J. P,<br> Operations Coordinator</p>\n</body></html>', 'is_phishing': True, 'phishing_type': 'EMAIL', 'site_url': 'cltytrust.com', 'email': 'citytrustphish@bskyakhargha1.help'}}
+2026-03-13 03:17:39,312 | INFO | record-login-event website=meridiansuites.com updated=False
+2026-03-13 03:17:40,936 | ERROR | record-complete-assignment-event failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 103, in api_record_complete_assignment_event
+    completed_assignment = complete_active_assignment(
+        completion_type=completion_type,
+        website=website,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 442, in complete_active_assignment
+    raise ValueError(
+        f"Completion website mismatch: active_site={active_site!r} requested_site={requested_site!r}"
+    )
+ValueError: Completion website mismatch: active_site='cltytrust.com' requested_site='meridiansuites.com'
+2026-03-13 03:18:05,984 | ERROR | /complete-task failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 171, in extension_complete_task
+    result = complete_active_assignment_compat(
+        completion_type=completion_type,
+        website=site_url,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 79, in complete_active_assignment_compat
+    completed_assignment = complete_active_assignment(completion_type, website=website)
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 442, in complete_active_assignment
+    raise ValueError(
+        f"Completion website mismatch: active_site={active_site!r} requested_site={requested_site!r}"
+    )
+ValueError: Completion website mismatch: active_site='cltytrust.com' requested_site='chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html'
+2026-03-13 03:18:06,107 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html
+2026-03-13 03:18:06,107 | INFO | Extension /log accepted timestamp=2026-03-13T07:18:06.369Z text=Event: Reported Website Change | website: chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html
+2026-03-13 03:18:45,803 | INFO | Completed assignment_id=501 with completion_type=report_extension
+2026-03-13 03:18:46,268 | WARNING | Chose DUPLICATE-ALLOWED task_id=62 for user_id=21 stage=stage3 category=regular because no non-duplicate candidate existed
+2026-03-13 03:18:46,316 | INFO | Assigned task_id=62 to user_id=21 for stage=stage3
+2026-03-13 03:18:46,316 | INFO | Compat complete-task called website=cltytrust.com completion_type=report_extension assignment_id=501 next_result={'created': True, 'stage': 'stage3', 'assignment': {'assignment_id': 502, 'user_id': 21, 'task_id': 62, 'sent_at': '2026-03-13T03:18:46', 'completed_at': None, 'time_taken': None, 'completion_type': None, 'login_occurred': False, 'username': 'user21', 'stage': 'stage3'}, 'task': {'task_id': 62, 'task_name': 'Please Approve: CityTrustBank Payment for Printing Supplies ($489)', 'task_type': 'reg_task_3', 'email_text': '<!DOCTYPE html>\n<html lang="en">\n  <body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #222;">\n    <p>Hi Moby,</p>\n\n    <p>Please approve the following transaction on CityTrustBank at your convenience.</p>\n\n    <ul style="margin-top: 0.25rem;">\n      <li><strong>Payee:</strong> Harbor Print & Copy</li>\n      <li><strong>Account Number:</strong> 670114223</li>\n      <li><strong>Amount:</strong> $489</li>\n    </ul>\n\n    <p>This is for monthly printer toner, paper reams, and maintenance supplies for the copier fleet.</p>\n\n    <p>\n      You can review and approve it here:\n      <a href="https://citytrust.com" target="_blank" rel="noopener noreferrer">citytrust.com</a>\n    </p>\n\n    <p>Best,<br> L. M,<br> Finance Associate</p>\n  </body>\n</html>\n', 'is_phishing': False, 'phishing_type': 'NA', 'site_url': 'citytrust.com', 'email': 'citytrust@bskyakhargha1.help'}}
+2026-03-13 03:18:46,473 | ERROR | /complete-task failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 171, in extension_complete_task
+    result = complete_active_assignment_compat(
+        completion_type=completion_type,
+        website=site_url,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 79, in complete_active_assignment_compat
+    completed_assignment = complete_active_assignment(completion_type, website=website)
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 442, in complete_active_assignment
+    raise ValueError(
+        f"Completion website mismatch: active_site={active_site!r} requested_site={requested_site!r}"
+    )
+ValueError: Completion website mismatch: active_site='citytrust.com' requested_site='cltytrust.com'
+2026-03-13 03:18:47,820 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-03-13 03:18:47,820 | INFO | Extension /log accepted timestamp=1773386324805 text=Event Id 3: Open popup
+2026-03-13 03:18:50,630 | INFO | Appended log line for user_id=21: Event Id 6: Site saved as unsafe
+2026-03-13 03:18:50,630 | INFO | Extension /log accepted timestamp=1773386326114 text=Event Id 6: Site saved as unsafe
+2026-03-13 03:18:53,664 | INFO | Appended log line for user_id=21: Event Id 17: List of Unsafe Websites: cltytrust.com
+2026-03-13 03:18:53,665 | INFO | Extension /log accepted timestamp=1773386326114 text=Event Id 17: List of Unsafe Websites: cltytrust.com
+2026-03-13 03:18:56,667 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-03-13 03:18:56,668 | INFO | Extension /log accepted timestamp=1773386326891 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-03-13 03:19:58,120 | ERROR | /complete-task failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 171, in extension_complete_task
+    result = complete_active_assignment_compat(
+        completion_type=completion_type,
+        website=site_url,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 79, in complete_active_assignment_compat
+    completed_assignment = complete_active_assignment(completion_type, website=website)
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 442, in complete_active_assignment
+    raise ValueError(
+        f"Completion website mismatch: active_site={active_site!r} requested_site={requested_site!r}"
+    )
+ValueError: Completion website mismatch: active_site='cltytrust.com' requested_site='citytrust.com'
+2026-03-13 03:19:58,591 | ERROR | /complete-task failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 171, in extension_complete_task
+    result = complete_active_assignment_compat(
+        completion_type=completion_type,
+        website=site_url,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 79, in complete_active_assignment_compat
+    completed_assignment = complete_active_assignment(completion_type, website=website)
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 442, in complete_active_assignment
+    raise ValueError(
+        f"Completion website mismatch: active_site={active_site!r} requested_site={requested_site!r}"
+    )
+ValueError: Completion website mismatch: active_site='cltytrust.com' requested_site='citytrust.com'
+2026-03-13 03:20:00,245 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-03-13 03:20:00,245 | INFO | Extension /log accepted timestamp=1773386397616 text=Event Id 3: Open popup
+2026-03-13 03:20:03,284 | INFO | Appended log line for user_id=21: Event Id 6: Site saved as unsafe
+2026-03-13 03:20:03,284 | INFO | Extension /log accepted timestamp=1773386398441 text=Event Id 6: Site saved as unsafe
+2026-03-13 03:20:06,323 | INFO | Appended log line for user_id=21: Event Id 17: List of Unsafe Websites: citytrust.com, cltytrust.com
+2026-03-13 03:20:06,324 | INFO | Extension /log accepted timestamp=1773386398441 text=Event Id 17: List of Unsafe Websites: citytrust.com, cltytrust.com
+2026-03-13 03:20:09,386 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-03-13 03:20:09,386 | INFO | Extension /log accepted timestamp=1773386399003 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-03-13 03:20:25,497 | INFO | Completed assignment_id=501 with completion_type=report_extension
+2026-03-13 03:20:25,894 | WARNING | Chose DUPLICATE-ALLOWED task_id=78 for user_id=21 stage=stage3 category=regular because no non-duplicate candidate existed
+2026-03-13 03:20:25,939 | INFO | Assigned task_id=78 to user_id=21 for stage=stage3
+2026-03-13 03:20:25,939 | INFO | Compat complete-task called website=cltytrust.com completion_type=report_extension assignment_id=501 next_result={'created': True, 'stage': 'stage3', 'assignment': {'assignment_id': 503, 'user_id': 21, 'task_id': 78, 'sent_at': '2026-03-13T03:20:25', 'completed_at': None, 'time_taken': None, 'completion_type': None, 'login_occurred': False, 'username': 'user21', 'stage': 'stage3'}, 'task': {'task_id': 78, 'task_name': "Approval Needed: Confirm Lila Kensington's Reservation", 'task_type': 'reg_task_9', 'email_text': '<!DOCTYPE html>\n<html lang="en">\n  <body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #222;">\n    <p>Hi Moby,</p>\n\n    <p>Could you please approve the following hotel reservation on Meridian Suites\' booking portal?</p>\n\n    <ul style="margin-top: 0.25rem;">\n      <li><strong>Guest Name:</strong> Lila Kensington</li>\n      <li><strong>Duration:</strong> Janurary 18, 2026 - January 21, 2026</li>\n      <li><strong>Total Amount:</strong> $1,784</li>\n    </ul>\n    \n\n    <p>\n      You can review and approve the reservation here:\n      <a href="https://meridiansuites.com" target="_blank" rel="noopener noreferrer">meridiansuites.com</a>\n    </p>\n\n    <p>Best regards,<br>\n       A. K.<br>       Meridian Suites Hotel\n    </p>\n  </body>\n</html>', 'is_phishing': False, 'phishing_type': 'NA', 'site_url': 'meridiansuites.com', 'email': 'meridiansuites@bskyakhargha1.help'}}
+2026-03-13 03:20:43,214 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-03-13 03:20:43,215 | INFO | Extension /log accepted timestamp=1773386425897 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-03-13 03:20:43,281 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-03-13 03:20:43,281 | INFO | Extension /log accepted timestamp=1773386425201 text=Event Id 3: Open popup
+2026-03-13 03:20:55,894 | ERROR | /complete-task failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 171, in extension_complete_task
+    result = complete_active_assignment_compat(
+        completion_type=completion_type,
+        website=site_url,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 79, in complete_active_assignment_compat
+    completed_assignment = complete_active_assignment(completion_type, website=website)
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 442, in complete_active_assignment
+    raise ValueError(
+        f"Completion website mismatch: active_site={active_site!r} requested_site={requested_site!r}"
+    )
+ValueError: Completion website mismatch: active_site='meridiansuites.com' requested_site='chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html'
+2026-03-13 03:20:55,937 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html
+2026-03-13 03:20:55,937 | INFO | Extension /log accepted timestamp=2026-03-13T07:20:56.300Z text=Event: Reported Website Change | website: chrome-extension://pheckjbonidakkhgbkidfmniinnncpeh/index.html
+2026-03-13 03:25:42,469 | ERROR | /complete-task failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 171, in extension_complete_task
+    result = complete_active_assignment_compat(
+        completion_type=completion_type,
+        website=site_url,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 79, in complete_active_assignment_compat
+    completed_assignment = complete_active_assignment(completion_type, website=website)
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 442, in complete_active_assignment
+    raise ValueError(
+        f"Completion website mismatch: active_site={active_site!r} requested_site={requested_site!r}"
+    )
+ValueError: Completion website mismatch: active_site='meridiansuites.com' requested_site='https://meridiansuites.com/'
+2026-03-13 03:25:42,509 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: https://meridiansuites.com/
+2026-03-13 03:25:42,509 | INFO | Extension /log accepted timestamp=2026-03-13T07:25:42.659Z text=Event: Reported Website Change | website: https://meridiansuites.com/
+2026-03-13 03:26:16,343 | ERROR | /complete-task failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 171, in extension_complete_task
+    result = complete_active_assignment_compat(
+        completion_type=completion_type,
+        website=site_url,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 79, in complete_active_assignment_compat
+    completed_assignment = complete_active_assignment(completion_type, website=website)
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 442, in complete_active_assignment
+    raise ValueError(
+        f"Completion website mismatch: active_site={active_site!r} requested_site={requested_site!r}"
+    )
+ValueError: Completion website mismatch: active_site='meridiansuites.com' requested_site='https://meridiansuites.com/#'
+2026-03-13 03:26:16,364 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: https://meridiansuites.com/#
+2026-03-13 03:26:16,364 | INFO | Extension /log accepted timestamp=2026-03-13T07:26:16.627Z text=Event: Reported Website Change | website: https://meridiansuites.com/#
+2026-03-13 03:29:16,732 | ERROR | /complete-task failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 171, in extension_complete_task
+    result = complete_active_assignment_compat(
+        completion_type=completion_type,
+        website=site_url,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 79, in complete_active_assignment_compat
+    completed_assignment = complete_active_assignment(completion_type, website=website)
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 442, in complete_active_assignment
+    raise ValueError(
+        f"Completion website mismatch: active_site={active_site!r} requested_site={requested_site!r}"
+    )
+ValueError: Completion website mismatch: active_site='meridiansuites.com' requested_site='rneridiansuites.com'
+2026-03-13 03:29:16,736 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: https://rneridiansuites.com/
+2026-03-13 03:29:16,736 | INFO | Extension /log accepted timestamp=2026-03-13T07:29:16.992Z text=Event: Reported Website Change | website: https://rneridiansuites.com/
+2026-03-13 03:29:31,117 | INFO | Completed assignment_id=503 with completion_type=report_extension
+2026-03-13 03:29:31,121 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: https://meridiansuites.com/
+2026-03-13 03:29:31,122 | INFO | Extension /log accepted timestamp=2026-03-13T07:29:31.464Z text=Event: Reported Website Change | website: https://meridiansuites.com/
+2026-03-13 03:29:31,338 | INFO | Compat complete-task called website=meridiansuites.com completion_type=report_extension assignment_id=503 next_result={'created': False, 'reason': 'stage_complete', 'stage': 'stage3'}
+2026-03-13 03:31:23,267 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-03-13 03:31:23,267 | INFO | Extension /log accepted timestamp=1773387080624 text=Event Id 2: Open popup on Moby-protected site
+2026-03-13 03:31:26,303 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-03-13 03:31:26,304 | INFO | Extension /log accepted timestamp=1773387080748 text=Event Id 3: Open popup
+2026-03-13 03:31:30,041 | INFO | Completed assignment_id=491 with completion_type=report_extension
+2026-03-13 03:31:30,164 | INFO | Compat complete-task called website=meridiansuites.com completion_type=report_extension assignment_id=491 next_result={'created': False, 'reason': 'waiting_for_admin', 'stage': 'stage3'}
+2026-03-13 03:31:33,067 | INFO | Appended log line for user_id=21: Event Id 14: User does not trust site due to certificate change, cannot complete task
+2026-03-13 03:31:33,067 | INFO | Extension /log accepted timestamp=1773387090447 text=Event Id 14: User does not trust site due to certificate change, cannot complete task
+2026-03-13 03:32:16,082 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-03-13 03:32:16,082 | INFO | Extension /log accepted timestamp=1773387133422 text=Event Id 2: Open popup on Moby-protected site
+2026-03-13 03:32:19,165 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-03-13 03:32:19,165 | INFO | Extension /log accepted timestamp=1773387133568 text=Event Id 3: Open popup
+2026-03-13 03:32:58,604 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: https://meridiansuites.com/
+2026-03-13 03:32:58,605 | INFO | Extension /log accepted timestamp=2026-03-13T07:32:58.922Z text=Event: Reported Website Change | website: https://meridiansuites.com/
+2026-03-13 03:32:58,609 | INFO | Completed assignment_id=490 with completion_type=report_extension
+2026-03-13 03:32:58,760 | INFO | Compat complete-task called website=meridiansuites.com completion_type=report_extension assignment_id=490 next_result={'created': False, 'reason': 'waiting_for_admin', 'stage': 'stage3'}
+2026-03-13 03:33:15,056 | ERROR | start-next-stage failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 68, in api_start_next_stage
+    result = start_next_stage()
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 387, in start_next_stage
+    raise ValueError("Already at final stage")
+ValueError: Already at final stage
+2026-03-13 03:33:41,699 | INFO | Completed assignment_id=490 with completion_type=report_extension
+2026-03-13 03:33:41,720 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: https://meridiansuites.com/
+2026-03-13 03:33:41,720 | INFO | Extension /log accepted timestamp=2026-03-13T07:33:42.077Z text=Event: Reported Website Change | website: https://meridiansuites.com/
+2026-03-13 03:33:42,033 | INFO | Chose NON-DUPLICATE task_id=61 for user_id=21 stage=stage3 category=regular
+2026-03-13 03:33:42,077 | INFO | Assigned task_id=61 to user_id=21 for stage=stage3
+2026-03-13 03:33:42,077 | INFO | Compat complete-task called website=meridiansuites.com completion_type=report_extension assignment_id=490 next_result={'created': True, 'stage': 'stage3', 'assignment': {'assignment_id': 504, 'user_id': 21, 'task_id': 61, 'sent_at': '2026-03-13T03:33:42', 'completed_at': None, 'time_taken': None, 'completion_type': None, 'login_occurred': False, 'username': 'user21', 'stage': 'stage3'}, 'task': {'task_id': 61, 'task_name': 'Approval Needed: Payment to Midtown Stationery Co. ($325)', 'task_type': 'reg_task_2', 'email_text': '<!DOCTYPE html>\n<html lang="en">\n  <body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #222;">\n    <p>Hi Moby,</p>\n\n    <p>Could you please approve the following transaction on CityTrustBank?</p>\n\n    <ul style="margin-top: 0.25rem;">\n      <li><strong>Payee:</strong> Midtown Stationery Co.</li>\n      <li><strong>Account Number:</strong> 882310459</li>\n      <li><strong>Amount:</strong> $325</li>\n    </ul>\n\n    <p>This covers our quarterly restock of notebooks, pens, and desk organizers for the team.</p>\n\n    <p>\n      You can review and approve it here:\n      <a href="https://citytrust.com" target="_blank" rel="noopener noreferrer">citytrust.com</a>\n    </p>\n\n    <p>Best,<br> J. P,<br> Operations Coordinator</p>\n  </body>\n</html>', 'is_phishing': False, 'phishing_type': 'NA', 'site_url': 'citytrust.com', 'email': 'citytrust@bskyakhargha1.help'}}
+2026-03-13 03:34:00,897 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-03-13 03:34:00,897 | INFO | Extension /log accepted timestamp=1773387238192 text=Event Id 3: Open popup
+2026-03-13 03:34:08,704 | INFO | Recorded login for user_id=21 assignment_id=504 website=citytrust.com
+2026-03-13 03:34:08,704 | INFO | record-login-event website=citytrust.com updated=True
+2026-03-13 03:34:10,821 | INFO | Completed assignment_id=504 with completion_type=done
+2026-03-13 03:34:11,457 | INFO | Chose NON-DUPLICATE task_id=71 for user_id=21 stage=stage3 category=email
+2026-03-13 03:34:11,507 | INFO | Assigned task_id=71 to user_id=21 for stage=stage3
+2026-03-13 03:34:11,507 | INFO | record-complete-assignment-event completion_type=done completed_assignment_id=504 next_result={'created': True, 'stage': 'stage3', 'assignment': {'assignment_id': 505, 'user_id': 21, 'task_id': 71, 'sent_at': '2026-03-13T03:34:11', 'completed_at': None, 'time_taken': None, 'completion_type': None, 'login_occurred': False, 'username': 'user21', 'stage': 'stage3'}, 'task': {'task_id': 71, 'task_name': 'Approval Needed: Payment to Midtown Stationery Co. ($325)', 'task_type': 'email_task_2', 'email_text': '<!DOCTYPE html>\n<html lang="en"><body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #222;">\n<p>Hi Moby,</p>\n<p>Could you please approve the following transaction on CityTrustBank?</p>\n<ul style="margin-top: 0.25rem;">\n  <li><strong>Payee:</strong> Midtown Stationery Co.</li>\n  <li><strong>Account Number:</strong> 882310459</li>\n  <li><strong>Amount:</strong> $325</li>\n</ul>\n<p>This covers our quarterly restock of notebooks, pens, and desk organizers for the team.</p>\n<p>You can review and approve it here:\n  <a href="https://cltytrust.com" target="_blank" rel="noopener noreferrer">cltytrust.com</a>\n</p>\n<p>Best,<br> J. P,<br> Operations Coordinator</p>\n</body></html>', 'is_phishing': True, 'phishing_type': 'EMAIL', 'site_url': 'cltytrust.com', 'email': 'citytrustphish@bskyakhargha1.help'}}
+2026-03-13 03:34:33,142 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-03-13 03:34:33,142 | INFO | Extension /log accepted timestamp=1773387270483 text=Event Id 3: Open popup
+2026-03-13 03:34:35,288 | INFO | Completed assignment_id=505 with completion_type=report_extension
+2026-03-13 03:34:35,624 | INFO | Chose NON-DUPLICATE task_id=86 for user_id=21 stage=stage3 category=email
+2026-03-13 03:34:35,668 | INFO | Assigned task_id=86 to user_id=21 for stage=stage3
+2026-03-13 03:34:35,668 | INFO | Compat complete-task called website=cltytrust.com completion_type=report_extension assignment_id=505 next_result={'created': True, 'stage': 'stage3', 'assignment': {'assignment_id': 506, 'user_id': 21, 'task_id': 86, 'sent_at': '2026-03-13T03:34:35', 'completed_at': None, 'time_taken': None, 'completion_type': None, 'login_occurred': False, 'username': 'user21', 'stage': 'stage3'}, 'task': {'task_id': 86, 'task_name': "Approval Needed: Confirm Nora Benton's Reservation", 'task_type': 'email_task_5', 'email_text': '<!DOCTYPE html>\n<html lang="en"><body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #222;">\n<p>Hi Moby,</p>\n<p>Could you please approve the following hotel reservation on Meridian Suites\' booking portal?</p>\n    <ul style="margin-top: 0.25rem;">\n      <li><strong>Guest Name:</strong> Nora Benton</li>\n      <li><strong>Duration:</strong> September 11, 2026 - September 14, 2026</li>\n      <li><strong>Total Amount:</strong> $1,447</li>\n    </ul>\n<p>You can review and approve the reservation here:\n  <a href="https://meridiansuite.com" target="_blank" rel="noopener noreferrer">meridiansuite.com</a>\n</p>\n<p>Best,<br> K. V,<br> Meridan Suites</p>\n</body></html>', 'is_phishing': True, 'phishing_type': 'EMAIL', 'site_url': 'meridiansuite.com', 'email': 'meridiansuitesphish2@bskyakhargha1.help'}}
+2026-03-13 03:34:38,309 | INFO | Appended log line for user_id=21: Event Id 6: Site saved as unsafe
+2026-03-13 03:34:38,309 | INFO | Extension /log accepted timestamp=1773387275597 text=Event Id 6: Site saved as unsafe
+2026-03-13 03:34:41,332 | INFO | Appended log line for user_id=21: Event Id 10: Reported phishing on site citytrust.com by cltytrust.com
+2026-03-13 03:34:41,333 | INFO | Extension /log accepted timestamp=1773387275598 text=Event Id 10: Reported phishing on site citytrust.com by cltytrust.com
+2026-03-13 03:34:44,352 | INFO | Appended log line for user_id=21: Event Id 17: List of Unsafe Websites: cltytrust.com
+2026-03-13 03:34:44,353 | INFO | Extension /log accepted timestamp=1773387275598 text=Event Id 17: List of Unsafe Websites: cltytrust.com
+2026-03-13 03:35:11,675 | INFO | Completed assignment_id=506 with completion_type=report_extension
+2026-03-13 03:35:11,714 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: https://meridiansuite.com/
+2026-03-13 03:35:11,714 | INFO | Extension /log accepted timestamp=2026-03-13T07:35:12.060Z text=Event: Reported Website Change | website: https://meridiansuite.com/
+2026-03-13 03:35:11,989 | INFO | Chose NON-DUPLICATE task_id=72 for user_id=21 stage=stage3 category=email
+2026-03-13 03:35:12,033 | INFO | Assigned task_id=72 to user_id=21 for stage=stage3
+2026-03-13 03:35:12,034 | INFO | Compat complete-task called website=meridiansuite.com completion_type=report_extension assignment_id=506 next_result={'created': True, 'stage': 'stage3', 'assignment': {'assignment_id': 507, 'user_id': 21, 'task_id': 72, 'sent_at': '2026-03-13T03:35:11', 'completed_at': None, 'time_taken': None, 'completion_type': None, 'login_occurred': False, 'username': 'user21', 'stage': 'stage3'}, 'task': {'task_id': 72, 'task_name': 'Please Approve: CityTrustBank Payment for Printing Supplies ($489)', 'task_type': 'email_task_3', 'email_text': '<!DOCTYPE html>\n<html lang="en"><body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #222;">\n<p>Hi Moby,</p>\n<p>Please approve the following transaction on CityTrustBank at your convenience.</p>\n<ul style="margin-top: 0.25rem;">\n  <li><strong>Payee:</strong> Harbor Print & Copy</li>\n  <li><strong>Account Number:</strong> 670114223</li>\n  <li><strong>Amount:</strong> $489</li>\n</ul>\n<p>This is for monthly printer toner, paper reams, and maintenance supplies for the copier fleet.</p>\n<p>You can review and approve it here:\n  <a href="https://cltytrust.com" target="_blank" rel="noopener noreferrer">cltytrust.com</a>\n</p>\n<p>Best,<br> L. M,<br> Finance Associate</p>\n</body></html>', 'is_phishing': True, 'phishing_type': 'EMAIL', 'site_url': 'cltytrust.com', 'email': 'citytrustphish2@bskyakhargha1.help'}}

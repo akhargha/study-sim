@@ -76,7 +76,7 @@ def complete_active_assignment_compat(completion_type: str, website: str | None 
     Compatibility wrapper for older extension/frontend behavior.
     Uses the same active-assignment completion logic.
     """
-    completed_assignment = complete_active_assignment(completion_type)
+    completed_assignment = complete_active_assignment(completion_type, website=website)
 
     user = get_study_user()
     next_result = assign_next_task_if_possible(user)
@@ -423,7 +423,7 @@ def record_login_if_matches_active(website: str):
     return True
 
 
-def complete_active_assignment(completion_type: str):
+def complete_active_assignment(completion_type: str, website: str | None = None):
     if completion_type not in ALLOWED_COMPLETION_TYPES:
         raise ValueError(f"Invalid completion_type={completion_type}")
 
@@ -433,6 +433,15 @@ def complete_active_assignment(completion_type: str):
         raise ValueError("No active assignment")
 
     assignment = active["assignment"]
+    task = active["task"]
+
+    if website is not None:
+        active_site = (task.get("site_url") or "").strip()
+        requested_site = (website or "").strip()
+        if active_site != requested_site:
+            raise ValueError(
+                f"Completion website mismatch: active_site={active_site!r} requested_site={requested_site!r}"
+            )
 
     sent_at = assignment["sent_at"]
     if not sent_at:

@@ -98,8 +98,12 @@ def create_app():
         try:
             body = request.get_json(force=True) or {}
             completion_type = body.get("completion_type", "")
+            website = body.get("website")
 
-            completed_assignment = complete_active_assignment(completion_type)
+            completed_assignment = complete_active_assignment(
+                completion_type=completion_type,
+                website=website,
+            )
 
             user = get_study_user()
             next_result = assign_next_task_if_possible(user)
