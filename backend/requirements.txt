@@ -1,0 +1,12 @@
+Flask==3.0.2
+flask-cors==4.0.0
+gunicorn==21.2.0
+supabase==2.4.0
+python-dotenv==1.0.1
+httpx==0.25.0
+postgrest==0.16.3
+realtime==1.0.6
+storage3==0.7.4
+supafunc==0.3.3
+gotrue==2.4.2
+websockets==12.0
