@@ -4,25 +4,26 @@ from logging.handlers import RotatingFileHandler
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-from config import LOG_FILE
+from config import LOG_FILE, EXTENSION_ID
 from study_logic import (
     start_study,
     start_next_stage,
     get_current_assignment_payload,
     record_login_if_matches_active,
     complete_active_assignment,
+    complete_active_assignment_compat,
     assign_next_task_if_possible,
     get_study_user,
     get_user_study_state_payload,
+    append_user_log_line,
 )
 from cert_logic import get_certificate_chain_for_hostname
 
 
 def create_app():
     app = Flask(__name__)
-    CORS(app, resources={r"/api/*": {"origins": "*"}})
+    CORS(app, resources={r"/*": {"origins": "*"}})
 
-    # Logging
     formatter = logging.Formatter("%(asctime)s | %(levelname)s | %(message)s")
     file_handler = RotatingFileHandler(LOG_FILE, maxBytes=2_000_000, backupCount=3)
     file_handler.setFormatter(formatter)
@@ -129,6 +130,68 @@ def create_app():
         except Exception as e:
             logger.exception("get-certificate-chain failed")
             return jsonify({"ok": False, "error": str(e)}), 500
+
+    # ---------------------------
+    # Extension compatibility routes
+    # ---------------------------
+
+    @app.post("/log")
+    def extension_log():
+        try:
+            body = request.get_json(force=True) or {}
+            text = body.get("text", "")
+            timestamp = body.get("timestamp")
+            extension_id = request.headers.get("X-Extension-ID", "")
+
+            # In this environment, just log it. You can enforce the header later if you want.
+            if extension_id and extension_id != EXTENSION_ID:
+                logger.warning("Unexpected extension id: %s", extension_id)
+
+            if not isinstance(text, str) or not text.strip():
+                return jsonify({"error": "bad payload"}), 400
+
+            append_user_log_line(text.strip())
+            logger.info("Extension /log accepted timestamp=%s text=%s", timestamp, text)
+            return jsonify({"status": "logged"}), 200
+        except Exception as e:
+            logger.exception("/log failed")
+            return jsonify({"error": str(e)}), 500
+
+    @app.post("/complete-task")
+    def extension_complete_task():
+        try:
+            body = request.get_json(force=True) or {}
+            site_url = body.get("site_url", "")
+            completion_type = body.get("completion_type", "")
+
+            result = complete_active_assignment_compat(
+                completion_type=completion_type,
+                website=site_url,
+            )
+
+            return jsonify({
+                "status": "completed",
+                "next_task": result["next_result"],
+            }), 200
+        except Exception as e:
+            logger.exception("/complete-task failed")
+            return jsonify({"error": str(e)}), 500
+
+    @app.get("/certificate_chain/<path:hostname>")
+    def extension_certificate_chain(hostname):
+        try:
+            chain = get_certificate_chain_for_hostname(hostname)
+            return jsonify({
+                "status": True,
+                "output": chain,
+            }), 200
+        except Exception as e:
+            logger.exception("/certificate_chain failed")
+            return jsonify({
+                "status": False,
+                "output": None,
+                "error": str(e),
+            }), 500
 
     return app
 

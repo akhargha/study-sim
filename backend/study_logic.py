@@ -44,6 +44,55 @@ def get_study_user():
         raise ValueError(f"Study user not found for username={STUDY_USERNAME}")
     return result.data[0]
 
+def append_user_log_line(message: str):
+    """
+    Append a timestamped line to users.log_text for the hardcoded study user.
+    """
+    user = get_study_user()
+    current_result = (
+        supabase.table("users")
+        .select("log_text")
+        .eq("id", user["id"])
+        .limit(1)
+        .execute()
+    )
+
+    current_log = ""
+    if current_result.data:
+        current_log = current_result.data[0].get("log_text") or ""
+
+    stamped_line = f"{now_ny_iso()}  {message}"
+    new_log = f"{current_log}\n{stamped_line}" if current_log.strip() else stamped_line
+
+    supabase.table("users").update({
+        "log_text": new_log
+    }).eq("id", user["id"]).execute()
+
+    logger.info("Appended log line for user_id=%s: %s", user["id"], message)
+
+
+def complete_active_assignment_compat(completion_type: str, website: str | None = None):
+    """
+    Compatibility wrapper for older extension/frontend behavior.
+    Uses the same active-assignment completion logic.
+    """
+    completed_assignment = complete_active_assignment(completion_type)
+
+    user = get_study_user()
+    next_result = assign_next_task_if_possible(user)
+
+    logger.info(
+        "Compat complete-task called website=%s completion_type=%s assignment_id=%s next_result=%s",
+        website,
+        completion_type,
+        completed_assignment["assignment_id"],
+        next_result,
+    )
+
+    return {
+        "completed_assignment": completed_assignment,
+        "next_result": next_result,
+    }
 
 def get_or_create_user_study_state(user_id: int):
     result = (

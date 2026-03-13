@@ -46,7 +46,9 @@ ALL_STUDY_SITES = {
     "cloudjetairway.com",
 }
 
-ALLOWED_COMPLETION_TYPES = {"done", "report_mail", "report_site"}
+ALLOWED_COMPLETION_TYPES = {"done", "report_mail", "report_extension"}
+
+EXTENSION_ID = "2T7jU3Hr4yC8"
 
 # Dummy certificate chains for now
 GOOD_CERT_CHAIN = [
