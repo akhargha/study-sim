@@ -45,10 +45,8 @@ def get_study_user():
         raise ValueError(f"Study user not found for username={STUDY_USERNAME}")
     return result.data[0]
 
+
 def append_user_log_line(message: str):
-    """
-    Append a timestamped line to users.log_text for the hardcoded study user.
-    """
     user = get_study_user()
     current_result = (
         supabase.table("users")
@@ -72,28 +70,9 @@ def append_user_log_line(message: str):
     logger.info("Appended log line for user_id=%s: %s", user["id"], message)
 
 
-def complete_active_assignment_compat(completion_type: str, website: str | None = None):
-    """
-    Compatibility wrapper for older extension/frontend behavior.
-    Uses the same active-assignment completion logic.
-    """
-    completed_assignment = complete_active_assignment(completion_type, website=website)
-
-    user = get_study_user()
-    next_result = assign_next_task_if_possible(user)
-
-    logger.info(
-        "Compat complete-task called website=%s completion_type=%s assignment_id=%s next_result=%s",
-        website,
-        completion_type,
-        completed_assignment["assignment_id"],
-        next_result,
-    )
-
-    return {
-        "completed_assignment": completed_assignment,
-        "next_result": next_result,
-    }
+# ---------------------------------------------------------------------------
+# User study state helpers
+# ---------------------------------------------------------------------------
 
 def get_or_create_user_study_state(user_id: int):
     result = (
@@ -130,6 +109,10 @@ def update_user_study_state(user_id: int, fields: dict):
     return result.data[0] if result.data else None
 
 
+# ---------------------------------------------------------------------------
+# Task classification and querying
+# ---------------------------------------------------------------------------
+
 def classify_task(task: dict) -> str:
     if task.get("is_phishing") is False:
         return "regular"
@@ -151,24 +134,9 @@ def get_all_tasks():
     return result.data or []
 
 
-def get_active_assignment_with_task(user_id: int):
-    result = (
-        supabase.table("assignments")
-        .select("*, tasks(*)")
-        .eq("user_id", user_id)
-        .is_("completed_at", "null")
-        .limit(1)
-        .execute()
-    )
-    if not result.data:
-        return None
-
-    row = result.data[0]
-    return {
-        "assignment": row,
-        "task": row["tasks"],
-    }
-
+# ---------------------------------------------------------------------------
+# Assignment queries
+# ---------------------------------------------------------------------------
 
 def get_all_assignments_with_tasks(user_id: int):
     result = (
@@ -180,10 +148,37 @@ def get_all_assignments_with_tasks(user_id: int):
     return result.data or []
 
 
+def get_incomplete_assignments_for_stage(user_id: int, stage: str):
+    result = (
+        supabase.table("assignments")
+        .select("*, tasks(*)")
+        .eq("user_id", user_id)
+        .eq("stage", stage)
+        .is_("completed_at", "null")
+        .execute()
+    )
+    return result.data or []
+
+
+def get_all_incomplete_assignments(user_id: int):
+    result = (
+        supabase.table("assignments")
+        .select("*, tasks(*)")
+        .eq("user_id", user_id)
+        .is_("completed_at", "null")
+        .execute()
+    )
+    return result.data or []
+
+
 def get_used_task_ids(user_id: int):
     rows = get_all_assignments_with_tasks(user_id)
     return {row["task_id"] for row in rows if row.get("task_id") is not None}
 
+
+# ---------------------------------------------------------------------------
+# Stage completion checks
+# ---------------------------------------------------------------------------
 
 def get_completed_counts_for_stage(user_id: int, stage: str):
     rows = get_all_assignments_with_tasks(user_id)
@@ -207,82 +202,76 @@ def is_stage_complete(user_id: int, stage: str):
     return all(counts[k] >= quota[k] for k in quota)
 
 
-def get_remaining_categories_for_stage(user_id: int, stage: str):
-    counts = get_completed_counts_for_stage(user_id, stage)
+# ---------------------------------------------------------------------------
+# Batch task selection for a stage
+# ---------------------------------------------------------------------------
+
+def select_tasks_for_stage(user_id: int, stage: str):
+    """Pick all tasks needed for a stage at once, respecting quotas and blocklists."""
     quota = STAGE_QUOTAS[stage]
-    return [k for k in quota if counts[k] < quota[k]]
-
-
-def get_candidate_tasks(user_id: int, stage: str, category: str, allow_duplicates: bool = False):
-    blocked = set(STAGE_BLOCKLISTS[stage])
     used_task_ids = get_used_task_ids(user_id)
     all_tasks = get_all_tasks()
+    blocked = set(STAGE_BLOCKLISTS[stage])
 
-    candidates = []
+    newly_selected_ids: set[int] = set()
+    selected_tasks: list[dict] = []
 
-    for task in all_tasks:
-        if not allow_duplicates and task["task_id"] in used_task_ids:
+    for category, needed_count in quota.items():
+        if needed_count <= 0:
             continue
 
-        task_category = classify_task(task)
-        if task_category != category:
-            continue
-
-        site_url = task.get("site_url") or ""
-
-        if category == "cert":
-            if site_url not in blocked:
+        candidates = []
+        for task in all_tasks:
+            if classify_task(task) != category:
                 continue
+            site_url = task.get("site_url") or ""
+            if category == "cert":
+                if site_url not in blocked:
+                    continue
+            else:
+                if site_url in blocked:
+                    continue
+            candidates.append(task)
+
+        non_dup = [
+            t for t in candidates
+            if t["task_id"] not in used_task_ids
+            and t["task_id"] not in newly_selected_ids
+        ]
+
+        chosen: list[dict] = []
+
+        if len(non_dup) >= needed_count:
+            chosen = random.sample(non_dup, needed_count)
         else:
-            if site_url in blocked:
-                continue
+            chosen = list(non_dup)
+            remaining = needed_count - len(chosen)
+            chosen_ids = {t["task_id"] for t in chosen}
+            dup_pool = [t for t in candidates if t["task_id"] not in chosen_ids]
+            if len(dup_pool) >= remaining:
+                chosen.extend(random.sample(dup_pool, remaining))
+            elif dup_pool:
+                chosen.extend(dup_pool)
+                still_needed = remaining - len(dup_pool)
+                if still_needed > 0 and candidates:
+                    chosen.extend(random.choices(candidates, k=still_needed))
+            elif candidates:
+                chosen.extend(random.choices(candidates, k=remaining))
+            else:
+                logger.warning(
+                    "No candidates at all for stage=%s category=%s", stage, category
+                )
 
-        candidates.append(task)
+        for t in chosen:
+            newly_selected_ids.add(t["task_id"])
+        selected_tasks.extend(chosen)
 
-    return candidates
+    return selected_tasks
 
 
-def choose_next_task(user_id: int, stage: str):
-    remaining_categories = get_remaining_categories_for_stage(user_id, stage)
-    if not remaining_categories:
-        return None
-
-    random.shuffle(remaining_categories)
-
-    # First pass: avoid duplicates
-    for category in remaining_categories:
-        candidates = get_candidate_tasks(
-            user_id=user_id,
-            stage=stage,
-            category=category,
-            allow_duplicates=False,
-        )
-        if candidates:
-            task = random.choice(candidates)
-            logger.info(
-                "Chose NON-DUPLICATE task_id=%s for user_id=%s stage=%s category=%s",
-                task["task_id"], user_id, stage, category
-            )
-            return task
-
-    # Second pass: allow duplicates only if necessary
-    for category in remaining_categories:
-        candidates = get_candidate_tasks(
-            user_id=user_id,
-            stage=stage,
-            category=category,
-            allow_duplicates=True,
-        )
-        if candidates:
-            task = random.choice(candidates)
-            logger.warning(
-                "Chose DUPLICATE-ALLOWED task_id=%s for user_id=%s stage=%s category=%s because no non-duplicate candidate existed",
-                task["task_id"], user_id, stage, category
-            )
-            return task
-
-    raise ValueError(f"No candidate tasks available at all for user_id={user_id}, stage={stage}")
-
+# ---------------------------------------------------------------------------
+# Assignment creation
+# ---------------------------------------------------------------------------
 
 def create_assignment(user: dict, task: dict, stage: str):
     result = (
@@ -303,85 +292,58 @@ def create_assignment(user: dict, task: dict, stage: str):
     return result.data[0]
 
 
-def assign_next_task_if_possible(user: dict):
-    active = get_active_assignment_with_task(user["id"])
-    if active:
-        return {
-            "created": False,
-            "reason": "active_assignment_exists",
-            "assignment": active["assignment"],
-            "task": active["task"],
-        }
+def assign_entire_stage(user: dict, stage: str):
+    """
+    Select all tasks for a stage, create assignment rows, and send all emails.
+    Skips if there are already incomplete assignments for this stage.
+    Returns list of {"assignment": ..., "task": ...} dicts.
+    """
+    existing = get_incomplete_assignments_for_stage(user["id"], stage)
+    if existing:
+        logger.info(
+            "Stage %s already has %d incomplete assignments — skipping batch assign",
+            stage, len(existing),
+        )
+        return []
 
-    state = get_or_create_user_study_state(user["id"])
-    stage = state["current_stage"]
+    tasks = select_tasks_for_stage(user["id"], stage)
+    created: list[dict] = []
 
-    if state["waiting_for_admin"]:
-        return {
-            "created": False,
-            "reason": "waiting_for_admin",
-            "stage": stage,
-        }
+    for task in tasks:
+        assignment = create_assignment(user, task, stage)
+        created.append({"assignment": assignment, "task": task})
 
-    if is_stage_complete(user["id"], stage):
-        update_user_study_state(user["id"], {
-            "waiting_for_admin": True,
-            "stage_completed_at": now_ny_iso(),
-        })
-
+    for item in created:
+        assignment = item["assignment"]
+        task = item["task"]
         try:
-            email_result = send_stage_complete_email(stage)
-            logger.info("Stage complete email sent: %s", email_result)
-        except Exception as e:
-            logger.exception("Failed to send stage complete email for stage=%s", stage)
+            email_result = send_task_email(task, assignment)
+            logger.info(
+                "Task email sent for assignment_id=%s: %s",
+                assignment["assignment_id"], email_result,
+            )
+        except Exception:
+            logger.exception(
+                "Failed to send task email for assignment_id=%s task_id=%s",
+                assignment["assignment_id"], task["task_id"],
+            )
 
-        return {
-            "created": False,
-            "reason": "stage_complete",
-            "stage": stage,
-        }
+    logger.info(
+        "Assigned %d tasks for stage=%s user_id=%s",
+        len(created), stage, user["id"],
+    )
+    return created
 
-    task = choose_next_task(user["id"], stage)
-    if not task:
-        update_user_study_state(user["id"], {
-            "waiting_for_admin": True,
-            "stage_completed_at": now_ny_iso(),
-        })
 
-        try:
-            email_result = send_stage_complete_email(stage)
-            logger.info("Stage complete email sent: %s", email_result)
-        except Exception as e:
-            logger.exception("Failed to send stage complete email for stage=%s", stage)
-
-        return {
-            "created": False,
-            "reason": "stage_complete",
-            "stage": stage,
-        }
-
-    assignment = create_assignment(user, task, stage)
-    logger.info("Assigned task_id=%s to user_id=%s for stage=%s", task["task_id"], user["id"], stage)
-
-    try:
-        email_result = send_task_email(task)
-        logger.info("Task email result: %s", email_result)
-    except Exception as e:
-        logger.exception("Failed to send task email for task_id=%s", task["task_id"])
-
-    return {
-        "created": True,
-        "stage": stage,
-        "assignment": assignment,
-        "task": task,
-    }
-
+# ---------------------------------------------------------------------------
+# Admin-triggered stage transitions
+# ---------------------------------------------------------------------------
 
 def start_study():
     user = get_study_user()
     state = get_or_create_user_study_state(user["id"])
 
-    update_fields = {}
+    update_fields: dict = {}
     if state["current_stage"] != "tutorial":
         update_fields["current_stage"] = "tutorial"
     if state["waiting_for_admin"]:
@@ -392,7 +354,14 @@ def start_study():
     if update_fields:
         update_user_study_state(user["id"], update_fields)
 
-    return assign_next_task_if_possible(user)
+    created = assign_entire_stage(user, "tutorial")
+    return {
+        "stage": "tutorial",
+        "assignments_created": len(created),
+        "assignment_ids": [
+            item["assignment"]["assignment_id"] for item in created
+        ],
+    }
 
 
 def start_next_stage():
@@ -416,45 +385,119 @@ def start_next_stage():
         "waiting_for_admin": False,
     })
 
-    return assign_next_task_if_possible(user)
+    created = assign_entire_stage(user, next_stage)
+    return {
+        "stage": next_stage,
+        "assignments_created": len(created),
+        "assignment_ids": [
+            item["assignment"]["assignment_id"] for item in created
+        ],
+    }
 
 
-def record_login_if_matches_active(website: str):
+# ---------------------------------------------------------------------------
+# Assignment-ID–based operations (the new primary interface)
+# ---------------------------------------------------------------------------
+
+def get_assignment_payload_by_id(assignment_id: int):
+    """Return assignment+task details for a specific assignment, or None if invalid/completed."""
     user = get_study_user()
-    active = get_active_assignment_with_task(user["id"])
-    if not active:
+
+    result = (
+        supabase.table("assignments")
+        .select("*, tasks(*)")
+        .eq("assignment_id", assignment_id)
+        .eq("user_id", user["id"])
+        .limit(1)
+        .execute()
+    )
+
+    if not result.data:
+        return None
+
+    row = result.data[0]
+    task = row["tasks"]
+
+    if row.get("completed_at"):
+        return None
+
+    return {
+        "assignment_id": row["assignment_id"],
+        "task_id": task["task_id"],
+        "task_name": task.get("task_name"),
+        "task_type": task.get("task_type"),
+        "site_url": task.get("site_url"),
+        "email_text": task.get("email_text"),
+        "email": task.get("email"),
+        "is_phishing": task.get("is_phishing"),
+        "phishing_type": task.get("phishing_type"),
+        "stage": row.get("stage"),
+        "login_occurred": row.get("login_occurred"),
+        "sent_at": row.get("sent_at"),
+    }
+
+
+def record_login_for_assignment(assignment_id: int, website: str):
+    """Mark login_occurred for a specific incomplete assignment if the site matches."""
+    user = get_study_user()
+
+    result = (
+        supabase.table("assignments")
+        .select("*, tasks(*)")
+        .eq("assignment_id", assignment_id)
+        .eq("user_id", user["id"])
+        .is_("completed_at", "null")
+        .limit(1)
+        .execute()
+    )
+
+    if not result.data:
         return False
 
-    assignment = active["assignment"]
-    task = active["task"]
+    row = result.data[0]
+    task = row["tasks"]
 
     if (task.get("site_url") or "") != website:
         return False
 
     supabase.table("assignments").update({
         "login_occurred": True
-    }).eq("assignment_id", assignment["assignment_id"]).execute()
+    }).eq("assignment_id", assignment_id).execute()
 
     logger.info(
-        "Recorded login for user_id=%s assignment_id=%s website=%s",
-        user["id"],
-        assignment["assignment_id"],
-        website,
+        "Recorded login for assignment_id=%s website=%s",
+        assignment_id, website,
     )
     return True
 
 
-def complete_active_assignment(completion_type: str, website: str | None = None):
+def complete_assignment_by_id(assignment_id: int, completion_type: str, website: str | None = None):
+    """
+    Complete a specific assignment by its ID.
+    After completion, check if the entire stage is now done.
+    """
     if completion_type not in ALLOWED_COMPLETION_TYPES:
         raise ValueError(f"Invalid completion_type={completion_type}")
 
     user = get_study_user()
-    active = get_active_assignment_with_task(user["id"])
-    if not active:
-        raise ValueError("No active assignment")
 
-    assignment = active["assignment"]
-    task = active["task"]
+    result = (
+        supabase.table("assignments")
+        .select("*, tasks(*)")
+        .eq("assignment_id", assignment_id)
+        .eq("user_id", user["id"])
+        .limit(1)
+        .execute()
+    )
+
+    if not result.data:
+        raise ValueError(f"Assignment {assignment_id} not found for study user")
+
+    row = result.data[0]
+    task = row["tasks"]
+
+    if row.get("completed_at"):
+        raise ValueError(f"Assignment {assignment_id} is already completed")
 
     if website is not None:
         active_site = (task.get("site_url") or "").strip()
@@ -464,9 +507,9 @@ def complete_active_assignment(completion_type: str, website: str | None = None)
                 f"Completion website mismatch: active_site={active_site!r} requested_site={requested_site!r}"
             )
 
-    sent_at = assignment["sent_at"]
+    sent_at = row["sent_at"]
     if not sent_at:
-        raise ValueError("Active assignment is missing sent_at")
+        raise ValueError("Assignment is missing sent_at")
 
     sent_dt = datetime.fromisoformat(sent_at).replace(tzinfo=NY_TZ)
     completed_dt = now_ny()
@@ -479,43 +522,93 @@ def complete_active_assignment(completion_type: str, website: str | None = None)
             "time_taken": seconds_to_hms(elapsed_seconds),
             "completion_type": completion_type,
         })
-        .eq("assignment_id", assignment["assignment_id"])
+        .eq("assignment_id", assignment_id)
         .execute()
     )
 
     logger.info(
         "Completed assignment_id=%s with completion_type=%s",
-        assignment["assignment_id"],
-        completion_type,
+        assignment_id, completion_type,
     )
+
+    stage = row.get("stage")
+    if stage and is_stage_complete(user["id"], stage):
+        state = get_or_create_user_study_state(user["id"])
+        if not state.get("waiting_for_admin"):
+            update_user_study_state(user["id"], {
+                "waiting_for_admin": True,
+                "stage_completed_at": now_ny_iso(),
+            })
+            try:
+                email_result = send_stage_complete_email(stage)
+                logger.info("Stage complete email sent: %s", email_result)
+            except Exception:
+                logger.exception("Failed to send stage complete email for stage=%s", stage)
 
     return updated.data[0]
 
 
-def get_current_assignment_payload():
-    user = get_study_user()
-    active = get_active_assignment_with_task(user["id"])
+# ---------------------------------------------------------------------------
+# Legacy compat: site-based active-assignment operations
+# ---------------------------------------------------------------------------
 
-    if not active:
+def get_active_assignment_with_task(user_id: int):
+    """Legacy: returns the first incomplete assignment (used by cert_logic compat)."""
+    result = (
+        supabase.table("assignments")
+        .select("*, tasks(*)")
+        .eq("user_id", user_id)
+        .is_("completed_at", "null")
+        .limit(1)
+        .execute()
+    )
+    if not result.data:
         return None
 
-    assignment = active["assignment"]
-    task = active["task"]
-
+    row = result.data[0]
     return {
-        "assignment_id": assignment["assignment_id"],
-        "task_id": task["task_id"],
-        "task_name": task.get("task_name"),
-        "task_type": task.get("task_type"),
-        "site_url": task.get("site_url"),
-        "email_text": task.get("email_text"),
-        "email": task.get("email"),
-        "is_phishing": task.get("is_phishing"),
-        "phishing_type": task.get("phishing_type"),
-        "stage": assignment.get("stage"),
-        "login_occurred": assignment.get("login_occurred"),
-        "sent_at": assignment.get("sent_at"),
+        "assignment": row,
+        "task": row["tasks"],
     }
+
+
+def complete_active_assignment_compat(
+    completion_type: str,
+    website: str | None = None,
+    assignment_id: int | None = None,
+):
+    """
+    Backward-compat wrapper used by /complete-task.
+    Prefers assignment_id if given; falls back to matching by website.
+    """
+    if assignment_id:
+        completed = complete_assignment_by_id(assignment_id, completion_type, website)
+    else:
+        if completion_type not in ALLOWED_COMPLETION_TYPES:
+            raise ValueError(f"Invalid completion_type={completion_type}")
+
+        user = get_study_user()
+        rows = get_all_incomplete_assignments(user["id"])
+
+        if not rows:
+            raise ValueError("No active assignment")
+
+        target = None
+        if website:
+            for row in rows:
+                task = row["tasks"]
+                if (task.get("site_url") or "").strip() == website.strip():
+                    target = row
+                    break
+
+        if not target:
+            target = rows[0]
+
+        completed = complete_assignment_by_id(
+            target["assignment_id"], completion_type, website
+        )
+
+    return {"completed_assignment": completed}
 
 
 def get_user_study_state_payload():

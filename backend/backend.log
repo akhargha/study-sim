@@ -938,3 +938,62 @@ ValueError: Already at final stage
 2026-03-29 11:32:24,740 | INFO | record-login-event website=meridiansuites.com updated=False
 2026-03-29 11:32:36,042 | INFO | record-login-event website=cltytrust.com updated=False
 2026-04-03 01:22:01,316 | INFO | record-login-event website=citytrustbanking.com updated=False
+2026-04-03 02:07:01,959 | INFO | record-login-event website=citytrustbanking.com updated=False
+2026-04-03 02:07:23,866 | INFO | Recorded login for user_id=21 assignment_id=544 website=citytrust.com
+2026-04-03 02:07:23,867 | INFO | record-login-event website=citytrust.com updated=True
+2026-04-03 02:08:16,465 | INFO | Recorded login for user_id=21 assignment_id=544 website=citytrust.com
+2026-04-03 02:08:16,465 | INFO | record-login-event website=citytrust.com updated=True
+2026-04-03 02:12:39,741 | INFO | Chose NON-DUPLICATE task_id=121 for user_id=21 stage=tutorial category=url
+2026-04-03 02:12:39,799 | INFO | Assigned task_id=121 to user_id=21 for stage=tutorial
+2026-04-03 02:12:40,157 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Payment to Union Copy Center ($566)
+2026-04-03 02:12:40,157 | INFO | Task email result: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Payment to Union Copy Center ($566)'}
+2026-04-03 02:12:40,158 | INFO | start-study result={'created': True, 'stage': 'tutorial', 'assignment': {'assignment_id': 545, 'user_id': 21, 'task_id': 121, 'sent_at': '2026-04-03T02:12:39', 'completed_at': None, 'time_taken': None, 'completion_type': None, 'login_occurred': False, 'username': 'user21', 'stage': 'tutorial'}, 'task': {'task_id': 121, 'task_name': 'Approval Needed: Payment to Union Copy Center ($566)', 'task_type': 'spof_task_14', 'email_text': '<!DOCTYPE html>\n<html lang="en">\n  <body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #222;">\n    <p>Hi Moby,</p>\n\n    <p>Please approve the following transaction on CityTrustBank at your convenience.</p>\n\n    <ul style="margin-top: 0.25rem;">\n      <li><strong>Payee:</strong> Union Copy Center</li>\n      <li><strong>Account Number:</strong> 715308264</li>\n      <li><strong>Amount:</strong> $566</li>\n    </ul>\n\n    <p>This is for January 2027 print production of client packets and internal meeting agendas.</p>\n\n    <p>\n      You can review and approve it here:\n      <a href="https://citytrustbanking.com" target="_blank" rel="noopener noreferrer">citytrustbanking.com</a>\n    </p>\n\n    <p>Best,<br> L. M,<br> Finance Associate</p>\n  </body>\n</html>', 'is_phishing': True, 'phishing_type': 'URL', 'site_url': 'citytrustbanking.com', 'email': 'citytrust@bskyakhargha1.help'}}
+2026-04-03 02:15:19,279 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Payment to Park Row IT Procurement ($1,148)
+2026-04-03 02:15:19,279 | INFO | Task email sent for assignment_id=546: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Payment to Park Row IT Procurement ($1,148)'}
+2026-04-03 02:15:19,418 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Flight for Marcus Hale
+2026-04-03 02:15:19,418 | INFO | Task email sent for assignment_id=547: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Confirm Flight for Marcus Hale'}
+2026-04-03 02:15:19,516 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Hannah Cole's Reservation
+2026-04-03 02:15:19,517 | INFO | Task email sent for assignment_id=548: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': "Approval Needed: Confirm Hannah Cole's Reservation"}
+2026-04-03 02:15:19,687 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Flight for Ryan Foster
+2026-04-03 02:15:19,687 | INFO | Task email sent for assignment_id=549: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Confirm Flight for Ryan Foster'}
+2026-04-03 02:15:19,806 | INFO | SendGrid send status=202 from=citytrustphish@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Payment to Apex Tech Supplies ($672)
+2026-04-03 02:15:19,806 | INFO | Task email sent for assignment_id=550: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Payment to Apex Tech Supplies ($672)'}
+2026-04-03 02:15:19,806 | INFO | Assigned 5 tasks for stage=tutorial user_id=21
+2026-04-03 02:15:19,806 | INFO | start-study result={'stage': 'tutorial', 'assignments_created': 5, 'assignment_ids': [546, 547, 548, 549, 550]}
+2026-04-03 02:16:09,585 | INFO | record-login-event assignment_id=550 website=citytrust.com updated=False
+2026-04-03 02:16:28,250 | INFO | Recorded login for assignment_id=546 website=citytrust.com
+2026-04-03 02:16:28,250 | INFO | record-login-event assignment_id=546 website=citytrust.com updated=True
+2026-04-03 02:17:18,351 | INFO | record-login-event website=cl0udjetairways.com updated=False
+2026-04-03 02:17:27,187 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-03 02:17:27,188 | INFO | Extension /log accepted timestamp=1775197047109 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-03 02:17:32,447 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 02:17:32,447 | INFO | Extension /log accepted timestamp=1775197049173 text=Event Id 3: Open popup
+2026-04-03 02:17:35,804 | INFO | Recorded login for assignment_id=550 website=citytrustbank.com
+2026-04-03 02:17:35,805 | INFO | record-login-event assignment_id=550 website=citytrustbank.com updated=True
+2026-04-03 02:17:42,157 | INFO | Recorded login for assignment_id=548 website=meridiansuites.com
+2026-04-03 02:17:42,158 | INFO | record-login-event assignment_id=548 website=meridiansuites.com updated=True
+2026-04-03 02:20:02,650 | INFO | Recorded login for assignment_id=549 website=cl0udjetairways.com
+2026-04-03 02:20:02,650 | INFO | record-login-event assignment_id=549 website=cl0udjetairways.com updated=True
+2026-04-03 02:20:13,003 | INFO | Recorded login for assignment_id=549 website=cl0udjetairways.com
+2026-04-03 02:20:13,003 | INFO | record-login-event assignment_id=549 website=cl0udjetairways.com updated=True
+2026-04-03 02:20:19,546 | INFO | Recorded login for assignment_id=549 website=cl0udjetairways.com
+2026-04-03 02:20:19,546 | INFO | record-login-event assignment_id=549 website=cl0udjetairways.com updated=True
+2026-04-03 02:20:38,721 | INFO | Recorded login for assignment_id=549 website=cl0udjetairways.com
+2026-04-03 02:20:38,721 | INFO | record-login-event assignment_id=549 website=cl0udjetairways.com updated=True
+2026-04-03 02:21:32,241 | INFO | Recorded login for assignment_id=549 website=cl0udjetairways.com
+2026-04-03 02:21:32,241 | INFO | record-login-event assignment_id=549 website=cl0udjetairways.com updated=True
+2026-04-03 02:22:19,653 | INFO | record-login-event website=cl0udjetairways.com updated=False
+2026-04-03 02:25:56,287 | INFO | Recorded login for assignment_id=549 website=cl0udjetairways.com
+2026-04-03 02:25:56,287 | INFO | record-login-event assignment_id=549 website=cl0udjetairways.com updated=True
+2026-04-03 02:26:03,130 | INFO | Recorded login for assignment_id=549 website=cl0udjetairways.com
+2026-04-03 02:26:03,131 | INFO | record-login-event assignment_id=549 website=cl0udjetairways.com updated=True
+2026-04-03 02:26:16,686 | INFO | Recorded login for assignment_id=549 website=cl0udjetairways.com
+2026-04-03 02:26:16,686 | INFO | record-login-event assignment_id=549 website=cl0udjetairways.com updated=True
+2026-04-03 02:26:23,988 | INFO | record-login-event website=cl0udjetairways.com updated=False
+2026-04-03 02:26:35,476 | INFO | record-login-event website=cl0udjetairways.com updated=False
+2026-04-03 02:29:41,112 | INFO | Recorded login for assignment_id=549 website=cl0udjetairways.com
+2026-04-03 02:29:41,113 | INFO | record-login-event assignment_id=549 website=cl0udjetairways.com updated=True
+2026-04-03 02:30:05,047 | INFO | Recorded login for assignment_id=548 website=meridiansuites.com
+2026-04-03 02:30:05,048 | INFO | record-login-event assignment_id=548 website=meridiansuites.com updated=True
+2026-04-03 02:30:15,172 | INFO | Recorded login for assignment_id=549 website=cl0udjetairways.com
+2026-04-03 02:30:15,172 | INFO | record-login-event assignment_id=549 website=cl0udjetairways.com updated=True
