@@ -15,7 +15,7 @@ FRONTEND_LOGIN_PASSWORD = os.getenv("FRONTEND_LOGIN_PASSWORD", "user")
 
 LOG_FILE = os.getenv("LOG_FILE", "/home/gabriel/study-sim/backend/backend.log")
 
-EMAIL_TO = os.getenv("EMAIL_TO", "kharghariaanupam07@gmail.com")
+EMAIL_TO = os.getenv("EMAIL_TO", "moby02@tutamail.com")
 DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL", "moby@bskyakhargha1.help")
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY", "")
 
