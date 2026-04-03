@@ -921,3 +921,20 @@ ValueError: Already at final stage
 2026-03-13 04:50:43,611 | INFO | Compat complete-task called website=rneridiansuites.com completion_type=report_extension assignment_id=542 next_result={'created': True, 'stage': 'stage3', 'assignment': {'assignment_id': 543, 'user_id': 21, 'task_id': 65, 'sent_at': '2026-03-13T04:50:43', 'completed_at': None, 'time_taken': None, 'completion_type': None, 'login_occurred': False, 'username': 'user21', 'stage': 'stage3'}, 'task': {'task_id': 65, 'task_name': 'Approval Needed: CityTrustBank Payment to Apex Tech Supplies ($615)', 'task_type': 'reg_task_6', 'email_text': '<!DOCTYPE html>\n<html lang="en">\n  <body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #222;">\n    <p>Hi Moby,</p>\n\n    <p>Requesting approval for the following CityTrustBank payment.</p>\n\n    <ul style="margin-top: 0.25rem;">\n      <li><strong>Payee:</strong> Apex Tech Supplies</li>\n      <li><strong>Account Number:</strong> 734501978</li>\n      <li><strong>Amount:</strong> $615</li>\n    </ul>\n\n    <p>This covers HDMI cables, surge protectors, wireless mice, and USB hubs for the new desks.</p>\n\n    <p>\n      You can review and approve it here:\n      <a href="https://citytrust.com" target="_blank" rel="noopener noreferrer">citytrust.com</a>\n    </p>\n\n    <p>Best,<br> K. V,<br> Office Manager</p>\n  </body>\n</html>', 'is_phishing': False, 'phishing_type': 'NA', 'site_url': 'citytrust.com', 'email': 'citytrust@bskyakhargha1.help'}}
 2026-03-13 04:50:45,528 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
 2026-03-13 04:50:45,528 | INFO | Extension /log accepted timestamp=1773391843575 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-03-29 11:31:51,265 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-03-29 11:31:51,265 | INFO | Extension /log accepted timestamp=1774798341981 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-03-29 11:31:59,042 | INFO | Recorded login for user_id=21 assignment_id=543 website=citytrust.com
+2026-03-29 11:31:59,042 | INFO | record-login-event website=citytrust.com updated=True
+2026-03-29 11:32:09,067 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-03-29 11:32:09,068 | INFO | Extension /log accepted timestamp=1774798359965 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-03-29 11:32:14,059 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-03-29 11:32:14,060 | INFO | Extension /log accepted timestamp=1774798361929 text=Event Id 2: Open popup on Moby-protected site
+2026-03-29 11:32:14,813 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-03-29 11:32:14,814 | INFO | Extension /log accepted timestamp=1774798365671 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-03-29 11:32:17,086 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-03-29 11:32:17,086 | INFO | Extension /log accepted timestamp=1774798367886 text=Event Id 2: Open popup on Moby-protected site
+2026-03-29 11:32:20,349 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-03-29 11:32:20,349 | INFO | Extension /log accepted timestamp=1774798368004 text=Event Id 3: Open popup
+2026-03-29 11:32:24,740 | INFO | record-login-event website=meridiansuites.com updated=False
+2026-03-29 11:32:36,042 | INFO | record-login-event website=cltytrust.com updated=False
+2026-04-03 01:22:01,316 | INFO | record-login-event website=citytrustbanking.com updated=False

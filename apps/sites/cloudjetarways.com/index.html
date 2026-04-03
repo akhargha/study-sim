@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CloudJet Airways</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../shared/styles.css" />
+        <style>
+          body {
+            --bg-start: #ffffff;
+        --bg-end: #f5f5f5;
+        --text: #424242;
+        --header-start: #d32f2f;
+        --header-end: #b71c1c;
+        --card-header-start: #b71c1c;
+        --card-header-end: #a01818;
+        --card-border-accent: #e53935;
+        --link: #d32f2f;
+        --input-border: #e0e0e0;
+        --input-bg: #fafafa;
+        --focus: #d32f2f;
+        --primary-start: #e53935;
+        --primary-end: #d32f2f;
+        --primary-hover-start: #d32f2f;
+        --primary-hover-end: #b71c1c;
+        --primary-shadow: rgba(211, 47, 47, 0.3);
+        --success-start: #616161;
+        --success-end: #424242;
+        --success-hover-start: #424242;
+        --success-hover-end: #212121;
+        --success-shadow: rgba(66, 66, 66, 0.3);
+        --alert-success-bg: #f1f8e9;
+        --alert-success-border: #c8e6c9;
+        --alert-success-text: #33691e;
+        --details-bg: #fafafa;
+        --details-border: #eeeeee;
+        --details-row-border: #eeeeee;
+        --amount: #d32f2f;
+        --footer-border: #eeeeee;
+        --label: #6b7280;
+          }
+        </style>
+      </head>
+      <body>
+        <header>
+          <div class="header-content">
+            <div class="logo">CloudJet Airways</div>
+          </div>
+        </header>
+
+        <main>
+          <div class="breadcrumb">
+            <a href="#">Dashboard</a> › <a href="#">Pending Approvals</a> › Payment Authorization
+          </div>
+
+          <div id="loginCard" class="card">
+            <div class="card-header">
+              <h2>Login with Username and Password</h2>
+            </div>
+
+            <div class="card-body">
+              <form id="loginForm" onsubmit="return false;">
+                <div class="form-group">
+                  <label for="acc">Username</label>
+                  <input id="acc" class="form-control" placeholder="Enter your username" autocomplete="username" />
+                </div>
+
+                <div class="form-group">
+                  <label for="pwd">Password</label>
+                  <input id="pwd" type="password" class="form-control" placeholder="Enter your password" autocomplete="current-password" />
+                </div>
+
+                <button id="loginBtn" type="button" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+                  <span class="loading-spinner" id="loginSpinner"></span>
+                  Login
+                </button>
+
+                <div id="loginErr" class="alert alert-danger" style="display: none;"></div>
+              </form>
+            </div>
+          </div>
+
+          <div id="taskCard" class="card" style="display: none;">
+            <div class="card-header">
+              <h2>Pending Payment Approval</h2>
+            </div>
+            <div class="card-body">
+              <div class="alert alert-success">
+                <strong>Authentication Successful</strong> - You are now authorized to approve business payments.
+              </div>
+
+              <p class="task-intro">
+                A <strong>business payment</strong> requires your approval before processing. Please review the payment details below and approve if accurate.
+              </p>
+
+              <div class="transaction-details">
+                <ul class="transaction-list">
+                  <li>
+                <span class="transaction-label">Aircraft ID:</span>
+                <span id="payeeValue" class="transaction-value "></span>
+              </li>
+              <li>
+                <span class="transaction-label">Service Provider:</span>
+                <span id="accountValue" class="transaction-value "></span>
+              </li>
+              <li>
+                <span class="transaction-label">Estimated Cost:</span>
+                <span id="amountValue" class="transaction-value amount-highlight"></span>
+              </li>
+                </ul>
+              </div>
+
+              <button id="approveBtn" class="btn btn-success" style="width: 100%; font-size: 18px; padding: 16px;">
+                <span class="loading-spinner" id="approveSpinner"></span>
+                Approve & Process Payment
+              </button>
+            </div>
+          </div>
+
+          <div id="doneCard" class="card" style="display: none;">
+            <div class="card-header">
+              <h2>Payment Approved Successfully</h2>
+            </div>
+            <div class="card-body" style="text-align: center;">
+              <h3 style="color: var(--header-start); margin-bottom: 16px;">Payment Authorized</h3>
+              <p style="font-size: 16px; margin-bottom: 24px; color: var(--text);">
+                The business payment has been successfully approved and will be processed within 1–2 business days.
+              </p>
+              <div class="alert alert-success">
+                <h3>Return to Mobymail to continue</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-info">
+            This website is designed for the MobyPhish study
+          </div>
+        </main>
+
+        <script>
+          window.STUDY_SITE_CONFIG = {
+            siteUrl: "cloudjetarways.com",
+            siteName: "CloudJet Airways",
+            apiBase: "https://study-api.com",
+            hardcodedUsername: "user",
+            hardcodedPassword: "user",
+            fields: [
+              { key: "aircraftId", elementId: "payeeValue" },
+      { key: "serviceProvider", elementId: "accountValue" },
+      { key: "estimatedCost", elementId: "amountValue" }
+            ],
+            fallbackDetails: {
+            "aircraftId": "This is not the correct website.",
+            "serviceProvider": "Please review the email again.",
+            "estimatedCost": "Do not approve this payment."
+},
+            taskDetails: {
+              "reg_task_13": {
+                "aircraftId": "Olivia Chen",
+                "serviceProvider": "Boston, MA to Chicago, IL (November 17, 2026 - November 20, 2026)",
+                "estimatedCost": "$486"
+              },
+              "reg_task_14": {
+                "aircraftId": "Marcus Hale",
+                "serviceProvider": "Boston, MA to Atlanta, GA (December 1, 2026 - December 3, 2026)",
+                "estimatedCost": "$412"
+              },
+              "reg_task_15": {
+                "aircraftId": "Priya Nair",
+                "serviceProvider": "Boston, MA to Dallas, TX (December 14, 2026 - December 17, 2026)",
+                "estimatedCost": "$538"
+              },
+              "reg_task_16": {
+                "aircraftId": "Daniel Brooks",
+                "serviceProvider": "Boston, MA to Washington, DC (January 11, 2027 - January 13, 2027)",
+                "estimatedCost": "$328"
+              },
+              "reg_task_17": {
+                "aircraftId": "Sofia Ramirez",
+                "serviceProvider": "Boston, MA to Denver, CO (February 8, 2027 - February 11, 2027)",
+                "estimatedCost": "$604"
+              },
+              "reg_task_18": {
+                "aircraftId": "Ethan Walker",
+                "serviceProvider": "Boston, MA to Seattle, WA (February 22, 2027 - February 26, 2027)",
+                "estimatedCost": "$718"
+              },
+              "reg_task_27": {
+                "aircraftId": "Isabella Turner",
+                "serviceProvider": "Boston, MA to Los Angeles, CA (April 6, 2027 - April 9, 2027)",
+                "estimatedCost": "$802"
+              },
+              "reg_task_28": {
+                "aircraftId": "Benjamin Scott",
+                "serviceProvider": "Boston, MA to Raleigh, NC (April 20, 2027 - April 22, 2027)",
+                "estimatedCost": "$364"
+              },
+              "reg_task_29": {
+                "aircraftId": "Emma Hughes",
+                "serviceProvider": "Boston, MA to Detroit, MI (May 4, 2027 - May 7, 2027)",
+                "estimatedCost": "$418"
+              },
+              "reg_task_30": {
+                "aircraftId": "Liam Cooper",
+                "serviceProvider": "Boston, MA to New Orleans, LA (May 18, 2027 - May 21, 2027)",
+                "estimatedCost": "$559"
+              },
+              "cert_task_5": {
+                "aircraftId": "Naomi Patel",
+                "serviceProvider": "Boston, MA to San Francisco, CA (March 9, 2027 - March 12, 2027)",
+                "estimatedCost": "$756"
+              },
+              "cert_task_6": {
+                "aircraftId": "Lucas Bennett",
+                "serviceProvider": "Boston, MA to Orlando, FL (March 23, 2027 - March 27, 2027)",
+                "estimatedCost": "$682"
+              },
+              "email_task_9": {
+                "aircraftId": "Ava Simmons",
+                "serviceProvider": "Boston, MA to Austin, TX (January 28, 2027 - January 31, 2027)",
+                "estimatedCost": "$536"
+              },
+              "email_task_10": {
+                "aircraftId": "Noah Parker",
+                "serviceProvider": "Boston, MA to Minneapolis, MN (February 10, 2027 - February 13, 2027)",
+                "estimatedCost": "$497"
+              },
+              "email_task_11": {
+                "aircraftId": "Chloe Davis",
+                "serviceProvider": "Boston, MA to Detroit, MI (February 24, 2027 - February 27, 2027)",
+                "estimatedCost": "$452"
+              },
+              "email_task_12": {
+                "aircraftId": "Mason Reed",
+                "serviceProvider": "Boston, MA to Houston, TX (March 11, 2027 - March 15, 2027)",
+                "estimatedCost": "$621"
+              },
+              "email_task_25": {
+                "aircraftId": "Ella Simmons",
+                "serviceProvider": "Boston, MA to Columbus, OH (January 14, 2027 - January 17, 2027)",
+                "estimatedCost": "$406"
+              },
+              "email_task_26": {
+                "aircraftId": "Jack Turner",
+                "serviceProvider": "Boston, MA to Houston, TX (March 4, 2027 - March 8, 2027)",
+                "estimatedCost": "$692"
+              },
+              "email_task_27": {
+                "aircraftId": "Ella Simmons",
+                "serviceProvider": "Boston, MA to Columbus, OH (January 14, 2027 - January 17, 2027)",
+                "estimatedCost": "$406"
+              },
+              "email_task_28": {
+                "aircraftId": "Jack Turner",
+                "serviceProvider": "Boston, MA to Houston, TX (March 4, 2027 - March 8, 2027)",
+                "estimatedCost": "$692"
+              },
+              "email_task_29": {
+                "aircraftId": "Ella Simmons",
+                "serviceProvider": "Boston, MA to Columbus, OH (January 14, 2027 - January 17, 2027)",
+                "estimatedCost": "$406"
+              },
+              "email_task_30": {
+                "aircraftId": "Jack Turner",
+                "serviceProvider": "Boston, MA to Houston, TX (March 4, 2027 - March 8, 2027)",
+                "estimatedCost": "$692"
+              },
+              "spof_task_9": {
+                "aircraftId": "Grace Morgan",
+                "serviceProvider": "Boston, MA to Phoenix, AZ (October 27, 2026 - October 30, 2026)",
+                "estimatedCost": "$514"
+              },
+              "spof_task_10": {
+                "aircraftId": "Henry Lawson",
+                "serviceProvider": "Boston, MA to Nashville, TN (November 18, 2026 - November 21, 2026)",
+                "estimatedCost": "$446"
+              },
+              "spof_task_11": {
+                "aircraftId": "Mia Foster",
+                "serviceProvider": "Boston, MA to Charlotte, NC (December 9, 2026 - December 12, 2026)",
+                "estimatedCost": "$402"
+              },
+              "spof_task_12": {
+                "aircraftId": "Colin Reeves",
+                "serviceProvider": "Boston, MA to Miami, FL (January 20, 2027 - January 24, 2027)",
+                "estimatedCost": "$588"
+              },
+              "spof_task_25": {
+                "aircraftId": "Zoe Bennett",
+                "serviceProvider": "Boston, MA to San Diego, CA (November 12, 2026 - November 15, 2026)",
+                "estimatedCost": "$734"
+              },
+              "spof_task_26": {
+                "aircraftId": "Ryan Foster",
+                "serviceProvider": "Boston, MA to Tampa, FL (December 7, 2026 - December 10, 2026)",
+                "estimatedCost": "$468"
+              },
+              "spof_task_27": {
+                "aircraftId": "Zoe Bennett",
+                "serviceProvider": "Boston, MA to San Diego, CA (November 12, 2026 - November 15, 2026)",
+                "estimatedCost": "$734"
+              },
+              "spof_task_28": {
+                "aircraftId": "Ryan Foster",
+                "serviceProvider": "Boston, MA to Tampa, FL (December 7, 2026 - December 10, 2026)",
+                "estimatedCost": "$468"
+              },
+              "spof_task_29": {
+                "aircraftId": "Zoe Bennett",
+                "serviceProvider": "Boston, MA to San Diego, CA (November 12, 2026 - November 15, 2026)",
+                "estimatedCost": "$734"
+              },
+              "spof_task_30": {
+                "aircraftId": "Ryan Foster",
+                "serviceProvider": "Boston, MA to Tampa, FL (December 7, 2026 - December 10, 2026)",
+                "estimatedCost": "$468"
+              }
+            }
+          };
+        </script>
+        <script src="../shared/app.js"></script>
+      </body>
+    </html>

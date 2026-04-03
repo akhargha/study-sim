@@ -8,6 +8,33 @@
   const doneCard = $("doneCard");
   const loginErr = $("loginErr");
 
+  const BRAND_DOMAIN_GROUPS = {
+    citytrust: ["citytrust.com", "citytrustbank.com", "citytrustbanking.com", "citytrut.com", "citytrvst.com", "cltytrust.com"],
+    meridiansuites: ["merdiansuites.com", "meridainsuites.com", "meridiansuite.com", "meridiansuites.co", "meridiansuites.com", "rneridiansuites.com"],
+    cloudjetairways: ["cl0udjetairways.com", "cloudjetairway.com", "cloudjetairways.com", "cloudjetarways.com", "cloudjettairways.com", "cioudjetairways.com"],
+  };
+
+  function getBrandForDomain(domain) {
+    if (!domain) return null;
+    const normalized = String(domain).toLowerCase();
+    for (const [brand, domains] of Object.entries(BRAND_DOMAIN_GROUPS)) {
+      if (domains.includes(normalized)) {
+        return brand;
+      }
+    }
+    return null;
+  }
+
+  function isSameBrandTask(assignmentSite) {
+    if (!assignmentSite) return true;
+    const currentBrand = getBrandForDomain(cfg.siteUrl);
+    const assignmentBrand = getBrandForDomain(assignmentSite);
+
+    // If we cannot resolve either side, keep prior behavior.
+    if (!currentBrand || !assignmentBrand) return true;
+    return currentBrand === assignmentBrand;
+  }
+
   function showCard(name) {
     loginCard.style.display = name === "login" ? "block" : "none";
     taskCard.style.display = name === "task" ? "block" : "none";
@@ -44,6 +71,13 @@
       }
 
       const taskType = data.assignment.task_type || null;
+      const assignmentSite = data.assignment.site_url || data.assignment.siteUrl || null;
+
+      if (!isSameBrandTask(assignmentSite)) {
+        setFallbackDetails();
+        return;
+      }
+
       setTaskDetails(taskType);
     } catch (err) {
       console.error("fetchCurrentAssignment failed:", err);

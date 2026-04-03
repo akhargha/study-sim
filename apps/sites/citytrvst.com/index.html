@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CityTrust Bank</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../shared/styles.css" />
+        <style>
+          body {
+            --bg-start: #f0fdf4;
+        --bg-end: #dcfce7;
+        --text: #14532d;
+        --header-start: #16a34a;
+        --header-end: #15803d;
+        --card-header-start: #15803d;
+        --card-header-end: #166534;
+        --card-border-accent: #22c55e;
+        --link: #16a34a;
+        --input-border: #d1fae5;
+        --input-bg: #f7fee7;
+        --focus: #22c55e;
+        --primary-start: #22c55e;
+        --primary-end: #16a34a;
+        --primary-hover-start: #16a34a;
+        --primary-hover-end: #15803d;
+        --primary-shadow: rgba(34, 197, 94, 0.3);
+        --success-start: #059669;
+        --success-end: #047857;
+        --success-hover-start: #047857;
+        --success-hover-end: #065f46;
+        --success-shadow: rgba(5, 150, 105, 0.3);
+        --alert-success-bg: #f0fdf4;
+        --alert-success-border: #bbf7d0;
+        --alert-success-text: #166534;
+        --details-bg: #f7fee7;
+        --details-border: #d1fae5;
+        --details-row-border: #d1fae5;
+        --amount: #dc2626;
+        --footer-border: #d1fae5;
+        --label: #6b7280;
+          }
+        </style>
+      </head>
+      <body>
+        <header>
+          <div class="header-content">
+            <div class="logo">CityTrust Bank</div>
+          </div>
+        </header>
+
+        <main>
+          <div class="breadcrumb">
+            <a href="#">Dashboard</a> › <a href="#">Pending Approvals</a> › Payment Authorization
+          </div>
+
+          <div id="loginCard" class="card">
+            <div class="card-header">
+              <h2>Login with Username and Password</h2>
+            </div>
+
+            <div class="card-body">
+              <form id="loginForm" onsubmit="return false;">
+                <div class="form-group">
+                  <label for="acc">Username</label>
+                  <input id="acc" class="form-control" placeholder="Enter your username" autocomplete="username" />
+                </div>
+
+                <div class="form-group">
+                  <label for="pwd">Password</label>
+                  <input id="pwd" type="password" class="form-control" placeholder="Enter your password" autocomplete="current-password" />
+                </div>
+
+                <button id="loginBtn" type="button" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+                  <span class="loading-spinner" id="loginSpinner"></span>
+                  Login
+                </button>
+
+                <div id="loginErr" class="alert alert-danger" style="display: none;"></div>
+              </form>
+            </div>
+          </div>
+
+          <div id="taskCard" class="card" style="display: none;">
+            <div class="card-header">
+              <h2>Pending Payment Approval</h2>
+            </div>
+            <div class="card-body">
+              <div class="alert alert-success">
+                <strong>Authentication Successful</strong> - You are now authorized to approve business payments.
+              </div>
+
+              <p class="task-intro">
+                A <strong>wire payment</strong> requires your approval before processing. Please review the payment details below and approve if accurate.
+              </p>
+
+              <div class="transaction-details">
+                <ul class="transaction-list">
+                  <li>
+                <span class="transaction-label">Recipient Name:</span>
+                <span id="payeeValue" class="transaction-value "></span>
+              </li>
+              <li>
+                <span class="transaction-label">Account Number:</span>
+                <span id="accountValue" class="transaction-value "></span>
+              </li>
+              <li>
+                <span class="transaction-label">Transfer Amount:</span>
+                <span id="amountValue" class="transaction-value amount-highlight"></span>
+              </li>
+                </ul>
+              </div>
+
+              <button id="approveBtn" class="btn btn-success" style="width: 100%; font-size: 18px; padding: 16px;">
+                <span class="loading-spinner" id="approveSpinner"></span>
+                Approve & Process Payment
+              </button>
+            </div>
+          </div>
+
+          <div id="doneCard" class="card" style="display: none;">
+            <div class="card-header">
+              <h2>Payment Approved Successfully</h2>
+            </div>
+            <div class="card-body" style="text-align: center;">
+              <h3 style="color: var(--header-start); margin-bottom: 16px;">Payment Authorized</h3>
+              <p style="font-size: 16px; margin-bottom: 24px; color: var(--text);">
+                The wire payment has been successfully approved and will be processed within 1–2 business days.
+              </p>
+              <div class="alert alert-success">
+                <h3>Return to Mobymail to continue</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-info">
+            This website is designed for the MobyPhish study
+          </div>
+        </main>
+
+        <script>
+          window.STUDY_SITE_CONFIG = {
+            siteUrl: "citytrvst.com",
+            siteName: "CityTrust Bank",
+            apiBase: "https://study-api.com",
+            hardcodedUsername: "user",
+            hardcodedPassword: "user",
+            fields: [
+              { key: "recipientName", elementId: "payeeValue" },
+      { key: "accountNumber", elementId: "accountValue" },
+      { key: "transferAmount", elementId: "amountValue" }
+            ],
+            fallbackDetails: {
+            "recipientName": "This is not the correct website.",
+            "accountNumber": "Please review the email again.",
+            "transferAmount": "Do not approve this payment."
+},
+            taskDetails: {
+              "reg_task_1": {
+                "recipientName": "Metro Office Supplies",
+                "accountNumber": "445632187",
+                "transferAmount": "$482"
+              },
+              "reg_task_2": {
+                "recipientName": "Midtown Stationery Co.",
+                "accountNumber": "882310459",
+                "transferAmount": "$358"
+              },
+              "reg_task_3": {
+                "recipientName": "Harbor Print & Copy",
+                "accountNumber": "670114223",
+                "transferAmount": "$544"
+              },
+              "reg_task_4": {
+                "recipientName": "Evergreen Office Furnishings",
+                "accountNumber": "553920186",
+                "transferAmount": "$1,286"
+              },
+              "reg_task_5": {
+                "recipientName": "Rapid Courier Services",
+                "accountNumber": "419768302",
+                "transferAmount": "$319"
+              },
+              "reg_task_6": {
+                "recipientName": "Apex Tech Supplies",
+                "accountNumber": "734501978",
+                "transferAmount": "$672"
+              },
+              "reg_task_19": {
+                "recipientName": "Northside Breakroom Supply",
+                "accountNumber": "610438275",
+                "transferAmount": "$238"
+              },
+              "reg_task_20": {
+                "recipientName": "Lumen Office Interiors",
+                "accountNumber": "781229640",
+                "transferAmount": "$915"
+              },
+              "reg_task_21": {
+                "recipientName": "Civic Archive Storage",
+                "accountNumber": "905117364",
+                "transferAmount": "$402"
+              },
+              "reg_task_22": {
+                "recipientName": "Park Row IT Procurement",
+                "accountNumber": "364218905",
+                "transferAmount": "$1,148"
+              },
+              "cert_task_1": {
+                "recipientName": "Evergreen Office Furnishings",
+                "accountNumber": "553920186",
+                "transferAmount": "$1,286"
+              },
+              "cert_task_2": {
+                "recipientName": "Rapid Courier Services",
+                "accountNumber": "419768302",
+                "transferAmount": "$319"
+              },
+              "email_task_1": {
+                "recipientName": "Apex Tech Supplies",
+                "accountNumber": "734501978",
+                "transferAmount": "$672"
+              },
+              "email_task_2": {
+                "recipientName": "Midtown Stationery Co.",
+                "accountNumber": "882310459",
+                "transferAmount": "$358"
+              },
+              "email_task_3": {
+                "recipientName": "Harbor Print & Copy",
+                "accountNumber": "670114223",
+                "transferAmount": "$544"
+              },
+              "email_task_4": {
+                "recipientName": "Evergreen Office Furnishings",
+                "accountNumber": "553920186",
+                "transferAmount": "$1,286"
+              },
+              "email_task_13": {
+                "recipientName": "Beacon Workplace Supply",
+                "accountNumber": "903442186",
+                "transferAmount": "$291"
+              },
+              "email_task_14": {
+                "recipientName": "Eastline Courier Services",
+                "accountNumber": "624509173",
+                "transferAmount": "$348"
+              },
+              "email_task_15": {
+                "recipientName": "Beacon Workplace Supply",
+                "accountNumber": "903442186",
+                "transferAmount": "$291"
+              },
+              "email_task_16": {
+                "recipientName": "Eastline Courier Services",
+                "accountNumber": "624509173",
+                "transferAmount": "$348"
+              },
+              "email_task_17": {
+                "recipientName": "Beacon Workplace Supply",
+                "accountNumber": "903442186",
+                "transferAmount": "$291"
+              },
+              "email_task_18": {
+                "recipientName": "Eastline Courier Services",
+                "accountNumber": "624509173",
+                "transferAmount": "$348"
+              },
+              "spof_task_1": {
+                "recipientName": "Metro Office Supplies",
+                "accountNumber": "445632187",
+                "transferAmount": "$482"
+              },
+              "spof_task_2": {
+                "recipientName": "Harbor Print & Copy",
+                "accountNumber": "670114223",
+                "transferAmount": "$544"
+              },
+              "spof_task_3": {
+                "recipientName": "Evergreen Office Furnishings",
+                "accountNumber": "553920186",
+                "transferAmount": "$1,286"
+              },
+              "spof_task_4": {
+                "recipientName": "Rapid Courier Services",
+                "accountNumber": "419768302",
+                "transferAmount": "$319"
+              },
+              "spof_task_13": {
+                "recipientName": "Sterling Office Goods",
+                "accountNumber": "482117305",
+                "transferAmount": "$427"
+              },
+              "spof_task_14": {
+                "recipientName": "Union Copy Center",
+                "accountNumber": "715308264",
+                "transferAmount": "$566"
+              },
+              "spof_task_15": {
+                "recipientName": "Sterling Office Goods",
+                "accountNumber": "482117305",
+                "transferAmount": "$427"
+              },
+              "spof_task_16": {
+                "recipientName": "Union Copy Center",
+                "accountNumber": "715308264",
+                "transferAmount": "$566"
+              },
+              "spof_task_17": {
+                "recipientName": "Sterling Office Goods",
+                "accountNumber": "482117305",
+                "transferAmount": "$427"
+              },
+              "spof_task_18": {
+                "recipientName": "Union Copy Center",
+                "accountNumber": "715308264",
+                "transferAmount": "$566"
+              }
+            }
+          };
+        </script>
+        <script src="../shared/app.js"></script>
+      </body>
+    </html>

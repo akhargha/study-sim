@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meridian Suites</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../shared/styles.css" />
+        <style>
+          body {
+            --bg-start: #f0f8ff;
+        --bg-end: #e3f2fd;
+        --text: #0a3880;
+        --header-start: #1976d2;
+        --header-end: #0d47a1;
+        --card-header-start: #0d47a1;
+        --card-header-end: #0b3f91;
+        --card-border-accent: #2196f3;
+        --link: #1976d2;
+        --input-border: #bbdefb;
+        --input-bg: #f0f8ff;
+        --focus: #2196f3;
+        --primary-start: #2196f3;
+        --primary-end: #1976d2;
+        --primary-hover-start: #1976d2;
+        --primary-hover-end: #0d47a1;
+        --primary-shadow: rgba(33, 150, 243, 0.3);
+        --success-start: #1e88e5;
+        --success-end: #1565c0;
+        --success-hover-start: #1565c0;
+        --success-hover-end: #0d47a1;
+        --success-shadow: rgba(21, 101, 192, 0.3);
+        --alert-success-bg: #e3f2fd;
+        --alert-success-border: #bbdefb;
+        --alert-success-text: #0d47a1;
+        --details-bg: #f0f8ff;
+        --details-border: #bbdefb;
+        --details-row-border: #bbdefb;
+        --amount: #15803d;
+        --footer-border: #bbdefb;
+        --label: #6b7280;
+          }
+        </style>
+      </head>
+      <body>
+        <header>
+          <div class="header-content">
+            <div class="logo">Meridian Suites</div>
+          </div>
+        </header>
+
+        <main>
+          <div class="breadcrumb">
+            <a href="#">Dashboard</a> › <a href="#">Pending Approvals</a> › Payment Authorization
+          </div>
+
+          <div id="loginCard" class="card">
+            <div class="card-header">
+              <h2>Login with Username and Password</h2>
+            </div>
+
+            <div class="card-body">
+              <form id="loginForm" onsubmit="return false;">
+                <div class="form-group">
+                  <label for="acc">Username</label>
+                  <input id="acc" class="form-control" placeholder="Enter your username" autocomplete="username" />
+                </div>
+
+                <div class="form-group">
+                  <label for="pwd">Password</label>
+                  <input id="pwd" type="password" class="form-control" placeholder="Enter your password" autocomplete="current-password" />
+                </div>
+
+                <button id="loginBtn" type="button" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+                  <span class="loading-spinner" id="loginSpinner"></span>
+                  Login
+                </button>
+
+                <div id="loginErr" class="alert alert-danger" style="display: none;"></div>
+              </form>
+            </div>
+          </div>
+
+          <div id="taskCard" class="card" style="display: none;">
+            <div class="card-header">
+              <h2>Pending Payment Approval</h2>
+            </div>
+            <div class="card-body">
+              <div class="alert alert-success">
+                <strong>Authentication Successful</strong> - You are now authorized to approve business payments.
+              </div>
+
+              <p class="task-intro">
+                A <strong>business payment</strong> requires your approval before processing. Please review the payment details below and approve if accurate.
+              </p>
+
+              <div class="transaction-details">
+                <ul class="transaction-list">
+                  <li>
+                <span class="transaction-label">Guest Name:</span>
+                <span id="payeeValue" class="transaction-value "></span>
+              </li>
+              <li>
+                <span class="transaction-label">Booking Period:</span>
+                <span id="accountValue" class="transaction-value "></span>
+              </li>
+              <li>
+                <span class="transaction-label">Total Amount:</span>
+                <span id="amountValue" class="transaction-value amount-highlight"></span>
+              </li>
+                </ul>
+              </div>
+
+              <button id="approveBtn" class="btn btn-success" style="width: 100%; font-size: 18px; padding: 16px;">
+                <span class="loading-spinner" id="approveSpinner"></span>
+                Approve & Process Payment
+              </button>
+            </div>
+          </div>
+
+          <div id="doneCard" class="card" style="display: none;">
+            <div class="card-header">
+              <h2>Payment Approved Successfully</h2>
+            </div>
+            <div class="card-body" style="text-align: center;">
+              <h3 style="color: var(--header-start); margin-bottom: 16px;">Payment Authorized</h3>
+              <p style="font-size: 16px; margin-bottom: 24px; color: var(--text);">
+                The business payment has been successfully approved and will be processed within 1–2 business days.
+              </p>
+              <div class="alert alert-success">
+                <h3>Return to Mobymail to continue</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-info">
+            This website is designed for the MobyPhish study
+          </div>
+        </main>
+
+        <script>
+          window.STUDY_SITE_CONFIG = {
+            siteUrl: "merdiansuites.com",
+            siteName: "Meridian Suites",
+            apiBase: "https://study-api.com",
+            hardcodedUsername: "user",
+            hardcodedPassword: "user",
+            fields: [
+              { key: "guestName", elementId: "payeeValue" },
+      { key: "bookingPeriod", elementId: "accountValue" },
+      { key: "totalAmount", elementId: "amountValue" }
+            ],
+            fallbackDetails: {
+            "guestName": "This is not the correct website.",
+            "bookingPeriod": "Please review the email again.",
+            "totalAmount": "Do not approve this payment."
+},
+            taskDetails: {
+              "reg_task_7": {
+                "guestName": "Sarah Thompson",
+                "bookingPeriod": "November 10, 2026 - November 13, 2026",
+                "totalAmount": "$1,462"
+              },
+              "reg_task_8": {
+                "guestName": "Ethan Marlowe",
+                "bookingPeriod": "November 24, 2026 - November 28, 2026",
+                "totalAmount": "$1,398"
+              },
+              "reg_task_9": {
+                "guestName": "Lila Kensington",
+                "bookingPeriod": "December 8, 2026 - December 11, 2026",
+                "totalAmount": "$1,126"
+              },
+              "reg_task_10": {
+                "guestName": "Rowan Thatcher",
+                "bookingPeriod": "January 12, 2027 - January 15, 2027",
+                "totalAmount": "$1,584"
+              },
+              "reg_task_11": {
+                "guestName": "Maya Ellington",
+                "bookingPeriod": "February 2, 2027 - February 6, 2027",
+                "totalAmount": "$1,944"
+              },
+              "reg_task_12": {
+                "guestName": "Tobias Renner",
+                "bookingPeriod": "February 18, 2027 - February 20, 2027",
+                "totalAmount": "$896"
+              },
+              "reg_task_23": {
+                "guestName": "Jordan Ellis",
+                "bookingPeriod": "March 30, 2027 - April 2, 2027",
+                "totalAmount": "$1,174"
+              },
+              "reg_task_24": {
+                "guestName": "Hannah Cole",
+                "bookingPeriod": "April 13, 2027 - April 16, 2027",
+                "totalAmount": "$1,289"
+              },
+              "reg_task_25": {
+                "guestName": "Leo Martin",
+                "bookingPeriod": "April 27, 2027 - April 30, 2027",
+                "totalAmount": "$1,096"
+              },
+              "reg_task_26": {
+                "guestName": "Amelia Ward",
+                "bookingPeriod": "May 11, 2027 - May 14, 2027",
+                "totalAmount": "$1,328"
+              },
+              "cert_task_3": {
+                "guestName": "Ivy Sanderson",
+                "bookingPeriod": "March 9, 2027 - March 13, 2027",
+                "totalAmount": "$1,238"
+              },
+              "cert_task_4": {
+                "guestName": "Carter Lytton",
+                "bookingPeriod": "March 23, 2027 - March 27, 2027",
+                "totalAmount": "$1,884"
+              },
+              "email_task_5": {
+                "guestName": "Nora Benton",
+                "bookingPeriod": "January 19, 2027 - January 22, 2027",
+                "totalAmount": "$1,447"
+              },
+              "email_task_6": {
+                "guestName": "Victor Hale",
+                "bookingPeriod": "February 9, 2027 - February 12, 2027",
+                "totalAmount": "$1,991"
+              },
+              "email_task_7": {
+                "guestName": "Tessa Granger",
+                "bookingPeriod": "February 23, 2027 - February 26, 2027",
+                "totalAmount": "$973"
+              },
+              "email_task_8": {
+                "guestName": "Felix Rowland",
+                "bookingPeriod": "March 8, 2027 - March 11, 2027",
+                "totalAmount": "$1,226"
+              },
+              "email_task_19": {
+                "guestName": "Natalie Ross",
+                "bookingPeriod": "January 26, 2027 - January 29, 2027",
+                "totalAmount": "$1,216"
+              },
+              "email_task_20": {
+                "guestName": "Caleb Murphy",
+                "bookingPeriod": "March 2, 2027 - March 5, 2027",
+                "totalAmount": "$1,362"
+              },
+              "email_task_21": {
+                "guestName": "Natalie Ross",
+                "bookingPeriod": "January 26, 2027 - January 29, 2027",
+                "totalAmount": "$1,216"
+              },
+              "email_task_22": {
+                "guestName": "Caleb Murphy",
+                "bookingPeriod": "March 2, 2027 - March 5, 2027",
+                "totalAmount": "$1,362"
+              },
+              "email_task_23": {
+                "guestName": "Natalie Ross",
+                "bookingPeriod": "January 26, 2027 - January 29, 2027",
+                "totalAmount": "$1,216"
+              },
+              "email_task_24": {
+                "guestName": "Caleb Murphy",
+                "bookingPeriod": "March 2, 2027 - March 5, 2027",
+                "totalAmount": "$1,362"
+              },
+              "spof_task_5": {
+                "guestName": "Clara Winslow",
+                "bookingPeriod": "October 24, 2026 - October 30, 2026",
+                "totalAmount": "$1,347"
+              },
+              "spof_task_6": {
+                "guestName": "Damon Carver",
+                "bookingPeriod": "November 16, 2026 - November 20, 2026",
+                "totalAmount": "$1,675"
+              },
+              "spof_task_7": {
+                "guestName": "Elise Montrose",
+                "bookingPeriod": "December 3, 2026 - December 6, 2026",
+                "totalAmount": "$842"
+              },
+              "spof_task_8": {
+                "guestName": "Julian Hartwell",
+                "bookingPeriod": "January 5, 2027 - January 8, 2027",
+                "totalAmount": "$1,512"
+              },
+              "spof_task_19": {
+                "guestName": "Claire Hudson",
+                "bookingPeriod": "November 3, 2026 - November 6, 2026",
+                "totalAmount": "$1,144"
+              },
+              "spof_task_20": {
+                "guestName": "Owen Price",
+                "bookingPeriod": "December 15, 2026 - December 18, 2026",
+                "totalAmount": "$1,298"
+              },
+              "spof_task_21": {
+                "guestName": "Claire Hudson",
+                "bookingPeriod": "November 3, 2026 - November 6, 2026",
+                "totalAmount": "$1,144"
+              },
+              "spof_task_22": {
+                "guestName": "Owen Price",
+                "bookingPeriod": "December 15, 2026 - December 18, 2026",
+                "totalAmount": "$1,298"
+              },
+              "spof_task_23": {
+                "guestName": "Claire Hudson",
+                "bookingPeriod": "November 3, 2026 - November 6, 2026",
+                "totalAmount": "$1,144"
+              },
+              "spof_task_24": {
+                "guestName": "Owen Price",
+                "bookingPeriod": "December 15, 2026 - December 18, 2026",
+                "totalAmount": "$1,298"
+              }
+            }
+          };
+        </script>
+        <script src="../shared/app.js"></script>
+      </body>
+    </html>
