@@ -997,3 +997,30 @@ ValueError: Already at final stage
 2026-04-03 02:30:05,048 | INFO | record-login-event assignment_id=548 website=meridiansuites.com updated=True
 2026-04-03 02:30:15,172 | INFO | Recorded login for assignment_id=549 website=cl0udjetairways.com
 2026-04-03 02:30:15,172 | INFO | record-login-event assignment_id=549 website=cl0udjetairways.com updated=True
+2026-04-03 02:33:31,233 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/551
+2026-04-03 02:33:31,533 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Leo Martin's Reservation
+2026-04-03 02:33:31,533 | INFO | Task email sent for assignment_id=551: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': "Approval Needed: Confirm Leo Martin's Reservation"}
+2026-04-03 02:33:31,534 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/552
+2026-04-03 02:33:31,640 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Amelia Ward's Reservation
+2026-04-03 02:33:31,641 | INFO | Task email sent for assignment_id=552: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': "Approval Needed: Confirm Amelia Ward's Reservation"}
+2026-04-03 02:33:31,641 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/553
+2026-04-03 02:33:31,730 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Rowan Thatcher's Reservation
+2026-04-03 02:33:31,730 | INFO | Task email sent for assignment_id=553: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': "Approval Needed: Confirm Rowan Thatcher's Reservation"}
+2026-04-03 02:33:31,731 | INFO | Replaced href for site_url=meridiansuites.co with assignment_url=https://meridiansuites.co/a/554
+2026-04-03 02:33:31,824 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Owen Price's Reservation
+2026-04-03 02:33:31,824 | INFO | Task email sent for assignment_id=554: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': "Approval Needed: Confirm Owen Price's Reservation"}
+2026-04-03 02:33:31,825 | INFO | Replaced href for site_url=cioudjetairways.com with assignment_url=https://cioudjetairways.com/a/555
+2026-04-03 02:33:31,944 | INFO | SendGrid send status=202 from=cloudjetairwaysphish@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Flight for Ava Simmons
+2026-04-03 02:33:31,944 | INFO | Task email sent for assignment_id=555: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairwaysphish@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Confirm Flight for Ava Simmons'}
+2026-04-03 02:33:31,944 | INFO | Assigned 5 tasks for stage=tutorial user_id=21
+2026-04-03 02:33:31,945 | INFO | start-study result={'stage': 'tutorial', 'assignments_created': 5, 'assignment_ids': [551, 552, 553, 554, 555]}
+2026-04-03 02:34:32,124 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-03 02:34:32,124 | INFO | Extension /log accepted timestamp=1775198071980 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-03 02:34:37,909 | INFO | Recorded login for assignment_id=555 website=cioudjetairways.com
+2026-04-03 02:34:37,910 | INFO | record-login-event assignment_id=555 website=cioudjetairways.com updated=True
+2026-04-03 02:34:46,603 | INFO | Completed assignment_id=555 with completion_type=done
+2026-04-03 02:34:46,652 | INFO | record-complete-assignment-event assignment_id=555 completion_type=done
+2026-04-03 02:35:10,768 | INFO | Recorded login for assignment_id=554 website=meridiansuites.co
+2026-04-03 02:35:10,768 | INFO | record-login-event assignment_id=554 website=meridiansuites.co updated=True
+2026-04-03 02:35:14,039 | INFO | Completed assignment_id=554 with completion_type=done
+2026-04-03 02:35:14,085 | INFO | record-complete-assignment-event assignment_id=554 completion_type=done

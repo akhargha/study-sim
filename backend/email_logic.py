@@ -1,4 +1,5 @@
 import logging
+import re
 
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
@@ -33,11 +34,21 @@ def send_email(from_email: str, to_email: str, subject: str, html_content: str):
     return response.status_code
 
 
+def replace_site_href_with_assignment_url(html: str, site_url: str, assignment_url: str) -> str:
+    """
+    Replace href="https://site_url" or href="http://site_url" (with optional trailing slash)
+    with the assignment-specific URL.
+    """
+    pattern = rf'href\s*=\s*["\']https?://{re.escape(site_url)}/?["\']'
+    replacement = f'href="{assignment_url}"'
+    return re.sub(pattern, replacement, html, flags=re.IGNORECASE)
+
+
 def send_task_email(task: dict, assignment: dict | None = None):
     """
     Send the task email when a task is assigned.
-    If an assignment dict is provided, appends the unique assignment URL
-    (https://<site_url>/a/<assignment_id>) to the email body.
+    If an assignment dict is provided, replaces existing site links in the email
+    with the assignment-specific URL (https://<site_url>/a/<assignment_id>).
     """
     html_content = (task.get("email_text") or "").strip()
     if not html_content:
@@ -49,10 +60,12 @@ def send_task_email(task: dict, assignment: dict | None = None):
         assignment_id = assignment["assignment_id"]
         if site_url:
             assignment_url = f"https://{site_url}/a/{assignment_id}"
-            html_content += (
-                f'\n<p><a href="{assignment_url}" '
-                f'style="color:#1a73e8;text-decoration:underline;">'
-                f"Open task</a></p>"
+            html_content = replace_site_href_with_assignment_url(
+                html_content, site_url, assignment_url
+            )
+            logger.info(
+                "Replaced href for site_url=%s with assignment_url=%s",
+                site_url, assignment_url,
             )
 
     from_email = (task.get("email") or "").strip() or DEFAULT_FROM_EMAIL
