@@ -47,7 +47,12 @@ ALL_STUDY_SITES = {
     "cloudjetairway.com",
 }
 
-ALLOWED_COMPLETION_TYPES = {"done", "report_mail", "report_extension"}
+ALLOWED_COMPLETION_TYPES = {
+    "done",
+    "report_mail",
+    "report_extension",
+    "previous_block_extension",
+}
 
 EXTENSION_ID = "2T7jU3Hr4yC8"
 

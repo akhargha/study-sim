@@ -1334,3 +1334,298 @@ Traceback (most recent call last):
   File "/home/gabriel/study-sim/backend/study_logic.py", line 373, in start_next_stage
     raise ValueError("Current stage is not waiting for admin")
 ValueError: Current stage is not waiting for admin
+2026-04-03 09:34:33,405 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: chrome://extensions/
+2026-04-03 09:34:33,405 | INFO | Extension /log accepted timestamp=2026-04-03T13:34:33.213Z text=Event: Reported Website Change | website: chrome://extensions/
+2026-04-03 09:42:00,169 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: https://drive.google.com/drive/u/1/folders/1uh-sShvs94V_oInxRxo_izQu3SrQQKKX
+2026-04-03 09:42:00,170 | INFO | Extension /log accepted timestamp=2026-04-03T13:42:00.404Z text=Event: Reported Website Change | website: https://drive.google.com/drive/u/1/folders/1uh-sShvs94V_oInxRxo_izQu3SrQQKKX
+2026-04-03 09:47:51,308 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/591
+2026-04-03 09:47:51,660 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Tobias Renner's Reservation
+2026-04-03 09:47:51,660 | INFO | Task email sent for assignment_id=591: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': "Approval Needed: Confirm Tobias Renner's Reservation"}
+2026-04-03 09:47:51,661 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/592
+2026-04-03 09:47:51,969 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Amelia Ward's Reservation
+2026-04-03 09:47:51,969 | INFO | Task email sent for assignment_id=592: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': "Approval Needed: Confirm Amelia Ward's Reservation"}
+2026-04-03 09:47:51,970 | INFO | Replaced href for site_url=cloudjetairways.com with assignment_url=https://cloudjetairways.com/a/593
+2026-04-03 09:47:52,062 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Flight for Liam Cooper
+2026-04-03 09:47:52,063 | INFO | Task email sent for assignment_id=593: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Confirm Flight for Liam Cooper'}
+2026-04-03 09:47:52,063 | INFO | Replaced href for site_url=cloudjetairways.com with assignment_url=https://cloudjetairways.com/a/594
+2026-04-03 09:47:52,182 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Flight for Isabella Turner
+2026-04-03 09:47:52,182 | INFO | Task email sent for assignment_id=594: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Confirm Flight for Isabella Turner'}
+2026-04-03 09:47:52,182 | INFO | Replaced href for site_url=cloudjetairways.com with assignment_url=https://cloudjetairways.com/a/595
+2026-04-03 09:47:52,276 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Flight for Emma Hughes
+2026-04-03 09:47:52,276 | INFO | Task email sent for assignment_id=595: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Confirm Flight for Emma Hughes'}
+2026-04-03 09:47:52,277 | INFO | Replaced href for site_url=cloudjettairways.com with assignment_url=https://cloudjettairways.com/a/596
+2026-04-03 09:47:52,350 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Flight for Zoe Bennett
+2026-04-03 09:47:52,350 | INFO | Task email sent for assignment_id=596: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Confirm Flight for Zoe Bennett'}
+2026-04-03 09:47:52,350 | INFO | Replaced href for site_url=merdiansuites.com with assignment_url=https://merdiansuites.com/a/597
+2026-04-03 09:47:52,432 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Owen Price's Reservation
+2026-04-03 09:47:52,432 | INFO | Task email sent for assignment_id=597: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': "Approval Needed: Confirm Owen Price's Reservation"}
+2026-04-03 09:47:52,437 | INFO | Replaced href for site_url=cl0udjetairways.com with assignment_url=https://cl0udjetairways.com/a/598
+2026-04-03 09:47:52,530 | INFO | SendGrid send status=202 from=cloudjetairwaysphish2@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Flight for Jack Turner
+2026-04-03 09:47:52,530 | INFO | Task email sent for assignment_id=598: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairwaysphish2@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Confirm Flight for Jack Turner'}
+2026-04-03 09:47:52,531 | INFO | Replaced href for site_url=cloudjetairway.com with assignment_url=https://cloudjetairway.com/a/599
+2026-04-03 09:47:52,632 | INFO | SendGrid send status=202 from=cloudjetairwaysphish@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Needed: Confirm Flight for Mason Reed
+2026-04-03 09:47:52,633 | INFO | Task email sent for assignment_id=599: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairwaysphish@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Needed: Confirm Flight for Mason Reed'}
+2026-04-03 09:47:52,633 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/600
+2026-04-03 09:47:52,727 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=kharghariaanupam07@gmail.com subject=Approval Required: Payment to Evergreen Office Furnishings ($1,286)
+2026-04-03 09:47:52,727 | INFO | Task email sent for assignment_id=600: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'kharghariaanupam07@gmail.com', 'subject': 'Approval Required: Payment to Evergreen Office Furnishings ($1,286)'}
+2026-04-03 09:47:52,727 | INFO | Assigned 10 tasks for stage=stage1 user_id=21
+2026-04-03 09:47:52,727 | INFO | start-next-stage result={'stage': 'stage1', 'assignments_created': 10, 'assignment_ids': [591, 592, 593, 594, 595, 596, 597, 598, 599, 600]}
+2026-04-03 09:52:55,860 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/601
+2026-04-03 09:52:56,117 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Jordan Ellis's Reservation
+2026-04-03 09:52:56,117 | INFO | Task email sent for assignment_id=601: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Jordan Ellis's Reservation"}
+2026-04-03 09:52:56,117 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/602
+2026-04-03 09:52:56,428 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Leo Martin's Reservation
+2026-04-03 09:52:56,429 | INFO | Task email sent for assignment_id=602: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Leo Martin's Reservation"}
+2026-04-03 09:52:56,429 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/603
+2026-04-03 09:52:56,598 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Sarah Thompson's Reservation
+2026-04-03 09:52:56,599 | INFO | Task email sent for assignment_id=603: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Sarah Thompson's Reservation"}
+2026-04-03 09:52:56,599 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/604
+2026-04-03 09:52:56,733 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Amelia Ward's Reservation
+2026-04-03 09:52:56,733 | INFO | Task email sent for assignment_id=604: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Amelia Ward's Reservation"}
+2026-04-03 09:52:56,733 | INFO | Replaced href for site_url=cloudjetairways.com with assignment_url=https://cloudjetairways.com/a/605
+2026-04-03 09:52:56,841 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Liam Cooper
+2026-04-03 09:52:56,842 | INFO | Task email sent for assignment_id=605: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Liam Cooper'}
+2026-04-03 09:52:56,842 | INFO | Replaced href for site_url=merdiansuites.com with assignment_url=https://merdiansuites.com/a/606
+2026-04-03 09:52:56,972 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Claire Hudson's Reservation
+2026-04-03 09:52:56,973 | INFO | Task email sent for assignment_id=606: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Claire Hudson's Reservation"}
+2026-04-03 09:52:56,973 | INFO | Replaced href for site_url=rneridiansuites.com with assignment_url=https://rneridiansuites.com/a/607
+2026-04-03 09:52:57,085 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Clara Winslow's Reservation
+2026-04-03 09:52:57,086 | INFO | Task email sent for assignment_id=607: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Clara Winslow's Reservation"}
+2026-04-03 09:52:57,087 | INFO | Replaced href for site_url=cioudjetairways.com with assignment_url=https://cioudjetairways.com/a/608
+2026-04-03 09:52:57,216 | INFO | SendGrid send status=202 from=cloudjetairwaysphish@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Ava Simmons
+2026-04-03 09:52:57,216 | INFO | Task email sent for assignment_id=608: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairwaysphish@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Ava Simmons'}
+2026-04-03 09:52:57,217 | INFO | Replaced href for site_url=cioudjetairways.com with assignment_url=https://cioudjetairways.com/a/609
+2026-04-03 09:52:57,328 | INFO | SendGrid send status=202 from=cloudjetairwaysphish2@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Noah Parker
+2026-04-03 09:52:57,328 | INFO | Task email sent for assignment_id=609: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairwaysphish2@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Noah Parker'}
+2026-04-03 09:52:57,329 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/610
+2026-04-03 09:52:57,454 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Action Needed: CityTrustBank Payment for Courier Services ($319)
+2026-04-03 09:52:57,455 | INFO | Task email sent for assignment_id=610: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Action Needed: CityTrustBank Payment for Courier Services ($319)'}
+2026-04-03 09:52:57,455 | INFO | Assigned 10 tasks for stage=stage1 user_id=21
+2026-04-03 09:52:57,455 | INFO | start-next-stage result={'stage': 'stage1', 'assignments_created': 10, 'assignment_ids': [601, 602, 603, 604, 605, 606, 607, 608, 609, 610]}
+2026-04-03 10:08:29,168 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:08:29,169 | INFO | Extension /log accepted timestamp=1775225305973 text=Event Id 3: Open popup
+2026-04-03 10:08:35,982 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:08:35,983 | INFO | Extension /log accepted timestamp=1775225313293 text=Event Id 3: Open popup
+2026-04-03 10:08:44,490 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:08:44,490 | INFO | Extension /log accepted timestamp=1775225321997 text=Event Id 3: Open popup
+2026-04-03 10:10:38,629 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:10:38,629 | INFO | Extension /log accepted timestamp=1775225437882 text=Event Id 3: Open popup
+2026-04-03 10:21:06,952 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:21:06,953 | INFO | Extension /log accepted timestamp=1775226064444 text=Event Id 3: Open popup
+2026-04-03 10:21:22,434 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-03 10:21:22,434 | INFO | Extension /log accepted timestamp=1775226079975 text=Event Id 2: Open popup on Moby-protected site
+2026-04-03 10:21:25,508 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:21:25,508 | INFO | Extension /log accepted timestamp=1775226080406 text=Event Id 3: Open popup
+2026-04-03 10:21:34,043 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:21:34,043 | INFO | Extension /log accepted timestamp=1775226090547 text=Event Id 3: Open popup
+2026-04-03 10:23:15,844 | INFO | Recorded login for assignment_id=603 website=meridiansuites.com
+2026-04-03 10:23:15,845 | INFO | record-login-event assignment_id=603 website=meridiansuites.com updated=True
+2026-04-03 10:23:20,020 | INFO | Completed assignment_id=603 with completion_type=done
+2026-04-03 10:23:20,068 | INFO | record-complete-assignment-event assignment_id=603 completion_type=done
+2026-04-03 10:23:34,568 | INFO | Recorded login for assignment_id=602 website=meridiansuites.com
+2026-04-03 10:23:34,569 | INFO | record-login-event assignment_id=602 website=meridiansuites.com updated=True
+2026-04-03 10:23:38,720 | INFO | Completed assignment_id=602 with completion_type=done
+2026-04-03 10:23:38,781 | INFO | record-complete-assignment-event assignment_id=602 completion_type=done
+2026-04-03 10:23:51,149 | INFO | Recorded login for assignment_id=605 website=cloudjetairways.com
+2026-04-03 10:23:51,150 | INFO | record-login-event assignment_id=605 website=cloudjetairways.com updated=True
+2026-04-03 10:23:52,811 | INFO | Completed assignment_id=605 with completion_type=done
+2026-04-03 10:23:52,873 | INFO | record-complete-assignment-event assignment_id=605 completion_type=done
+2026-04-03 10:24:04,866 | INFO | Recorded login for assignment_id=601 website=meridiansuites.com
+2026-04-03 10:24:04,866 | INFO | record-login-event assignment_id=601 website=meridiansuites.com updated=True
+2026-04-03 10:24:06,674 | INFO | Completed assignment_id=601 with completion_type=done
+2026-04-03 10:24:06,722 | INFO | record-complete-assignment-event assignment_id=601 completion_type=done
+2026-04-03 10:24:19,706 | INFO | Recorded login for assignment_id=604 website=meridiansuites.com
+2026-04-03 10:24:19,706 | INFO | record-login-event assignment_id=604 website=meridiansuites.com updated=True
+2026-04-03 10:24:22,209 | INFO | Completed assignment_id=604 with completion_type=done
+2026-04-03 10:24:22,261 | INFO | record-complete-assignment-event assignment_id=604 completion_type=done
+2026-04-03 10:24:37,905 | INFO | Completed assignment_id=607 with completion_type=report_extension
+2026-04-03 10:24:37,945 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: https://rneridiansuites.com/a/607
+2026-04-03 10:24:37,945 | INFO | Extension /log accepted timestamp=2026-04-03T14:24:38.423Z text=Event: Reported Website Change | website: https://rneridiansuites.com/a/607
+2026-04-03 10:24:37,957 | INFO | record-complete-assignment-event assignment_id=607 completion_type=report_extension
+2026-04-03 10:24:57,099 | INFO | Recorded login for assignment_id=606 website=merdiansuites.com
+2026-04-03 10:24:57,099 | INFO | record-login-event assignment_id=606 website=merdiansuites.com updated=True
+2026-04-03 10:25:01,957 | INFO | Completed assignment_id=606 with completion_type=done
+2026-04-03 10:25:02,038 | INFO | record-complete-assignment-event assignment_id=606 completion_type=done
+2026-04-03 10:25:14,726 | INFO | Completed assignment_id=608 with completion_type=report_extension
+2026-04-03 10:25:14,740 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: https://cioudjetairways.com/a/608
+2026-04-03 10:25:14,740 | INFO | Extension /log accepted timestamp=2026-04-03T14:25:15.245Z text=Event: Reported Website Change | website: https://cioudjetairways.com/a/608
+2026-04-03 10:25:14,778 | INFO | record-complete-assignment-event assignment_id=608 completion_type=report_extension
+2026-04-03 10:25:29,231 | INFO | Recorded login for assignment_id=610 website=citytrust.com
+2026-04-03 10:25:29,232 | INFO | record-login-event assignment_id=610 website=citytrust.com updated=True
+2026-04-03 10:25:30,976 | INFO | Completed assignment_id=610 with completion_type=done
+2026-04-03 10:25:31,020 | INFO | record-complete-assignment-event assignment_id=610 completion_type=done
+2026-04-03 10:25:40,768 | INFO | Completed assignment_id=609 with completion_type=report_extension
+2026-04-03 10:25:40,863 | INFO | Appended log line for user_id=21: Event: Reported Website Change | website: https://cioudjetairways.com/a/609
+2026-04-03 10:25:40,864 | INFO | Extension /log accepted timestamp=2026-04-03T14:25:41.322Z text=Event: Reported Website Change | website: https://cioudjetairways.com/a/609
+2026-04-03 10:25:41,281 | INFO | SendGrid send status=202 from=moby@bskyakhargha1.help to=moby02@tutamail.com subject=stage1 complete — contact admin
+2026-04-03 10:25:41,281 | INFO | Stage complete email sent: {'sent': True, 'status_code': 202, 'from_email': 'moby@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'stage1 complete — contact admin'}
+2026-04-03 10:25:41,281 | INFO | record-complete-assignment-event assignment_id=609 completion_type=report_extension
+2026-04-03 10:26:46,243 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/611
+2026-04-03 10:26:46,638 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Lumen Office Interiors ($915)
+2026-04-03 10:26:46,638 | INFO | Task email sent for assignment_id=611: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Lumen Office Interiors ($915)'}
+2026-04-03 10:26:46,639 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/612
+2026-04-03 10:26:46,752 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Metro Office Supplies ($482)
+2026-04-03 10:26:46,753 | INFO | Task email sent for assignment_id=612: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Metro Office Supplies ($482)'}
+2026-04-03 10:26:46,753 | INFO | Replaced href for site_url=cloudjetairways.com with assignment_url=https://cloudjetairways.com/a/613
+2026-04-03 10:26:46,874 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Sofia Ramirez
+2026-04-03 10:26:46,875 | INFO | Task email sent for assignment_id=613: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Sofia Ramirez'}
+2026-04-03 10:26:46,875 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/614
+2026-04-03 10:26:46,985 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Please Approve: CityTrustBank Payment for Printing Supplies ($544)
+2026-04-03 10:26:46,986 | INFO | Task email sent for assignment_id=614: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Please Approve: CityTrustBank Payment for Printing Supplies ($544)'}
+2026-04-03 10:26:46,986 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/615
+2026-04-03 10:26:47,107 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Midtown Stationery Co. ($358)
+2026-04-03 10:26:47,108 | INFO | Task email sent for assignment_id=615: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Midtown Stationery Co. ($358)'}
+2026-04-03 10:26:47,108 | INFO | Replaced href for site_url=citytrvst.com with assignment_url=https://citytrvst.com/a/616
+2026-04-03 10:26:47,231 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Union Copy Center ($566)
+2026-04-03 10:26:47,232 | INFO | Task email sent for assignment_id=616: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Union Copy Center ($566)'}
+2026-04-03 10:26:47,232 | INFO | Replaced href for site_url=cltytrust.com with assignment_url=https://cltytrust.com/a/617
+2026-04-03 10:26:47,354 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Metro Office Supplies ($482)
+2026-04-03 10:26:47,355 | INFO | Task email sent for assignment_id=617: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Metro Office Supplies ($482)'}
+2026-04-03 10:26:47,355 | INFO | Replaced href for site_url=citytrvst.com with assignment_url=https://citytrvst.com/a/618
+2026-04-03 10:26:47,477 | INFO | SendGrid send status=202 from=citytrustphish2@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Eastline Courier Services ($348)
+2026-04-03 10:26:47,477 | INFO | Task email sent for assignment_id=618: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish2@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Eastline Courier Services ($348)'}
+2026-04-03 10:26:47,478 | INFO | Replaced href for site_url=cloudjetairway.com with assignment_url=https://cloudjetairway.com/a/619
+2026-04-03 10:26:47,597 | INFO | SendGrid send status=202 from=cloudjetairwaysphish2@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Chloe Davis
+2026-04-03 10:26:47,598 | INFO | Task email sent for assignment_id=619: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairwaysphish2@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Chloe Davis'}
+2026-04-03 10:26:47,598 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/620
+2026-04-03 10:26:47,737 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Ivy Sanderson's Reservation
+2026-04-03 10:26:47,737 | INFO | Task email sent for assignment_id=620: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Ivy Sanderson's Reservation"}
+2026-04-03 10:26:47,737 | INFO | Assigned 10 tasks for stage=stage2 user_id=21
+2026-04-03 10:26:47,737 | INFO | start-next-stage result={'stage': 'stage2', 'assignments_created': 10, 'assignment_ids': [611, 612, 613, 614, 615, 616, 617, 618, 619, 620]}
+2026-04-03 10:30:48,796 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-03 10:30:48,796 | INFO | Extension /log accepted timestamp=1775226646294 text=Event Id 2: Open popup on Moby-protected site
+2026-04-03 10:33:39,724 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-03 10:33:39,724 | INFO | Extension /log accepted timestamp=1775226817116 text=Event Id 2: Open popup on Moby-protected site
+2026-04-03 10:33:42,715 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:33:42,715 | INFO | Extension /log accepted timestamp=1775226817287 text=Event Id 3: Open popup
+2026-04-03 10:42:19,964 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-03 10:42:19,964 | INFO | Extension /log accepted timestamp=1775227337277 text=Event Id 2: Open popup on Moby-protected site
+2026-04-03 10:42:22,971 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:42:22,971 | INFO | Extension /log accepted timestamp=1775227337442 text=Event Id 3: Open popup
+2026-04-03 10:42:38,811 | INFO | Appended log line for user_id=21: Event Id 13: User trusts site despite certificate change
+2026-04-03 10:42:38,811 | INFO | Extension /log accepted timestamp=1775227354848 text=Event Id 13: User trusts site despite certificate change
+2026-04-03 10:44:17,861 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:44:17,862 | INFO | Extension /log accepted timestamp=1775227455153 text=Event Id 3: Open popup
+2026-04-03 10:44:28,787 | INFO | Completed assignment_id=619 with completion_type=report_extension
+2026-04-03 10:44:28,849 | INFO | record-complete-assignment-event assignment_id=619 completion_type=report_extension
+2026-04-03 10:44:31,470 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-03 10:44:31,470 | INFO | Extension /log accepted timestamp=1775227471867 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-03 10:44:53,014 | INFO | Recorded login for assignment_id=611 website=citytrust.com
+2026-04-03 10:44:53,015 | INFO | record-login-event assignment_id=611 website=citytrust.com updated=True
+2026-04-03 10:44:54,735 | INFO | Completed assignment_id=611 with completion_type=done
+2026-04-03 10:44:54,788 | INFO | record-complete-assignment-event assignment_id=611 completion_type=done
+2026-04-03 10:45:06,295 | INFO | Recorded login for assignment_id=614 website=citytrust.com
+2026-04-03 10:45:06,295 | INFO | record-login-event assignment_id=614 website=citytrust.com updated=True
+2026-04-03 10:45:10,512 | INFO | Completed assignment_id=614 with completion_type=done
+2026-04-03 10:45:10,575 | INFO | record-complete-assignment-event assignment_id=614 completion_type=done
+2026-04-03 10:45:25,931 | INFO | Recorded login for assignment_id=612 website=citytrust.com
+2026-04-03 10:45:25,931 | INFO | record-login-event assignment_id=612 website=citytrust.com updated=True
+2026-04-03 10:45:27,748 | INFO | Completed assignment_id=612 with completion_type=done
+2026-04-03 10:45:27,808 | INFO | record-complete-assignment-event assignment_id=612 completion_type=done
+2026-04-03 10:45:40,695 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:45:40,696 | INFO | Extension /log accepted timestamp=1775227537954 text=Event Id 3: Open popup
+2026-04-03 10:45:49,121 | INFO | Completed assignment_id=617 with completion_type=report_extension
+2026-04-03 10:45:49,174 | INFO | record-complete-assignment-event assignment_id=617 completion_type=report_extension
+2026-04-03 10:46:02,003 | INFO | Recorded login for assignment_id=615 website=citytrust.com
+2026-04-03 10:46:02,003 | INFO | record-login-event assignment_id=615 website=citytrust.com updated=True
+2026-04-03 10:46:03,022 | INFO | Completed assignment_id=615 with completion_type=done
+2026-04-03 10:46:03,072 | INFO | record-complete-assignment-event assignment_id=615 completion_type=done
+2026-04-03 10:46:18,704 | INFO | Recorded login for assignment_id=613 website=cloudjetairways.com
+2026-04-03 10:46:18,704 | INFO | record-login-event assignment_id=613 website=cloudjetairways.com updated=True
+2026-04-03 10:46:20,252 | INFO | Completed assignment_id=613 with completion_type=done
+2026-04-03 10:46:20,301 | INFO | record-complete-assignment-event assignment_id=613 completion_type=done
+2026-04-03 10:46:41,917 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:46:41,918 | INFO | Extension /log accepted timestamp=1775227599266 text=Event Id 3: Open popup
+2026-04-03 10:46:51,965 | INFO | Recorded login for assignment_id=618 website=citytrvst.com
+2026-04-03 10:46:51,965 | INFO | record-login-event assignment_id=618 website=citytrvst.com updated=True
+2026-04-03 10:46:53,186 | INFO | Completed assignment_id=618 with completion_type=done
+2026-04-03 10:46:53,227 | INFO | record-complete-assignment-event assignment_id=618 completion_type=done
+2026-04-03 10:47:11,346 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:47:11,346 | INFO | Extension /log accepted timestamp=1775227628673 text=Event Id 3: Open popup
+2026-04-03 10:47:13,058 | INFO | Completed assignment_id=616 with completion_type=report_extension
+2026-04-03 10:47:13,103 | INFO | record-complete-assignment-event assignment_id=616 completion_type=report_extension
+2026-04-03 10:47:23,797 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-03 10:47:23,798 | INFO | Extension /log accepted timestamp=1775227644158 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-03 10:47:30,067 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:47:30,068 | INFO | Extension /log accepted timestamp=1775227647405 text=Event Id 3: Open popup
+2026-04-03 10:48:11,159 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-03 10:48:11,160 | INFO | Extension /log accepted timestamp=1775227688476 text=Event Id 2: Open popup on Moby-protected site
+2026-04-03 10:48:14,177 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:48:14,177 | INFO | Extension /log accepted timestamp=1775227688689 text=Event Id 3: Open popup
+2026-04-03 10:48:19,787 | INFO | Completed assignment_id=620 with completion_type=report_extension
+2026-04-03 10:48:20,379 | INFO | SendGrid send status=202 from=moby@bskyakhargha1.help to=moby02@tutamail.com subject=stage2 complete — contact admin
+2026-04-03 10:48:20,379 | INFO | Stage complete email sent: {'sent': True, 'status_code': 202, 'from_email': 'moby@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'stage2 complete — contact admin'}
+2026-04-03 10:48:20,379 | INFO | record-complete-assignment-event assignment_id=620 completion_type=report_extension
+2026-04-03 10:48:22,811 | INFO | Appended log line for user_id=21: Event Id 14: User does not trust site due to certificate change, cannot complete task
+2026-04-03 10:48:22,811 | INFO | Extension /log accepted timestamp=1775227700122 text=Event Id 14: User does not trust site due to certificate change, cannot complete task
+2026-04-03 10:51:49,559 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:51:49,559 | INFO | Extension /log accepted timestamp=1775227906775 text=Event Id 3: Open popup
+2026-04-03 10:51:52,500 | INFO | Appended log line for user_id=21: Event Id 4: Site saved as Moby-protected
+2026-04-03 10:51:52,501 | INFO | Extension /log accepted timestamp=1775227909247 text=Event Id 4: Site saved as Moby-protected
+2026-04-03 10:52:06,353 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:52:06,353 | INFO | Extension /log accepted timestamp=1775227923654 text=Event Id 3: Open popup
+2026-04-03 10:52:08,491 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-03 10:52:08,491 | INFO | Extension /log accepted timestamp=1775227928839 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-03 10:52:19,405 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-03 10:52:19,405 | INFO | Extension /log accepted timestamp=1775227936706 text=Event Id 3: Open popup
+2026-04-10 01:00:30,326 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 01:00:30,326 | INFO | Extension /log accepted timestamp=1775797225805 text=Event Id 3: Open popup
+2026-04-10 01:00:32,512 | INFO | Appended log line for user_id=21: Event Id 16: User opened edit site list view
+2026-04-10 01:00:32,513 | INFO | Extension /log accepted timestamp=1775797228020 text=Event Id 16: User opened edit site list view
+2026-04-10 01:00:45,389 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 01:00:45,390 | INFO | Extension /log accepted timestamp=1775797242122 text=Event Id 3: Open popup
+2026-04-10 01:01:40,712 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:01:40,712 | INFO | Extension /log accepted timestamp=1775797300444 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:01:42,138 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:01:42,138 | INFO | Extension /log accepted timestamp=1775797301969 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:03:13,187 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 01:03:13,187 | INFO | Extension /log accepted timestamp=1775797389888 text=Event Id 3: Open popup
+2026-04-10 01:06:40,037 | INFO | Appended log line for user_id=21: Event Id 16: User opened edit site list view
+2026-04-10 01:06:40,037 | INFO | Extension /log accepted timestamp=1775797592692 text=Event Id 16: User opened edit site list view
+2026-04-10 01:32:01,493 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:32:01,493 | INFO | Extension /log accepted timestamp=1775799120623 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:32:28,324 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:32:28,324 | INFO | Extension /log accepted timestamp=1775799148016 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:32:32,181 | INFO | Completed assignment_id=619 with completion_type=report_extension
+2026-04-10 01:32:32,300 | INFO | record-complete-assignment-event assignment_id=619 completion_type=report_extension
+2026-04-10 01:32:34,088 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 01:32:34,088 | INFO | Extension /log accepted timestamp=1775799150622 text=Event Id 3: Open popup
+2026-04-10 01:32:34,859 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:32:34,859 | INFO | Extension /log accepted timestamp=1775799154598 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:32:55,339 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:32:55,340 | INFO | Extension /log accepted timestamp=1775799175194 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:36:05,381 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 01:36:05,381 | INFO | Extension /log accepted timestamp=1775799361862 text=Event Id 3: Open popup
+2026-04-10 01:36:15,977 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 01:36:15,977 | INFO | Extension /log accepted timestamp=1775799372775 text=Event Id 3: Open popup
+2026-04-10 01:36:18,959 | INFO | Appended log line for user_id=21: Event Id 6: Site saved as unsafe
+2026-04-10 01:36:18,959 | INFO | Extension /log accepted timestamp=1775799373700 text=Event Id 6: Site saved as unsafe
+2026-04-10 01:36:22,234 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:36:22,234 | INFO | Extension /log accepted timestamp=1775799382091 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 01:36:22,251 | INFO | Appended log line for user_id=21: Event Id 17: List of Unsafe Websites: cloudjetairway.com
+2026-04-10 01:36:22,252 | INFO | Extension /log accepted timestamp=1775799373700 text=Event Id 17: List of Unsafe Websites: cloudjetairway.com
+2026-04-10 01:43:02,498 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 01:43:02,498 | INFO | Extension /log accepted timestamp=1775799775232 text=Event Id 3: Open popup
+2026-04-10 01:43:05,372 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 01:43:05,372 | INFO | Extension /log accepted timestamp=1775799775235 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 01:44:28,770 | INFO | Completed assignment_id=619 with completion_type=previous_block_extension
+2026-04-10 01:44:28,884 | INFO | record-complete-assignment-event assignment_id=619 completion_type=previous_block_extension
+2026-04-10 01:44:31,832 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 01:44:31,832 | INFO | Extension /log accepted timestamp=1775799868669 text=Event Id 3: Open popup
+2026-04-10 01:44:34,919 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 01:44:34,920 | INFO | Extension /log accepted timestamp=1775799868672 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 01:50:53,573 | ERROR | record-complete-assignment-event failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 125, in api_record_complete_assignment_event
+    completed = complete_assignment_by_id(
+        assignment_id=int(assignment_id),
+        completion_type=completion_type,
+        website=website,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 500, in complete_assignment_by_id
+    raise ValueError(f"Assignment {assignment_id} is already completed")
+ValueError: Assignment 619 is already completed
+2026-04-10 01:50:56,649 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 01:50:56,650 | INFO | Extension /log accepted timestamp=1775800253485 text=Event Id 3: Open popup
+2026-04-10 01:50:59,732 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 01:50:59,732 | INFO | Extension /log accepted timestamp=1775800253487 text=Event Id 15: User does not trust blocked site, cannot complete task
