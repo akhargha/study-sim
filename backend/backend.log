@@ -1629,3 +1629,586 @@ ValueError: Assignment 619 is already completed
 2026-04-10 01:50:56,650 | INFO | Extension /log accepted timestamp=1775800253485 text=Event Id 3: Open popup
 2026-04-10 01:50:59,732 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
 2026-04-10 01:50:59,732 | INFO | Extension /log accepted timestamp=1775800253487 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 02:11:55,030 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:11:55,030 | INFO | Extension /log accepted timestamp=1775801511052 text=Event Id 3: Open popup
+2026-04-10 02:13:04,079 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:13:04,079 | INFO | Extension /log accepted timestamp=1775801580692 text=Event Id 3: Open popup
+2026-04-10 02:14:23,632 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:14:23,632 | INFO | Extension /log accepted timestamp=1775801660241 text=Event Id 3: Open popup
+2026-04-10 02:20:10,753 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:20:10,754 | INFO | Extension /log accepted timestamp=1775802007199 text=Event Id 3: Open popup
+2026-04-10 02:26:20,306 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:26:20,306 | INFO | Extension /log accepted timestamp=1775802376677 text=Event Id 3: Open popup
+2026-04-10 02:26:36,744 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:26:36,744 | INFO | Extension /log accepted timestamp=1775802393455 text=Event Id 3: Open popup
+2026-04-10 02:29:21,942 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:29:21,942 | INFO | Extension /log accepted timestamp=1775802558509 text=Event Id 3: Open popup
+2026-04-10 02:29:33,338 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:29:33,338 | INFO | Extension /log accepted timestamp=1775802570077 text=Event Id 3: Open popup
+2026-04-10 02:29:47,735 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:29:47,735 | INFO | Extension /log accepted timestamp=1775802584578 text=Event Id 3: Open popup
+2026-04-10 02:29:57,253 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:29:57,253 | INFO | Extension /log accepted timestamp=1775802594042 text=Event Id 3: Open popup
+2026-04-10 02:53:50,367 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:53:50,367 | INFO | Extension /log accepted timestamp=1775804026329 text=Event Id 3: Open popup
+2026-04-10 02:54:08,270 | INFO | Appended log line for user_id=21: Event Id 6: Site saved as unsafe
+2026-04-10 02:54:08,270 | INFO | Extension /log accepted timestamp=1775804045099 text=Event Id 6: Site saved as unsafe
+2026-04-10 02:54:11,269 | INFO | Appended log line for user_id=21: Event Id 17: List of Unsafe Websites: meridiansuites.com
+2026-04-10 02:54:11,270 | INFO | Extension /log accepted timestamp=1775804045099 text=Event Id 17: List of Unsafe Websites: meridiansuites.com
+2026-04-10 02:54:14,331 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 02:54:14,331 | INFO | Extension /log accepted timestamp=1775804045105 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 02:54:27,499 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:54:27,499 | INFO | Extension /log accepted timestamp=1775804065616 text=Event Id 3: Open popup
+2026-04-10 02:55:00,972 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:55:00,972 | INFO | Extension /log accepted timestamp=1775804100462 text=Event Id 3: Open popup
+2026-04-10 02:55:09,212 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:55:09,213 | INFO | Extension /log accepted timestamp=1775804106050 text=Event Id 3: Open popup
+2026-04-10 02:55:12,350 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 02:55:12,350 | INFO | Extension /log accepted timestamp=1775804111566 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 02:55:21,476 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:55:21,476 | INFO | Extension /log accepted timestamp=1775804118381 text=Event Id 3: Open popup
+2026-04-10 02:55:24,485 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 02:55:24,485 | INFO | Extension /log accepted timestamp=1775804118383 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 02:55:51,062 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:55:51,062 | INFO | Extension /log accepted timestamp=1775804147798 text=Event Id 3: Open popup
+2026-04-10 02:56:00,475 | INFO | Completed assignment_id=619 with completion_type=report_extension
+2026-04-10 02:56:00,483 | ERROR | record-complete-assignment-event failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 125, in api_record_complete_assignment_event
+    completed = complete_assignment_by_id(
+        assignment_id=int(assignment_id),
+        completion_type=completion_type,
+        website=website,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 500, in complete_assignment_by_id
+    raise ValueError(f"Assignment {assignment_id} is already completed")
+ValueError: Assignment 619 is already completed
+2026-04-10 02:56:00,570 | INFO | record-complete-assignment-event assignment_id=619 completion_type=report_extension
+2026-04-10 02:56:02,527 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 02:56:02,527 | INFO | Extension /log accepted timestamp=1775804162517 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 02:56:15,037 | ERROR | record-complete-assignment-event failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 125, in api_record_complete_assignment_event
+    completed = complete_assignment_by_id(
+        assignment_id=int(assignment_id),
+        completion_type=completion_type,
+        website=website,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 500, in complete_assignment_by_id
+    raise ValueError(f"Assignment {assignment_id} is already completed")
+ValueError: Assignment 619 is already completed
+2026-04-10 02:56:18,213 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:56:18,213 | INFO | Extension /log accepted timestamp=1775804175082 text=Event Id 3: Open popup
+2026-04-10 02:56:21,441 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 02:56:21,442 | INFO | Extension /log accepted timestamp=1775804175084 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 02:56:27,403 | INFO | Appended log line for user_id=21: Event Id 4: Site saved as Moby-protected
+2026-04-10 02:56:27,404 | INFO | Extension /log accepted timestamp=1775804184339 text=Event Id 4: Site saved as Moby-protected
+2026-04-10 02:56:30,501 | INFO | Appended log line for user_id=21: Event Id 7: List of Sensitive Websites: citytrust.com, cloudjetairway.com
+2026-04-10 02:56:30,501 | INFO | Extension /log accepted timestamp=1775804184339 text=Event Id 7: List of Sensitive Websites: citytrust.com, cloudjetairway.com
+2026-04-10 02:56:37,363 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:56:37,363 | INFO | Extension /log accepted timestamp=1775804194245 text=Event Id 3: Open popup
+2026-04-10 02:56:45,992 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 02:56:45,992 | INFO | Extension /log accepted timestamp=1775804202791 text=Event Id 3: Open popup
+2026-04-10 02:56:48,999 | INFO | Appended log line for user_id=21: Event Id 16: User opened edit site list view
+2026-04-10 02:56:48,999 | INFO | Extension /log accepted timestamp=1775804204550 text=Event Id 16: User opened edit site list view
+2026-04-10 03:00:47,618 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 03:00:47,618 | INFO | Extension /log accepted timestamp=1775804444341 text=Event Id 3: Open popup
+2026-04-10 03:03:43,471 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 03:03:43,471 | INFO | Extension /log accepted timestamp=1775804619952 text=Event Id 3: Open popup
+2026-04-10 03:08:20,615 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 03:08:20,616 | INFO | Extension /log accepted timestamp=1775804897366 text=Event Id 3: Open popup
+2026-04-10 03:11:15,217 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 03:11:15,218 | INFO | Extension /log accepted timestamp=1775805071424 text=Event Id 3: Open popup
+2026-04-10 03:11:46,189 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 03:11:46,189 | INFO | Extension /log accepted timestamp=1775805102944 text=Event Id 3: Open popup
+2026-04-10 03:11:52,568 | INFO | Appended log line for user_id=21: Event Id 6: Site saved as unsafe
+2026-04-10 03:11:52,568 | INFO | Extension /log accepted timestamp=1775805109429 text=Event Id 6: Site saved as unsafe
+2026-04-10 03:17:07,324 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 03:17:07,324 | INFO | Extension /log accepted timestamp=1775805424092 text=Event Id 3: Open popup
+2026-04-10 03:17:13,054 | INFO | Appended log line for user_id=21: Event Id 4: Site saved as Moby-protected
+2026-04-10 03:17:13,054 | INFO | Extension /log accepted timestamp=1775805429967 text=Event Id 4: Site saved as Moby-protected
+2026-04-10 03:17:16,116 | INFO | Appended log line for user_id=21: Event Id 7: List of Sensitive Websites: google.com
+2026-04-10 03:17:16,116 | INFO | Extension /log accepted timestamp=1775805429967 text=Event Id 7: List of Sensitive Websites: google.com
+2026-04-10 03:17:22,357 | ERROR | record-complete-assignment-event failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 125, in api_record_complete_assignment_event
+    completed = complete_assignment_by_id(
+        assignment_id=int(assignment_id),
+        completion_type=completion_type,
+        website=website,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 500, in complete_assignment_by_id
+    raise ValueError(f"Assignment {assignment_id} is already completed")
+ValueError: Assignment 619 is already completed
+2026-04-10 03:17:22,398 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 03:17:22,398 | INFO | Extension /log accepted timestamp=1775805439306 text=Event Id 3: Open popup
+2026-04-10 03:17:22,456 | ERROR | record-complete-assignment-event failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 125, in api_record_complete_assignment_event
+    completed = complete_assignment_by_id(
+        assignment_id=int(assignment_id),
+        completion_type=completion_type,
+        website=website,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 500, in complete_assignment_by_id
+    raise ValueError(f"Assignment {assignment_id} is already completed")
+ValueError: Assignment 619 is already completed
+2026-04-10 03:17:27,469 | ERROR | record-complete-assignment-event failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 125, in api_record_complete_assignment_event
+    completed = complete_assignment_by_id(
+        assignment_id=int(assignment_id),
+        completion_type=completion_type,
+        website=website,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 500, in complete_assignment_by_id
+    raise ValueError(f"Assignment {assignment_id} is already completed")
+ValueError: Assignment 619 is already completed
+2026-04-10 03:17:30,535 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 03:17:30,535 | INFO | Extension /log accepted timestamp=1775805447512 text=Event Id 3: Open popup
+2026-04-10 08:24:58,590 | ERROR | record-complete-assignment-event failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 125, in api_record_complete_assignment_event
+    completed = complete_assignment_by_id(
+        assignment_id=int(assignment_id),
+        completion_type=completion_type,
+        website=website,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 500, in complete_assignment_by_id
+    raise ValueError(f"Assignment {assignment_id} is already completed")
+ValueError: Assignment 619 is already completed
+2026-04-10 08:25:24,701 | ERROR | record-complete-assignment-event failed
+Traceback (most recent call last):
+  File "/home/gabriel/study-sim/backend/app.py", line 125, in api_record_complete_assignment_event
+    completed = complete_assignment_by_id(
+        assignment_id=int(assignment_id),
+        completion_type=completion_type,
+        website=website,
+    )
+  File "/home/gabriel/study-sim/backend/study_logic.py", line 500, in complete_assignment_by_id
+    raise ValueError(f"Assignment {assignment_id} is already completed")
+ValueError: Assignment 619 is already completed
+2026-04-10 08:25:27,840 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 08:25:27,840 | INFO | Extension /log accepted timestamp=1775823925190 text=Event Id 3: Open popup
+2026-04-10 08:25:30,812 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 08:25:30,812 | INFO | Extension /log accepted timestamp=1775823925192 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 08:25:53,017 | INFO | Appended log line for user_id=21: Event Id 16: User opened edit site list view
+2026-04-10 08:25:53,017 | INFO | Extension /log accepted timestamp=1775823950299 text=Event Id 16: User opened edit site list view
+2026-04-10 08:26:00,809 | INFO | Appended log line for user_id=21: Event Id 8: Saved site removed
+2026-04-10 08:26:00,809 | INFO | Extension /log accepted timestamp=1775823958143 text=Event Id 8: Saved site removed
+2026-04-10 08:26:03,775 | INFO | Appended log line for user_id=21: Event Id 8: Saved site removed
+2026-04-10 08:26:03,775 | INFO | Extension /log accepted timestamp=1775823959983 text=Event Id 8: Saved site removed
+2026-04-10 08:26:04,204 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 08:26:04,205 | INFO | Extension /log accepted timestamp=1775823964672 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 08:26:06,838 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 08:26:06,838 | INFO | Extension /log accepted timestamp=1775823966957 text=Event Id 3: Open popup
+2026-04-10 08:26:13,335 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 08:26:13,335 | INFO | Extension /log accepted timestamp=1775823973525 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 08:26:16,377 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 08:26:16,377 | INFO | Extension /log accepted timestamp=1775823973671 text=Event Id 3: Open popup
+2026-04-10 08:26:29,404 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 08:26:29,405 | INFO | Extension /log accepted timestamp=1775823986809 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 08:27:52,680 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/621
+2026-04-10 08:27:53,040 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Action Needed: CityTrustBank Payment for Courier Services ($319)
+2026-04-10 08:27:53,040 | INFO | Task email sent for assignment_id=621: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Action Needed: CityTrustBank Payment for Courier Services ($319)'}
+2026-04-10 08:27:53,040 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/622
+2026-04-10 08:27:53,280 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Northside Breakroom Supply ($238)
+2026-04-10 08:27:53,281 | INFO | Task email sent for assignment_id=622: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Northside Breakroom Supply ($238)'}
+2026-04-10 08:27:53,282 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/623
+2026-04-10 08:27:53,422 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Lila Kensington's Reservation
+2026-04-10 08:27:53,423 | INFO | Task email sent for assignment_id=623: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Lila Kensington's Reservation"}
+2026-04-10 08:27:53,423 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/624
+2026-04-10 08:27:53,523 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: CityTrustBank Payment to Apex Tech Supplies ($672)
+2026-04-10 08:27:53,524 | INFO | Task email sent for assignment_id=624: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: CityTrustBank Payment to Apex Tech Supplies ($672)'}
+2026-04-10 08:27:53,524 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/625
+2026-04-10 08:27:53,655 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Rowan Thatcher's Reservation
+2026-04-10 08:27:53,655 | INFO | Task email sent for assignment_id=625: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Rowan Thatcher's Reservation"}
+2026-04-10 08:27:53,656 | INFO | Replaced href for site_url=citytrut.com with assignment_url=https://citytrut.com/a/626
+2026-04-10 08:27:53,750 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Sterling Office Goods ($427)
+2026-04-10 08:27:53,750 | INFO | Task email sent for assignment_id=626: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Sterling Office Goods ($427)'}
+2026-04-10 08:27:53,751 | INFO | Replaced href for site_url=meridainsuites.com with assignment_url=https://meridainsuites.com/a/627
+2026-04-10 08:27:53,847 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Claire Hudson's Reservation
+2026-04-10 08:27:53,847 | INFO | Task email sent for assignment_id=627: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Claire Hudson's Reservation"}
+2026-04-10 08:27:53,848 | INFO | Replaced href for site_url=citytrustbank.com with assignment_url=https://citytrustbank.com/a/628
+2026-04-10 08:27:53,929 | INFO | SendGrid send status=202 from=citytrustphish@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Apex Tech Supplies ($672)
+2026-04-10 08:27:53,929 | INFO | Task email sent for assignment_id=628: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Apex Tech Supplies ($672)'}
+2026-04-10 08:27:53,930 | INFO | Replaced href for site_url=merdiansuites.com with assignment_url=https://merdiansuites.com/a/629
+2026-04-10 08:27:54,023 | INFO | SendGrid send status=202 from=meridiansuitesphish@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Natalie Ross's Reservation
+2026-04-10 08:27:54,024 | INFO | Task email sent for assignment_id=629: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuitesphish@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Natalie Ross's Reservation"}
+2026-04-10 08:27:54,024 | INFO | Replaced href for site_url=citytrustbanking.com with assignment_url=https://citytrustbanking.com/a/630
+2026-04-10 08:27:54,116 | INFO | SendGrid send status=202 from=citytrustphish@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Beacon Workplace Supply ($291)
+2026-04-10 08:27:54,116 | INFO | Task email sent for assignment_id=630: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Beacon Workplace Supply ($291)'}
+2026-04-10 08:27:54,117 | INFO | Replaced href for site_url=meridainsuites.com with assignment_url=https://meridainsuites.com/a/631
+2026-04-10 08:27:54,217 | INFO | SendGrid send status=202 from=meridiansuitesphish@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Natalie Ross's Reservation
+2026-04-10 08:27:54,217 | INFO | Task email sent for assignment_id=631: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuitesphish@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Natalie Ross's Reservation"}
+2026-04-10 08:27:54,218 | INFO | Replaced href for site_url=cloudjetairways.com with assignment_url=https://cloudjetairways.com/a/632
+2026-04-10 08:27:54,309 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Naomi Patel
+2026-04-10 08:27:54,310 | INFO | Task email sent for assignment_id=632: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Naomi Patel'}
+2026-04-10 08:27:54,310 | INFO | Assigned 12 tasks for stage=stage3 user_id=21
+2026-04-10 08:27:54,310 | INFO | start-next-stage result={'stage': 'stage3', 'assignments_created': 12, 'assignment_ids': [621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632]}
+2026-04-10 08:29:03,420 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 08:29:03,421 | INFO | Extension /log accepted timestamp=1775824140864 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 08:45:24,656 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 08:45:24,656 | INFO | Extension /log accepted timestamp=1775825121986 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 08:45:27,744 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 08:45:27,745 | INFO | Extension /log accepted timestamp=1775825122499 text=Event Id 3: Open popup
+2026-04-10 08:49:33,767 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 08:49:33,767 | INFO | Extension /log accepted timestamp=1775825371100 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 08:49:37,591 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 08:49:37,591 | INFO | Extension /log accepted timestamp=1775825371253 text=Event Id 3: Open popup
+2026-04-10 08:59:38,417 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 08:59:38,418 | INFO | Extension /log accepted timestamp=1775825978245 text=Event Id 3: Open popup
+2026-04-10 09:02:29,506 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:02:29,506 | INFO | Extension /log accepted timestamp=1775826149930 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:02:39,635 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:02:39,635 | INFO | Extension /log accepted timestamp=1775826157090 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:02:42,819 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:02:42,819 | INFO | Extension /log accepted timestamp=1775826163260 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:02:48,154 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:02:48,154 | INFO | Extension /log accepted timestamp=1775826165571 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:02:51,919 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:02:51,920 | INFO | Extension /log accepted timestamp=1775826172398 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:03:37,879 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:03:37,879 | INFO | Extension /log accepted timestamp=1775826215272 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:03:40,817 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 09:03:40,817 | INFO | Extension /log accepted timestamp=1775826215462 text=Event Id 3: Open popup
+2026-04-10 09:05:35,466 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:05:35,467 | INFO | Extension /log accepted timestamp=1775826332581 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:05:38,362 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 09:05:38,363 | INFO | Extension /log accepted timestamp=1775826332875 text=Event Id 3: Open popup
+2026-04-10 09:13:14,457 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:13:14,458 | INFO | Extension /log accepted timestamp=1775826794928 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:13:16,523 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:13:16,523 | INFO | Extension /log accepted timestamp=1775826797031 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:20:54,130 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 09:20:54,130 | INFO | Extension /log accepted timestamp=1775827251461 text=Event Id 3: Open popup
+2026-04-10 09:21:49,806 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:21:49,807 | INFO | Extension /log accepted timestamp=1775827310288 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:22:00,524 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:22:00,524 | INFO | Extension /log accepted timestamp=1775827321048 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:22:07,539 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:22:07,540 | INFO | Extension /log accepted timestamp=1775827325006 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:22:11,023 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:22:11,023 | INFO | Extension /log accepted timestamp=1775827331543 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:22:28,834 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:22:28,835 | INFO | Extension /log accepted timestamp=1775827349348 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:22:45,670 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:22:45,670 | INFO | Extension /log accepted timestamp=1775827366200 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:22:56,882 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:22:56,882 | INFO | Extension /log accepted timestamp=1775827377414 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:23:11,141 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:23:11,141 | INFO | Extension /log accepted timestamp=1775827391666 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:23:12,277 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:23:12,277 | INFO | Extension /log accepted timestamp=1775827392796 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:23:15,606 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:23:15,607 | INFO | Extension /log accepted timestamp=1775827396141 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:40:24,760 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:40:24,760 | INFO | Extension /log accepted timestamp=1775828425279 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:40:34,999 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:40:34,999 | INFO | Extension /log accepted timestamp=1775828432495 text=Event Id 2: Open popup on Moby-protected site
+2026-04-10 09:40:36,908 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:40:36,909 | INFO | Extension /log accepted timestamp=1775828437417 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:40:56,601 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 09:40:56,601 | INFO | Extension /log accepted timestamp=1775828454038 text=Event Id 3: Open popup
+2026-04-10 09:41:16,053 | INFO | Appended log line for user_id=21: Event Id 6: Site saved as unsafe
+2026-04-10 09:41:16,053 | INFO | Extension /log accepted timestamp=1775828472777 text=Event Id 6: Site saved as unsafe
+2026-04-10 09:41:17,141 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:41:17,141 | INFO | Extension /log accepted timestamp=1775828477682 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-10 09:41:28,781 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-10 09:41:28,782 | INFO | Extension /log accepted timestamp=1775828486245 text=Event Id 3: Open popup
+2026-04-10 09:41:31,911 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 09:41:31,911 | INFO | Extension /log accepted timestamp=1775828486247 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-10 09:41:43,244 | INFO | Appended log line for user_id=21: Event Id 4: Site saved as Moby-protected
+2026-04-10 09:41:43,244 | INFO | Extension /log accepted timestamp=1775828500632 text=Event Id 4: Site saved as Moby-protected
+2026-04-10 09:41:46,239 | INFO | Appended log line for user_id=21: Event Id 7: List of Sensitive Websites: citytrust.com, cloudjetairways.com, meridiansuites.com
+2026-04-10 09:41:46,240 | INFO | Extension /log accepted timestamp=1775828500632 text=Event Id 7: List of Sensitive Websites: citytrust.com, cloudjetairways.com, meridiansuites.com
+2026-04-16 22:16:20,409 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 22:16:20,409 | INFO | Extension /log accepted timestamp=1776392177911 text=Event Id 3: Open popup
+2026-04-16 22:16:22,983 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 22:16:22,983 | INFO | Extension /log accepted timestamp=1776392184673 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 22:16:23,961 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 22:16:23,962 | INFO | Extension /log accepted timestamp=1776392185565 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 22:25:02,959 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 22:25:02,960 | INFO | Extension /log accepted timestamp=1776392701110 text=Event Id 3: Open popup
+2026-04-16 23:23:52,496 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 23:23:52,497 | INFO | Extension /log accepted timestamp=1776396230244 text=Event Id 3: Open popup
+2026-04-16 23:23:52,554 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:23:52,555 | INFO | Extension /log accepted timestamp=1776396234192 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:23:58,039 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:23:58,039 | INFO | Extension /log accepted timestamp=1776396239858 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:23:59,237 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:23:59,237 | INFO | Extension /log accepted timestamp=1776396241076 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:02,251 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:02,251 | INFO | Extension /log accepted timestamp=1776396244115 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:04,741 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:04,741 | INFO | Extension /log accepted timestamp=1776396246565 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:11,268 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 23:24:11,268 | INFO | Extension /log accepted timestamp=1776396248785 text=Event Id 3: Open popup
+2026-04-16 23:24:29,912 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:29,912 | INFO | Extension /log accepted timestamp=1776396271773 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:31,105 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:31,106 | INFO | Extension /log accepted timestamp=1776396272993 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:31,535 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:31,535 | INFO | Extension /log accepted timestamp=1776396273424 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:36,870 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-16 23:24:36,870 | INFO | Extension /log accepted timestamp=1776396275674 text=Event Id 2: Open popup on Moby-protected site
+2026-04-16 23:24:39,849 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 23:24:39,849 | INFO | Extension /log accepted timestamp=1776396275689 text=Event Id 3: Open popup
+2026-04-16 23:24:46,082 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:24:46,082 | INFO | Extension /log accepted timestamp=1776396287961 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:31:45,995 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:31:45,995 | INFO | Extension /log accepted timestamp=1776396707699 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:31:46,080 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:31:46,080 | INFO | Extension /log accepted timestamp=1776396707957 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:02,846 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 23:34:02,847 | INFO | Extension /log accepted timestamp=1776396841198 text=Event Id 3: Open popup
+2026-04-16 23:34:11,150 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:11,150 | INFO | Extension /log accepted timestamp=1776396852926 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:12,593 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:12,593 | INFO | Extension /log accepted timestamp=1776396854440 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:23,182 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:23,183 | INFO | Extension /log accepted timestamp=1776396865043 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:38,743 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 23:34:38,744 | INFO | Extension /log accepted timestamp=1776396877540 text=Event Id 3: Open popup
+2026-04-16 23:34:39,652 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:39,652 | INFO | Extension /log accepted timestamp=1776396881569 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:40,578 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:40,578 | INFO | Extension /log accepted timestamp=1776396882507 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:41,066 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:41,066 | INFO | Extension /log accepted timestamp=1776396882974 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:42,056 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:42,056 | INFO | Extension /log accepted timestamp=1776396883985 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:52,473 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:34:52,473 | INFO | Extension /log accepted timestamp=1776396894360 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:35:39,158 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 23:35:39,158 | INFO | Extension /log accepted timestamp=1776396937995 text=Event Id 3: Open popup
+2026-04-16 23:35:52,296 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:35:52,297 | INFO | Extension /log accepted timestamp=1776396954202 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:35:52,681 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:35:52,681 | INFO | Extension /log accepted timestamp=1776396954629 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:36:36,701 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 23:36:36,701 | INFO | Extension /log accepted timestamp=1776396995531 text=Event Id 3: Open popup
+2026-04-16 23:36:39,651 | INFO | Appended log line for user_id=21: Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-16 23:36:39,651 | INFO | Extension /log accepted timestamp=1776396995532 text=Event Id 15: User does not trust blocked site, cannot complete task
+2026-04-16 23:37:12,392 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:37:12,393 | INFO | Extension /log accepted timestamp=1776397034250 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:37:19,646 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:37:19,647 | INFO | Extension /log accepted timestamp=1776397041546 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:38:27,088 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:38:27,088 | INFO | Extension /log accepted timestamp=1776397108862 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:38:50,413 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:38:50,413 | INFO | Extension /log accepted timestamp=1776397132308 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:38:54,931 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-16 23:38:54,931 | INFO | Extension /log accepted timestamp=1776397133798 text=Event Id 2: Open popup on Moby-protected site
+2026-04-16 23:39:29,147 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:39:29,147 | INFO | Extension /log accepted timestamp=1776397171009 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:39:32,614 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:39:32,615 | INFO | Extension /log accepted timestamp=1776397174554 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:39:47,153 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:39:47,153 | INFO | Extension /log accepted timestamp=1776397189041 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:39:54,554 | INFO | Appended log line for user_id=21: Event Id 2: Open popup on Moby-protected site
+2026-04-16 23:39:54,554 | INFO | Extension /log accepted timestamp=1776397193299 text=Event Id 2: Open popup on Moby-protected site
+2026-04-16 23:39:57,546 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 23:39:57,547 | INFO | Extension /log accepted timestamp=1776397193316 text=Event Id 3: Open popup
+2026-04-16 23:41:57,863 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 23:41:57,863 | INFO | Extension /log accepted timestamp=1776397316552 text=Event Id 3: Open popup
+2026-04-16 23:42:12,932 | INFO | Appended log line for user_id=21: Event Id 6: Site saved as unsafe
+2026-04-16 23:42:12,933 | INFO | Extension /log accepted timestamp=1776397333173 text=Event Id 6: Site saved as unsafe
+2026-04-16 23:42:14,816 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:42:14,817 | INFO | Extension /log accepted timestamp=1776397336757 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:42:26,912 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:42:26,912 | INFO | Extension /log accepted timestamp=1776397348727 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:42:41,216 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:42:41,216 | INFO | Extension /log accepted timestamp=1776397362940 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:42:42,941 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:42:42,942 | INFO | Extension /log accepted timestamp=1776397364864 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-16 23:48:49,146 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-16 23:48:49,147 | INFO | Extension /log accepted timestamp=1776397727535 text=Event Id 3: Open popup
+2026-04-17 00:28:08,004 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/633
+2026-04-17 00:28:08,298 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Tobias Renner's Reservation (m)
+2026-04-17 00:28:08,299 | INFO | Task email sent for assignment_id=633: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Tobias Renner's Reservation (m)"}
+2026-04-17 00:28:08,300 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/634
+2026-04-17 00:28:08,500 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Northside Breakroom Supply ($238) (24)
+2026-04-17 00:28:08,501 | INFO | Task email sent for assignment_id=634: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Northside Breakroom Supply ($238) (24)'}
+2026-04-17 00:28:08,501 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/635
+2026-04-17 00:28:08,603 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Rowan Thatcher's Reservation (k)
+2026-04-17 00:28:08,603 | INFO | Task email sent for assignment_id=635: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Rowan Thatcher's Reservation (k)"}
+2026-04-17 00:28:08,604 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/636
+2026-04-17 00:28:08,705 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Action Needed: CityTrustBank Payment for Courier Services ($319) (5)
+2026-04-17 00:28:08,705 | INFO | Task email sent for assignment_id=636: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Action Needed: CityTrustBank Payment for Courier Services ($319) (5)'}
+2026-04-17 00:28:08,706 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/637
+2026-04-17 00:28:08,835 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Required- Payment to Evergreen Office Furnishings ($1,286) (4)
+2026-04-17 00:28:08,836 | INFO | Task email sent for assignment_id=637: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Required- Payment to Evergreen Office Furnishings ($1,286) (4)'}
+2026-04-17 00:28:08,836 | INFO | Replaced href for site_url=meridainsuites.com with assignment_url=https://meridainsuites.com/a/638
+2026-04-17 00:28:08,929 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Claire Hudson's Reservation (52)
+2026-04-17 00:28:08,929 | INFO | Task email sent for assignment_id=638: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Claire Hudson's Reservation (52)"}
+2026-04-17 00:28:08,930 | INFO | Replaced href for site_url=meridiansuites.co with assignment_url=https://meridiansuites.co/a/639
+2026-04-17 00:28:09,021 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Owen Price's Reservation (57)
+2026-04-17 00:28:09,021 | INFO | Task email sent for assignment_id=639: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Owen Price's Reservation (57)"}
+2026-04-17 00:28:09,022 | INFO | Replaced href for site_url=cl0udjetairways.com with assignment_url=https://cl0udjetairways.com/a/640
+2026-04-17 00:28:09,113 | INFO | SendGrid send status=202 from=cloudjetairwaysphish@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Ella Simmons (71)
+2026-04-17 00:28:09,113 | INFO | Task email sent for assignment_id=640: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairwaysphish@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Ella Simmons (71)'}
+2026-04-17 00:28:09,114 | INFO | Replaced href for site_url=meridainsuites.com with assignment_url=https://meridainsuites.com/a/641
+2026-04-17 00:28:09,207 | INFO | SendGrid send status=202 from=meridiansuitesphish2@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Caleb Murphy's Reservation (55)
+2026-04-17 00:28:09,208 | INFO | Task email sent for assignment_id=641: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuitesphish2@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Caleb Murphy's Reservation (55)"}
+2026-04-17 00:28:09,208 | INFO | Replaced href for site_url=cloudjetarways.com with assignment_url=https://cloudjetarways.com/a/642
+2026-04-17 00:28:09,301 | INFO | SendGrid send status=202 from=cloudjetairwaysphish@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Ella Simmons (66)
+2026-04-17 00:28:09,302 | INFO | Task email sent for assignment_id=642: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairwaysphish@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Ella Simmons (66)'}
+2026-04-17 00:28:09,303 | INFO | Replaced href for site_url=cltytrust.com with assignment_url=https://cltytrust.com/a/643
+2026-04-17 00:28:09,392 | INFO | SendGrid send status=202 from=citytrustphish@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed- Payment to Midtown Stationery Co. (c)
+2026-04-17 00:28:09,392 | INFO | Task email sent for assignment_id=643: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed- Payment to Midtown Stationery Co. (c)'}
+2026-04-17 00:28:09,393 | INFO | Replaced href for site_url=cloudjetairways.com with assignment_url=https://cloudjetairways.com/a/644
+2026-04-17 00:28:09,488 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Naomi Patel (22)
+2026-04-17 00:28:09,489 | INFO | Task email sent for assignment_id=644: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Naomi Patel (22)'}
+2026-04-17 00:28:09,489 | INFO | Assigned 12 tasks for stage=stage3 user_id=21
+2026-04-17 00:28:09,489 | INFO | start-next-stage result={'stage': 'stage3', 'assignments_created': 12, 'assignment_ids': [633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644]}
+2026-04-17 00:51:24,274 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/645
+2026-04-17 00:51:24,594 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Civic Archive Storage ($402) (26)
+2026-04-17 00:51:24,594 | INFO | Task email sent for assignment_id=645: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Civic Archive Storage ($402) (26)'}
+2026-04-17 00:51:24,594 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/646
+2026-04-17 00:51:25,098 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Required- Payment to Evergreen Office Furnishings ($1,286) (4)
+2026-04-17 00:51:25,098 | INFO | Task email sent for assignment_id=646: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Required- Payment to Evergreen Office Furnishings ($1,286) (4)'}
+2026-04-17 00:51:25,098 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/647
+2026-04-17 00:51:25,189 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Northside Breakroom Supply ($238) (24)
+2026-04-17 00:51:25,190 | INFO | Task email sent for assignment_id=647: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Northside Breakroom Supply ($238) (24)'}
+2026-04-17 00:51:25,190 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/648
+2026-04-17 00:51:25,281 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: CityTrustBank Payment to Apex Tech Supplies ($672) (6)
+2026-04-17 00:51:25,281 | INFO | Task email sent for assignment_id=648: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: CityTrustBank Payment to Apex Tech Supplies ($672) (6)'}
+2026-04-17 00:51:25,282 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/649
+2026-04-17 00:51:25,370 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Rowan Thatcher's Reservation (k)
+2026-04-17 00:51:25,370 | INFO | Task email sent for assignment_id=649: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Rowan Thatcher's Reservation (k)"}
+2026-04-17 00:51:25,371 | INFO | Replaced href for site_url=cl0udjetairways.com with assignment_url=https://cl0udjetairways.com/a/650
+2026-04-17 00:51:25,492 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Ryan Foster (70)
+2026-04-17 00:51:25,492 | INFO | Task email sent for assignment_id=650: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Ryan Foster (70)'}
+2026-04-17 00:51:25,493 | INFO | Replaced href for site_url=meridainsuites.com with assignment_url=https://meridainsuites.com/a/651
+2026-04-17 00:51:25,607 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Claire Hudson's Reservation (52)
+2026-04-17 00:51:25,608 | INFO | Task email sent for assignment_id=651: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': "Approval Needed: Confirm Claire Hudson's Reservation (52)"}
+2026-04-17 00:51:25,608 | INFO | Replaced href for site_url=cloudjettairways.com with assignment_url=https://cloudjettairways.com/a/652
+2026-04-17 00:51:25,703 | INFO | SendGrid send status=202 from=cloudjetairwaysphish2@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Jack Turner (63)
+2026-04-17 00:51:25,703 | INFO | Task email sent for assignment_id=652: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairwaysphish2@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Jack Turner (63)'}
+2026-04-17 00:51:25,704 | INFO | Replaced href for site_url=citytrustbanking.com with assignment_url=https://citytrustbanking.com/a/653
+2026-04-17 00:51:25,783 | INFO | SendGrid send status=202 from=citytrustphish2@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Eastline Courier Services ($348) (39)
+2026-04-17 00:51:25,784 | INFO | Task email sent for assignment_id=653: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish2@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Eastline Courier Services ($348) (39)'}
+2026-04-17 00:51:25,784 | INFO | Replaced href for site_url=cl0udjetairways.com with assignment_url=https://cl0udjetairways.com/a/654
+2026-04-17 00:51:25,877 | INFO | SendGrid send status=202 from=cloudjetairwaysphish2@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Jack Turner (72)
+2026-04-17 00:51:25,877 | INFO | Task email sent for assignment_id=654: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairwaysphish2@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Jack Turner (72)'}
+2026-04-17 00:51:25,878 | INFO | Replaced href for site_url=citytrut.com with assignment_url=https://citytrut.com/a/655
+2026-04-17 00:51:25,959 | INFO | SendGrid send status=202 from=citytrustphish@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Payment to Beacon Workplace Supply ($291) (46)
+2026-04-17 00:51:25,959 | INFO | Task email sent for assignment_id=655: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Payment to Beacon Workplace Supply ($291) (46)'}
+2026-04-17 00:51:25,960 | INFO | Replaced href for site_url=cloudjetairways.com with assignment_url=https://cloudjetairways.com/a/656
+2026-04-17 00:51:26,064 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=moby02@tutamail.com subject=Approval Needed: Confirm Flight for Lucas Bennett (23)
+2026-04-17 00:51:26,065 | INFO | Task email sent for assignment_id=656: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'moby02@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Lucas Bennett (23)'}
+2026-04-17 00:51:26,065 | INFO | Assigned 12 tasks for stage=stage3 user_id=21
+2026-04-17 00:51:26,065 | INFO | start-next-stage result={'stage': 'stage3', 'assignments_created': 12, 'assignment_ids': [645, 646, 647, 648, 649, 650, 651, 652, 653, 654, 655, 656]}
+2026-04-17 00:54:55,152 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/657
+2026-04-17 00:54:55,546 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Rowan Thatcher's Reservation (k)
+2026-04-17 00:54:55,546 | INFO | Task email sent for assignment_id=657: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Rowan Thatcher's Reservation (k)"}
+2026-04-17 00:54:55,546 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/658
+2026-04-17 00:54:55,665 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Tobias Renner's Reservation (m)
+2026-04-17 00:54:55,666 | INFO | Task email sent for assignment_id=658: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Tobias Renner's Reservation (m)"}
+2026-04-17 00:54:55,666 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/659
+2026-04-17 00:54:55,767 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Payment to Northside Breakroom Supply ($238) (24)
+2026-04-17 00:54:55,767 | INFO | Task email sent for assignment_id=659: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Payment to Northside Breakroom Supply ($238) (24)'}
+2026-04-17 00:54:55,768 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/660
+2026-04-17 00:54:55,861 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby03@tutamail.com subject=Action Needed: CityTrustBank Payment for Courier Services ($319) (5)
+2026-04-17 00:54:55,861 | INFO | Task email sent for assignment_id=660: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Action Needed: CityTrustBank Payment for Courier Services ($319) (5)'}
+2026-04-17 00:54:55,861 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/661
+2026-04-17 00:54:55,955 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: CityTrustBank Payment to Apex Tech Supplies ($672) (6)
+2026-04-17 00:54:55,955 | INFO | Task email sent for assignment_id=661: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: CityTrustBank Payment to Apex Tech Supplies ($672) (6)'}
+2026-04-17 00:54:55,955 | INFO | Replaced href for site_url=cltytrust.com with assignment_url=https://cltytrust.com/a/662
+2026-04-17 00:54:56,043 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby03@tutamail.com subject=Please Approve: CityTrustBank Payment for Printing Supplies - $544 (8)
+2026-04-17 00:54:56,044 | INFO | Task email sent for assignment_id=662: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Please Approve: CityTrustBank Payment for Printing Supplies - $544 (8)'}
+2026-04-17 00:54:56,044 | INFO | Replaced href for site_url=meridiansuites.co with assignment_url=https://meridiansuites.co/a/663
+2026-04-17 00:54:56,131 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Claire Hudson's Reservation (56)
+2026-04-17 00:54:56,131 | INFO | Task email sent for assignment_id=663: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Claire Hudson's Reservation (56)"}
+2026-04-17 00:54:56,132 | INFO | Replaced href for site_url=citytrustbanking.com with assignment_url=https://citytrustbanking.com/a/664
+2026-04-17 00:54:56,238 | INFO | SendGrid send status=202 from=citytrustphish2@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Payment to Eastline Courier Services ($348) (39)
+2026-04-17 00:54:56,238 | INFO | Task email sent for assignment_id=664: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish2@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Payment to Eastline Courier Services ($348) (39)'}
+2026-04-17 00:54:56,239 | INFO | Replaced href for site_url=merdiansuites.com with assignment_url=https://merdiansuites.com/a/665
+2026-04-17 00:54:56,335 | INFO | SendGrid send status=202 from=meridiansuitesphish@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Natalie Ross's Reservation (50)
+2026-04-17 00:54:56,335 | INFO | Task email sent for assignment_id=665: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuitesphish@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Natalie Ross's Reservation (50)"}
+2026-04-17 00:54:56,336 | INFO | Replaced href for site_url=meridainsuites.com with assignment_url=https://meridainsuites.com/a/666
+2026-04-17 00:54:56,432 | INFO | SendGrid send status=202 from=meridiansuitesphish@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Natalie Ross's Reservation (54)
+2026-04-17 00:54:56,432 | INFO | Task email sent for assignment_id=666: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuitesphish@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Natalie Ross's Reservation (54)"}
+2026-04-17 00:54:56,433 | INFO | Replaced href for site_url=citytrut.com with assignment_url=https://citytrut.com/a/667
+2026-04-17 00:54:56,521 | INFO | SendGrid send status=202 from=citytrustphish2@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Payment to Eastline Courier Services ($348) (47)
+2026-04-17 00:54:56,521 | INFO | Task email sent for assignment_id=667: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish2@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Payment to Eastline Courier Services ($348) (47)'}
+2026-04-17 00:54:56,521 | INFO | Replaced href for site_url=cloudjetairways.com with assignment_url=https://cloudjetairways.com/a/668
+2026-04-17 00:54:56,605 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Flight for Lucas Bennett (23)
+2026-04-17 00:54:56,606 | INFO | Task email sent for assignment_id=668: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Lucas Bennett (23)'}
+2026-04-17 00:54:56,606 | INFO | Assigned 12 tasks for stage=stage3 user_id=21
+2026-04-17 00:54:56,606 | INFO | start-next-stage result={'stage': 'stage3', 'assignments_created': 12, 'assignment_ids': [657, 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668]}
+2026-04-17 01:00:49,597 | INFO | Recorded login for assignment_id=657 website=meridiansuites.com
+2026-04-17 01:00:49,597 | INFO | record-login-event assignment_id=657 website=meridiansuites.com updated=True
+2026-04-17 01:00:51,698 | INFO | Completed assignment_id=657 with completion_type=done
+2026-04-17 01:00:51,761 | INFO | record-complete-assignment-event assignment_id=657 completion_type=done
+2026-04-17 01:05:43,293 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-17 01:05:43,294 | INFO | Extension /log accepted timestamp=1776402344884 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-17 01:10:39,132 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-17 01:10:39,132 | INFO | Extension /log accepted timestamp=1776402638002 text=Event Id 3: Open popup
+2026-04-17 01:12:21,071 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-17 01:12:21,071 | INFO | Extension /log accepted timestamp=1776402743112 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-17 01:12:31,469 | INFO | Recorded login for assignment_id=660 website=citytrust.com
+2026-04-17 01:12:31,469 | INFO | record-login-event assignment_id=660 website=citytrust.com updated=True
+2026-04-17 01:12:33,127 | INFO | Completed assignment_id=660 with completion_type=done
+2026-04-17 01:12:33,176 | INFO | record-complete-assignment-event assignment_id=660 completion_type=done
+2026-04-17 01:12:55,342 | INFO | Recorded login for assignment_id=659 website=citytrust.com
+2026-04-17 01:12:55,343 | INFO | record-login-event assignment_id=659 website=citytrust.com updated=True
+2026-04-17 01:12:57,086 | INFO | Completed assignment_id=659 with completion_type=done
+2026-04-17 01:12:57,142 | INFO | record-complete-assignment-event assignment_id=659 completion_type=done
+2026-04-17 01:17:58,112 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-17 01:17:58,112 | INFO | Extension /log accepted timestamp=1776403076774 text=Event Id 3: Open popup
+2026-04-17 01:18:10,379 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-17 01:18:10,379 | INFO | Extension /log accepted timestamp=1776403089351 text=Event Id 3: Open popup
+2026-04-17 01:18:19,505 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-17 01:18:19,505 | INFO | Extension /log accepted timestamp=1776403098485 text=Event Id 3: Open popup
+2026-04-17 01:18:38,175 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-04-17 01:18:38,175 | INFO | Extension /log accepted timestamp=1776403117053 text=Event Id 3: Open popup
+2026-04-17 01:18:53,588 | INFO | Appended log line for user_id=21: Event Id 6: Site saved as unsafe
+2026-04-17 01:18:53,588 | INFO | Extension /log accepted timestamp=1776403132553 text=Event Id 6: Site saved as unsafe
+2026-04-17 01:18:54,121 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-04-17 01:18:54,121 | INFO | Extension /log accepted timestamp=1776403136167 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 15:24:49,121 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 15:24:49,121 | INFO | Extension /log accepted timestamp=1782242797037 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 15:25:01,218 | INFO | Recorded login for assignment_id=668 website=cloudjetairways.com
+2026-06-23 15:25:01,218 | INFO | record-login-event assignment_id=668 website=cloudjetairways.com updated=True
+2026-06-23 15:25:03,629 | INFO | Completed assignment_id=668 with completion_type=done
+2026-06-23 15:25:03,668 | INFO | record-complete-assignment-event assignment_id=668 completion_type=done
+2026-06-23 15:32:16,259 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 15:32:16,260 | INFO | Extension /log accepted timestamp=1782243244118 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 15:32:53,500 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 15:32:53,500 | INFO | Extension /log accepted timestamp=1782243281348 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 15:53:51,771 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 15:53:51,771 | INFO | Extension /log accepted timestamp=1782244539643 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 16:30:24,630 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 16:30:24,630 | INFO | Extension /log accepted timestamp=1782246731940 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 16:31:58,804 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 16:31:58,804 | INFO | Extension /log accepted timestamp=1782246826655 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 16:32:08,350 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 16:32:08,351 | INFO | Extension /log accepted timestamp=1782246836293 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 16:32:12,935 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 16:32:12,935 | INFO | Extension /log accepted timestamp=1782246840823 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:28:45,466 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:28:45,467 | INFO | Extension /log accepted timestamp=1782250232636 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:30:17,544 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:30:17,544 | INFO | Extension /log accepted timestamp=1782250325375 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:30:18,798 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:30:18,798 | INFO | Extension /log accepted timestamp=1782250326767 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:30:26,929 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:30:26,930 | INFO | Extension /log accepted timestamp=1782250334885 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:30:37,863 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:30:37,863 | INFO | Extension /log accepted timestamp=1782250345893 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:31:07,023 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:31:07,024 | INFO | Extension /log accepted timestamp=1782250375085 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:31:12,695 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 17:31:12,695 | INFO | Extension /log accepted timestamp=1782250380717 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 20:25:06,513 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-06-23 20:25:06,513 | INFO | Extension /log accepted timestamp=1782260795508 text=Event Id 3: Open popup
+2026-06-23 20:26:33,722 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-06-23 20:26:33,722 | INFO | Extension /log accepted timestamp=1782260882683 text=Event Id 3: Open popup
+2026-06-23 20:29:36,341 | INFO | Appended log line for user_id=21: Event Id 3: Open popup
+2026-06-23 20:29:36,341 | INFO | Extension /log accepted timestamp=1782261065057 text=Event Id 3: Open popup
+2026-06-23 20:53:23,499 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 20:53:23,499 | INFO | Extension /log accepted timestamp=1782262511363 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 20:55:38,752 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-23 20:55:38,752 | INFO | Extension /log accepted timestamp=1782262647373 text=Event Id 1: Interact with Moby-protected website without opening extension

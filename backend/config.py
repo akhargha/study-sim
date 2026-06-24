@@ -15,7 +15,7 @@ FRONTEND_LOGIN_PASSWORD = os.getenv("FRONTEND_LOGIN_PASSWORD", "user")
 
 LOG_FILE = os.getenv("LOG_FILE", "/home/gabriel/study-sim/backend/backend.log")
 
-EMAIL_TO = os.getenv("EMAIL_TO", "moby02@tutamail.com")
+EMAIL_TO = os.getenv("EMAIL_TO", "moby03@tutamail.com")
 DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL", "moby@bskyakhargha1.help")
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY", "")
 
@@ -23,9 +23,9 @@ STAGE_ORDER = ["tutorial", "stage1", "stage2", "stage3"]
 
 STAGE_QUOTAS = {
     "tutorial": {"regular": 3, "url": 1, "email": 1, "cert": 0},
-    "stage1": {"regular": 5, "url": 2, "email": 2, "cert": 1},
-    "stage2": {"regular": 5, "url": 2, "email": 2, "cert": 1},
-    "stage3": {"regular": 5, "url": 2, "email": 4, "cert": 1},
+    "stage1": {"regular": 5, "url": 3, "email": 2, "cert": 0},
+    "stage2": {"regular": 5, "url": 3, "email": 2, "cert": 0},
+    "stage3": {"regular": 5, "url": 3, "email": 4, "cert": 0},
 }
 
 STAGE_BLOCKLISTS = {
