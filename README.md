@@ -1,46 +1,152 @@
-# Study Sim Starter
+# Overview
 
-This starter gives you:
+This repository contains the backend server code and supporting infrastructure for the **MobyPhish** user study.
 
-- 9 static site directories
-- 1 shared JavaScript file
-- 1 shared stylesheet
-- scripts to create HappyTrust and SadTrust root CAs
-- a script to issue per-domain certificates
-- a deploy script to sync the sites into `/var/www/study-sim`
-- an Nginx server block template
+It includes:
 
-## Important note about the CloudJet fake domain
+* Backend server code
+* Simulated phishing websites
+* Deployment scripts
+* SSL certificates
+* Nginx configuration
 
-Your fake domain written as `cIoudjetairways.com` uses a capital `I` in place of lowercase `l`.
-DNS hostnames are case-insensitive, so browsers will normalize it to `cioudjetairways.com`.
-That still works as a distinct domain, but the actual hostname to map in `/etc/hosts` should be `cioudjetairways.com`.
+---
 
-## Site behavior
+# Website Files
 
-All sites share the same logic in `apps/sites/shared/app.js`.
+The simulated websites are located in:
 
-Each site has only:
-- its own `index.html`
-- its per-site config embedded into that file
-- brand-specific color variables
-- task-type-specific details
+```text
+apps/sites/
+```
 
-## Authentication
+Each website has its own directory containing:
 
-The current frontend is wired so the username must be the numeric `user_id`.
-The page calls `/get-user-credentials` and compares the returned username/password against what the user entered.
-That keeps the frontend simple while still using your `users` table.
+* `index.html`
+* `favicon.*`
 
-## Local logs
+Be **very careful** when modifying or adding websites. Many site names differ by only a few characters, making it easy to introduce mistakes. Always thoroughly test any changes before deployment.
 
-If a network request fails, the frontend appends a local browser log to `localStorage`.
-Key format:
-- `study_logs_<siteUrl>`
+---
 
-## Next backend endpoints expected
+# Adding or Modifying Tasks
 
-- `POST /get-user-credentials`
-- `POST /get-current-assignment`
-- `POST /record-login-event`
-- `POST /record-complete-assignment-event`
+Each site's `index.html` contains a `taskDetails` variable that defines the tasks associated with that website.
+
+If you add a new study task, you **must** update the corresponding site's `taskDetails` variable as well.
+
+---
+
+# Certificates
+
+SSL certificates are stored in:
+
+```text
+certs/
+```
+
+The repository currently contains certificates for two certificate authorities:
+
+* HappyTrust
+* SadTrust
+
+This directory is not particularly relevant for the current version of the study, since certificate phishing is not being tested.
+
+---
+
+# Hosting and Deployment
+
+The websites are hosted on:
+
+```text
+gabriel@maple.cs.trincoll.edu
+```
+
+**Note:** This server is only accessible while connected to the Trinity College **eduroam** network.
+
+The deployed websites live in:
+
+```text
+/var/www/study-sim/<site-name>
+```
+
+However, you should **not** edit files there directly.
+
+Instead, make changes inside:
+
+```text
+apps/sites/
+```
+
+and deploy them using:
+
+```bash
+deploy/scripts/deploy_sites.sh
+```
+
+Before running the deployment script, review it to ensure it will perform the intended actions.
+
+After deployment, reload Nginx:
+
+```bash
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+If you add a new website, make sure to:
+
+1. Verify that the deployment scripts correctly generate the required Nginx configuration.
+2. Add the appropriate domain alias and DNS mapping to the study laptop's `hosts` file, following the existing format.
+
+---
+
+# Backend Configuration
+
+The backend code is located in:
+
+```text
+backend/
+```
+
+Most of the files are self-explanatory. The most important configuration file is:
+
+```text
+backend/.env
+```
+
+This file contains runtime configuration such as:
+
+* `USER_ID`
+* `SEND_TO_EMAIL`
+* Database configuration
+* Other environment-specific settings
+
+If `.env` is missing, the backend falls back to:
+
+```text
+backend/config.py
+```
+
+**Important:** `config.py` is **only a fallback**. Do **not** modify it expecting production settings to change. In nearly all cases, configuration changes should be made in `.env`.
+
+---
+
+# Restarting the Backend
+
+After making changes to the backend code or the `.env` file, restart the backend service:
+
+```bash
+sudo systemctl restart study-backend
+```
+
+---
+
+# Python Virtual Environment
+
+Before working on the backend, activate the project's virtual environment:
+
+```bash
+source venv/bin/activate
+```
+
+This ensures the correct Python packages and dependencies are available.
