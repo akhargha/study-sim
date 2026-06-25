@@ -2212,3 +2212,96 @@ ValueError: Assignment 619 is already completed
 2026-06-23 20:53:23,499 | INFO | Extension /log accepted timestamp=1782262511363 text=Event Id 1: Interact with Moby-protected website without opening extension
 2026-06-23 20:55:38,752 | INFO | Appended log line for user_id=21: Event Id 1: Interact with Moby-protected website without opening extension
 2026-06-23 20:55:38,752 | INFO | Extension /log accepted timestamp=1782262647373 text=Event Id 1: Interact with Moby-protected website without opening extension
+2026-06-24 00:49:02,715 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/669
+2026-06-24 00:49:03,172 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Tobias Renner's Reservation (m)
+2026-06-24 00:49:03,173 | INFO | Task email sent for assignment_id=669: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Tobias Renner's Reservation (m)"}
+2026-06-24 00:49:03,173 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/670
+2026-06-24 00:49:03,495 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Hannah Cole's Reservation (29)
+2026-06-24 00:49:03,495 | INFO | Task email sent for assignment_id=670: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Hannah Cole's Reservation (29)"}
+2026-06-24 00:49:03,500 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/671
+2026-06-24 00:49:03,593 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Required- Payment to Evergreen Office Furnishings ($1,286) (4)
+2026-06-24 00:49:03,594 | INFO | Task email sent for assignment_id=671: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Required- Payment to Evergreen Office Furnishings ($1,286) (4)'}
+2026-06-24 00:49:03,594 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/672
+2026-06-24 00:49:03,677 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Payment to Civic Archive Storage ($402) (26)
+2026-06-24 00:49:03,678 | INFO | Task email sent for assignment_id=672: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Payment to Civic Archive Storage ($402) (26)'}
+2026-06-24 00:49:03,678 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/673
+2026-06-24 00:49:03,766 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Lila Kensington's Reservation (j)
+2026-06-24 00:49:03,767 | INFO | Task email sent for assignment_id=673: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Lila Kensington's Reservation (j)"}
+2026-06-24 00:49:03,767 | INFO | Replaced href for site_url=cloudjettairways.com with assignment_url=https://cloudjettairways.com/a/674
+2026-06-24 00:49:03,855 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Flight for Zoe Bennett (60)
+2026-06-24 00:49:03,855 | INFO | Task email sent for assignment_id=674: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Zoe Bennett (60)'}
+2026-06-24 00:49:03,856 | INFO | Replaced href for site_url=rneridiansuites.com with assignment_url=https://rneridiansuites.com/a/675
+2026-06-24 00:49:03,949 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Damon Carver's Reservation (o)
+2026-06-24 00:49:03,949 | INFO | Task email sent for assignment_id=675: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Damon Carver's Reservation (o)"}
+2026-06-24 00:49:03,950 | INFO | Replaced href for site_url=rneridiansuites.com with assignment_url=https://rneridiansuites.com/a/676
+2026-06-24 00:49:04,038 | INFO | SendGrid send status=202 from=meridiansuitesphish2@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Victor Hale's Reservation (s)
+2026-06-24 00:49:04,039 | INFO | Task email sent for assignment_id=676: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuitesphish2@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Victor Hale's Reservation (s)"}
+2026-06-24 00:49:04,039 | INFO | Replaced href for site_url=citytrvst.com with assignment_url=https://citytrvst.com/a/677
+2026-06-24 00:49:04,129 | INFO | SendGrid send status=202 from=citytrustphish@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Payment to Beacon Workplace Supply ($291) (42)
+2026-06-24 00:49:04,129 | INFO | Task email sent for assignment_id=677: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Payment to Beacon Workplace Supply ($291) (42)'}
+2026-06-24 00:49:04,129 | INFO | Replaced href for site_url=citytrustbanking.com with assignment_url=https://citytrustbanking.com/a/678
+2026-06-24 00:49:04,214 | INFO | SendGrid send status=202 from=citytrustphish@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Payment to Beacon Workplace Supply ($291) (38)
+2026-06-24 00:49:04,215 | INFO | Task email sent for assignment_id=678: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Payment to Beacon Workplace Supply ($291) (38)'}
+2026-06-24 00:49:04,215 | INFO | Replaced href for site_url=merdiansuites.com with assignment_url=https://merdiansuites.com/a/679
+2026-06-24 00:49:04,302 | INFO | SendGrid send status=202 from=meridiansuitesphish2@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Caleb Murphy's Reservation (51)
+2026-06-24 00:49:04,303 | INFO | Task email sent for assignment_id=679: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuitesphish2@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Caleb Murphy's Reservation (51)"}
+2026-06-24 00:49:04,303 | INFO | Replaced href for site_url=cloudjetairways.com with assignment_url=https://cloudjetairways.com/a/680
+2026-06-24 00:49:04,380 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Flight for Lucas Bennett (23)
+2026-06-24 00:49:04,381 | INFO | Task email sent for assignment_id=680: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Lucas Bennett (23)'}
+2026-06-24 00:49:04,381 | INFO | Assigned 12 tasks for stage=stage3 user_id=21
+2026-06-24 00:49:04,381 | INFO | start-next-stage result={'stage': 'stage3', 'assignments_created': 12, 'assignment_ids': [669, 670, 671, 672, 673, 674, 675, 676, 677, 678, 679, 680]}
+2026-06-24 20:42:37,161 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/681
+2026-06-24 20:42:37,565 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Ethan Marlowe's Reservation (i)
+2026-06-24 20:42:37,566 | INFO | Task email sent for assignment_id=681: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Ethan Marlowe's Reservation (i)"}
+2026-06-24 20:42:37,566 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/682
+2026-06-24 20:42:37,842 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Rowan Thatcher's Reservation (k)
+2026-06-24 20:42:37,843 | INFO | Task email sent for assignment_id=682: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Rowan Thatcher's Reservation (k)"}
+2026-06-24 20:42:37,843 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/683
+2026-06-24 20:42:37,991 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Required- Payment to Evergreen Office Furnishings ($1,286) (4)
+2026-06-24 20:42:37,991 | INFO | Task email sent for assignment_id=683: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Required- Payment to Evergreen Office Furnishings ($1,286) (4)'}
+2026-06-24 20:42:37,992 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/684
+2026-06-24 20:42:38,080 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Tobias Renner's Reservation (m)
+2026-06-24 20:42:38,080 | INFO | Task email sent for assignment_id=684: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Tobias Renner's Reservation (m)"}
+2026-06-24 20:42:38,081 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/685
+2026-06-24 20:42:38,208 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Lila Kensington's Reservation (j)
+2026-06-24 20:42:38,208 | INFO | Task email sent for assignment_id=685: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Lila Kensington's Reservation (j)"}
+2026-06-24 20:42:38,208 | INFO | Replaced href for site_url=cl0udjetairways.com with assignment_url=https://cl0udjetairways.com/a/686
+2026-06-24 20:42:38,283 | INFO | SendGrid send status=202 from=cloudjetairways@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Flight for Ryan Foster (70)
+2026-06-24 20:42:38,284 | INFO | Task email sent for assignment_id=686: {'sent': True, 'status_code': 202, 'from_email': 'cloudjetairways@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Confirm Flight for Ryan Foster (70)'}
+2026-06-24 20:42:38,285 | INFO | Replaced href for site_url=merdiansuites.com with assignment_url=https://merdiansuites.com/a/687
+2026-06-24 20:42:38,373 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Owen Price's Reservation (49)
+2026-06-24 20:42:38,373 | INFO | Task email sent for assignment_id=687: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Owen Price's Reservation (49)"}
+2026-06-24 20:42:38,374 | INFO | Replaced href for site_url=meridiansuite.com with assignment_url=https://meridiansuite.com/a/688
+2026-06-24 20:42:38,441 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Elise Montrose's Reservation (p)
+2026-06-24 20:42:38,442 | INFO | Task email sent for assignment_id=688: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Elise Montrose's Reservation (p)"}
+2026-06-24 20:42:38,442 | INFO | Replaced href for site_url=citytrut.com with assignment_url=https://citytrut.com/a/689
+2026-06-24 20:42:38,544 | INFO | SendGrid send status=202 from=citytrustphish2@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Payment to Eastline Courier Services ($348) (47)
+2026-06-24 20:42:38,545 | INFO | Task email sent for assignment_id=689: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish2@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Payment to Eastline Courier Services ($348) (47)'}
+2026-06-24 20:42:38,545 | INFO | Replaced href for site_url=cltytrust.com with assignment_url=https://cltytrust.com/a/690
+2026-06-24 20:42:38,637 | INFO | SendGrid send status=202 from=citytrustphish@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed- Payment to Midtown Stationery Co. (c)
+2026-06-24 20:42:38,637 | INFO | Task email sent for assignment_id=690: {'sent': True, 'status_code': 202, 'from_email': 'citytrustphish@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed- Payment to Midtown Stationery Co. (c)'}
+2026-06-24 20:42:38,638 | INFO | Replaced href for site_url=rneridiansuites.com with assignment_url=https://rneridiansuites.com/a/691
+2026-06-24 20:42:38,729 | INFO | SendGrid send status=202 from=meridiansuitesphish2@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Victor Hale's Reservation (s)
+2026-06-24 20:42:38,729 | INFO | Task email sent for assignment_id=691: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuitesphish2@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Victor Hale's Reservation (s)"}
+2026-06-24 20:42:38,730 | INFO | Replaced href for site_url=meridiansuites.co with assignment_url=https://meridiansuites.co/a/692
+2026-06-24 20:42:38,817 | INFO | SendGrid send status=202 from=meridiansuitesphish2@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Caleb Murphy's Reservation (59)
+2026-06-24 20:42:38,817 | INFO | Task email sent for assignment_id=692: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuitesphish2@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Caleb Murphy's Reservation (59)"}
+2026-06-24 20:42:38,818 | INFO | Assigned 12 tasks for stage=stage3 user_id=21
+2026-06-24 20:42:38,818 | INFO | start-next-stage result={'stage': 'stage3', 'assignments_created': 12, 'assignment_ids': [681, 682, 683, 684, 685, 686, 687, 688, 689, 690, 691, 692]}
+2026-06-25 00:58:27,087 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/693
+2026-06-25 00:58:27,510 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Leo Martin's Reservation (30)
+2026-06-25 00:58:27,510 | INFO | Task email sent for assignment_id=693: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Leo Martin's Reservation (30)"}
+2026-06-25 00:58:27,510 | INFO | Replaced href for site_url=meridiansuites.com with assignment_url=https://meridiansuites.com/a/694
+2026-06-25 00:58:27,943 | INFO | SendGrid send status=202 from=meridiansuites@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Rowan Thatcher's Reservation (k)
+2026-06-25 00:58:27,944 | INFO | Task email sent for assignment_id=694: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuites@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Rowan Thatcher's Reservation (k)"}
+2026-06-25 00:58:27,944 | INFO | Replaced href for site_url=citytrust.com with assignment_url=https://citytrust.com/a/695
+2026-06-25 00:58:28,043 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Required- Payment to Evergreen Office Furnishings ($1,286) (4)
+2026-06-25 00:58:28,044 | INFO | Task email sent for assignment_id=695: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Required- Payment to Evergreen Office Furnishings ($1,286) (4)'}
+2026-06-25 00:58:28,044 | INFO | Replaced href for site_url=citytrvst.com with assignment_url=https://citytrvst.com/a/696
+2026-06-25 00:58:28,140 | INFO | SendGrid send status=202 from=citytrust@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Payment to Sterling Office Goods ($427) (40)
+2026-06-25 00:58:28,140 | INFO | Task email sent for assignment_id=696: {'sent': True, 'status_code': 202, 'from_email': 'citytrust@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': 'Approval Needed: Payment to Sterling Office Goods ($427) (40)'}
+2026-06-25 00:58:28,140 | INFO | Replaced href for site_url=meridiansuite.com with assignment_url=https://meridiansuite.com/a/697
+2026-06-25 00:58:28,233 | INFO | SendGrid send status=202 from=meridiansuitesphish@bskyakhargha1.help to=moby03@tutamail.com subject=Approval Needed: Confirm Felix Rowland's Reservation (u)
+2026-06-25 00:58:28,234 | INFO | Task email sent for assignment_id=697: {'sent': True, 'status_code': 202, 'from_email': 'meridiansuitesphish@bskyakhargha1.help', 'to_email': 'moby03@tutamail.com', 'subject': "Approval Needed: Confirm Felix Rowland's Reservation (u)"}
+2026-06-25 00:58:28,234 | INFO | Assigned 5 tasks for stage=tutorial user_id=21
+2026-06-25 00:58:28,234 | INFO | start-study result={'stage': 'tutorial', 'assignments_created': 5, 'assignment_ids': [693, 694, 695, 696, 697]}
